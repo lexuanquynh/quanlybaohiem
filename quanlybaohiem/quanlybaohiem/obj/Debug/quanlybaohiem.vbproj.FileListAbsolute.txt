@@ -1,0 +1,10 @@
+E:\TINHOCNGANHANG\quanlybaohiem\quanlybaohiem\bin\Debug\quanlybaohiem.exe.config
+E:\TINHOCNGANHANG\quanlybaohiem\quanlybaohiem\bin\Debug\quanlybaohiem.exe
+E:\TINHOCNGANHANG\quanlybaohiem\quanlybaohiem\bin\Debug\quanlybaohiem.pdb
+E:\TINHOCNGANHANG\quanlybaohiem\quanlybaohiem\bin\Debug\quanlybaohiem.xml
+E:\TINHOCNGANHANG\quanlybaohiem\quanlybaohiem\obj\Debug\quanlybaohiem.Resources.resources
+E:\TINHOCNGANHANG\quanlybaohiem\quanlybaohiem\obj\Debug\quanlybaohiem.vbproj.GenerateResource.Cache
+E:\TINHOCNGANHANG\quanlybaohiem\quanlybaohiem\obj\Debug\quanlybaohiem.exe
+E:\TINHOCNGANHANG\quanlybaohiem\quanlybaohiem\obj\Debug\quanlybaohiem.xml
+E:\TINHOCNGANHANG\quanlybaohiem\quanlybaohiem\obj\Debug\quanlybaohiem.pdb
+E:\TINHOCNGANHANG\quanlybaohiem\quanlybaohiem\obj\Debug\quanlybaohiem.FrmMain.resources
