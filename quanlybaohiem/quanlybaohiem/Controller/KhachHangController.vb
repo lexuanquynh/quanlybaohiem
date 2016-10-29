@@ -43,6 +43,7 @@ Public Class KhachHangController
     Protected Friend Const DE_CUS_SOTK As String = "sotk"
 
     Protected Friend Const DE_PRODUCE_INSERT_CUSTOM As String = "insertdataintotableKH"
+    Protected Friend Const DE_PRODUCE_UPDATE_CUSTOM As String = "updatedatainsidetableKH"
 
     'define table
     Protected Friend Const TABLE_TINHTRANGQUANHE As String = "tinhtrangquanhe"
@@ -50,8 +51,9 @@ Public Class KhachHangController
     Protected Friend Const TABLE_HOPDONG As String = "hopdong"
     Protected Friend Const TABLE_HOADON As String = "hoadon"
 
-    'Ham them moi khach hang
-    Public Function ThemMoiKhachHang(ByVal hovaten As String, ByVal gioitinh As Integer, tinhtrang As String,
+    'Ham them moi khach hang hoac sua khach hang
+    'bien xac dinh them moi hoac sua: isUpadte = true thi update, neu khong la them moi
+    Public Function ChinhSuaThongTinKhachHang(ByVal isUpdate As Boolean, ByVal hovaten As String, ByVal gioitinh As Integer, tinhtrang As String,
                                      ByVal ngaysinh As String, ByVal noisinh As String, ByVal quoctich As String,
                                      ByVal socmnd As String, ByVal ngaycap As String, ByVal noicap As String,
                                      ByVal diachithuongtru As String, ByVal nghenghiep As String,
@@ -65,7 +67,12 @@ Public Class KhachHangController
         Dim cmd As New SqlCommand
 
         cmd.Connection = con
-        cmd.CommandText = DE_PRODUCE_INSERT_CUSTOM
+        If isUpdate Then
+            cmd.CommandText = DE_PRODUCE_UPDATE_CUSTOM
+        Else
+            cmd.CommandText = DE_PRODUCE_INSERT_CUSTOM
+        End If
+
         cmd.CommandType = CommandType.StoredProcedure
 
         Try
@@ -87,9 +94,19 @@ Public Class KhachHangController
             cmd.Parameters.AddWithValue(DE_CUS_SOTK, sotk)
             cmd.ExecuteNonQuery()
             myDbConnecter.DongKetNoi()
+            If isUpdate Then
+                MessageBox.Show("Cập nhật thông tin khách hàng thành công")
+            Else
+                MessageBox.Show("Thêm mới thông tin khách hàng thành công")
+            End If
             Return True
         Catch ex As Exception
             myDbConnecter.DongKetNoi()
+            If isUpdate Then
+                MessageBox.Show("Cập nhật thông tin khách hàng thất bại")
+            Else
+                MessageBox.Show("Thêm mới thông tin khách hàng thất bại")
+            End If
             Return False
         End Try
     End Function
@@ -116,7 +133,24 @@ Public Class KhachHangController
         con = myDbConnecter.TaoKetNoi()
 
         Dim ds As New DataSet
-        Dim da As New SqlDataAdapter("select " + DE_CUS_IDKHACHHANG + " as [" + DE_MAKH_AS + "], " + DE_CUS_HOVATEN + " as [" + DE_HOVATEN_AS + "]," + DE_CUS_GIOITINH + " as [" + DE_GIOITINH_AS + "], " + DE_CUS_TINHTRANG + " as [" + DE_TINHTRANG_AS + "]," + DE_CUS_NGAYSINH + " as [" + DE_NGAYSINH_AS + "], " + DE_CUS_NOISINH + " as [" + DE_NOISINH_AS + "], " + DE_CUS_QUOCTICH + " as [" + DE_QUOCTICH_AS + "], " + DE_CUS_SOCMND + " as [" + DE_SOCMND_AS + "], " + DE_CUS_NGAYCAP + " as [" + DE_NGAYCAP_AS + "], " + DE_CUS_NOICAP + " as [" + DE_NOICAP_AS + "], " + DE_CUS_DIACHITHUONGTRU + " as [" + DE_DIACHITHUONGTRU_AS + "], " + DE_CUS_NGHENGHIEP + " as [" + DE_NGHENGHIEP_AS + "], " + DE_CUS_DIENTHOAI + " as [" + DE_DIENTHOAI_AS + "], " + DE_CUS_TENCOQUAN + " as [" + DE_TENCOQUAN_AS + "], " + DE_CUS_DIACHICOQUAN + " as [" + DE_DIACHICOQUAN_AS + "], " + DE_CUS_THUNHAPMOTNAM + " as [" + DE_THUNHAPMOTNAM_AS + "], " + DE_CUS_SOTK + " as [" + DE_SOTK_AS + "]  from " + TABLE_KHACHHANG, con)
+        Dim da As New SqlDataAdapter("select " + DE_CUS_IDKHACHHANG + " as [" + DE_MAKH_AS + "], " +
+                                     DE_CUS_HOVATEN + " as [" + DE_HOVATEN_AS + "]," +
+                                     DE_CUS_GIOITINH + " as [" + DE_GIOITINH_AS + "], " +
+                                     DE_CUS_TINHTRANG + " as [" + DE_TINHTRANG_AS + "]," +
+                                     DE_CUS_NGAYSINH + " as [" + DE_NGAYSINH_AS + "], " +
+                                     DE_CUS_NOISINH + " as [" + DE_NOISINH_AS + "], " +
+                                     DE_CUS_QUOCTICH + " as [" + DE_QUOCTICH_AS + "], " +
+                                     DE_CUS_SOCMND + " as [" + DE_SOCMND_AS + "], " +
+                                     DE_CUS_NGAYCAP + " as [" + DE_NGAYCAP_AS + "], " +
+                                     DE_CUS_NOICAP + " as [" + DE_NOICAP_AS + "], " +
+                                     DE_CUS_DIACHITHUONGTRU + " as [" + DE_DIACHITHUONGTRU_AS + "], " +
+                                     DE_CUS_NGHENGHIEP + " as [" + DE_NGHENGHIEP_AS + "], " +
+                                     DE_CUS_DIENTHOAI + " as [" + DE_DIENTHOAI_AS + "], " +
+                                     DE_CUS_TENCOQUAN + " as [" + DE_TENCOQUAN_AS + "], " +
+                                     DE_CUS_DIACHICOQUAN + " as [" + DE_DIACHICOQUAN_AS + "], " +
+                                     DE_CUS_THUNHAPMOTNAM + " as [" + DE_THUNHAPMOTNAM_AS + "], " +
+                                     DE_CUS_SOTK + " as [" + DE_SOTK_AS + "]  from " +
+                                     TABLE_KHACHHANG, con)
         da.Fill(ds)
         myDbConnecter.DongKetNoi()
 

@@ -1,7 +1,9 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class MyDBConnector
-    Protected Friend Const DE_CONNECT_SQL As String = "data source=hp-pc;initial catalog=qlhdbh;integrated security=true"
+    'Data Source=BOYALONE;Initial Catalog=QLHDBH;Integrated Security=True
+    'data source=hp-pc;initial catalog=qlhdbh;integrated security=true
+    Protected Friend Const DE_CONNECT_SQL As String = "Data Source=BOYALONE;Initial Catalog=QLHDBH;Integrated Security=True"
     Dim con As New SqlConnection
     'Ham tao ket noi toi database
     Public Function TaoKetNoi() As SqlConnection

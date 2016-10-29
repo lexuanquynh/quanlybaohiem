@@ -71,10 +71,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\KhachHangController.vb" />
-    <Compile Include="DataSetBaoHiem.Designer.vb">
+    <Compile Include="QLHDBHDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetBaoHiem.xsd</DependentUpon>
+      <DependentUpon>QLHDBHDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="view\FrmMain.vb">
       <SubType>Form</SubType>
@@ -112,17 +112,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="DataSetBaoHiem.xsc">
-      <DependentUpon>DataSetBaoHiem.xsd</DependentUpon>
-    </None>
-    <None Include="DataSetBaoHiem.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetBaoHiem.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataSetBaoHiem.xss">
-      <DependentUpon>DataSetBaoHiem.xsd</DependentUpon>
-    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -133,6 +122,17 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="QLHDBHDataSet.xsc">
+      <DependentUpon>QLHDBHDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLHDBHDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLHDBHDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLHDBHDataSet.xss">
+      <DependentUpon>QLHDBHDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />

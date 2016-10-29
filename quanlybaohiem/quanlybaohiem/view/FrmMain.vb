@@ -13,8 +13,6 @@
     Private Sub btnThemKH_Click(sender As Object, e As EventArgs) Handles btnThemKH.Click
         GroupBoxThemKH.Show()
         GroupBoxTruyVanKhachHang.Hide()
-
-
     End Sub
 
     Private Sub btnTruyVanThongTinKH_Click(sender As Object, e As EventArgs) Handles btnTruyVanThongTinKH.Click
@@ -40,9 +38,8 @@
         End If
     End Sub
 
-
-    'Xu ly them 1 khach hang
-    Private Sub ButtonDongYThemKH_Click(sender As Object, e As EventArgs) Handles ButtonDongYThemKH.Click
+    'Ham kiem tra du lieu nhap vao da dung chua
+    Private Sub CheckInput()
         'Check du lieu tren form
         If txtHoVaTen.Text.Length() = 0 Then
             MessageBox.Show("Họ tên đang để trống!")
@@ -50,6 +47,11 @@
             Return
         End If
         'Must define
+    End Sub
+
+    'Xu ly them 1 khach hang
+    Private Sub ButtonDongYThemKH_Click(sender As Object, e As EventArgs) Handles ButtonDongYThemKH.Click
+        CheckInput()
 
         'Insert vao database
         Dim mKhachHangController As KhachHangController
@@ -59,23 +61,20 @@
         gioitinh = cbGioiTinh.SelectedIndex
 
         Dim thunhap As Double
-        If Double.TryParse(txtThuNhap.Text, thunhap) Then
+        If Double.TryParse(txtThuNhapHangNam.Text, thunhap) Then
 
         Else
             MessageBox.Show("Số tiền thu nhập không đúng")
-            txtThuNhap.Focus()
+            txtThuNhapHangNam.Focus()
             Return
         End If
 
-        If mKhachHangController.ThemMoiKhachHang(txtHoVaTen.Text, gioitinh, txtTinhTrang.Text,
+        If mKhachHangController.ChinhSuaThongTinKhachHang(False, txtHoVaTen.Text, gioitinh, txtTinhTrang.Text,
                                                  dtNgaySinh.Text, txtNoiSinh.Text, txtQuocTich.Text,
                                                  txtCMND.Text, dtNgayCMND.Text, txtNoiCapCMND.Text,
                                                  txtDiaChiThuongTru.Text, txtNgheNghiep.Text, txtSDT.Text, txtTenCoQuan.Text,
                                                  txtDiaChiCoQuan.Text, 100000, txtSoTKNganHang.Text) Then
-            MessageBox.Show("Thêm mới khách hàng thành công")
             GroupBoxThemKH.Hide()
-        Else
-            MessageBox.Show("Thêm mới khách hàng thất bại!")
         End If
     End Sub
 
@@ -136,5 +135,78 @@
             btnCapNhatKhachHang.Enabled = False
             btnXoaKhachHang.Enabled = False
         End If
+    End Sub
+
+    'Ham cap nhat thong tin khach hang
+    Private Sub btnCapNhatKhachHang_Click(sender As Object, e As EventArgs) Handles btnCapNhatKhachHang.Click
+        'CheckInput()
+        'Insert vao database
+        Dim mKhachHangController As KhachHangController
+        mKhachHangController = New KhachHangController()
+
+        Dim gioitinh As Integer
+        gioitinh = cbGioiTinh.SelectedIndex
+
+        Dim thunhap As Double
+        If Double.TryParse(txtThuNhapHangNam.Text, thunhap) Then
+
+        Else
+            MessageBox.Show("Số tiền thu nhập không đúng")
+            txtThuNhapHangNam.Focus()
+            Return
+        End If
+
+        If mKhachHangController.ChinhSuaThongTinKhachHang(True, txtHoVaTen.Text, gioitinh, txtTinhTrang.Text,
+                                                 dtNgaySinh.Text, txtNoiSinh.Text, txtQuocTich.Text,
+                                                 txtCMND.Text, dtNgayCMND.Text, txtNoiCapCMND.Text,
+                                                 txtDiaChiThuongTru.Text, txtNgheNghiep.Text, txtSDT.Text, txtTenCoQuan.Text,
+                                                 txtDiaChiCoQuan.Text, 100000, txtSoTKNganHang.Text) Then
+            GroupBoxThemKH.Hide()
+        End If
+    End Sub
+
+    Private Sub DataGridViewKhachHang_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewKhachHang.CellContentClick
+        txtMaKH.Text = e.RowIndex.ToString
+
+        If e.RowIndex >= 0 Then
+            Dim row As DataGridViewRow
+            row = Me.DataGridViewKhachHang.Rows(e.RowIndex)
+            'txtMaKH.Text = row.Cells(0).Value.ToString
+            txtHoVaTen.Text = row.Cells(1).Value.ToString
+        End If
+        'Day toan bo data tu grid len form
+        '       [hovaten] [nvarchar](50) NULL,
+        '[gioitinh] [bit] NULL,
+        '[tinhtrang] nvarchar(10)NULL,
+        '[ngaysinh] SMALLDATETIME  NULL,
+        '[noisinh] [nvarchar](50) NULL,
+        '[quoctich] [nvarchar](50) NULL,
+        '[socmnd] [varchar] (15) NULL,
+        '[ngaycap] SMALLDATETIME NULL,
+        '[noicap] [nvarchar](150) NULL,
+        '[diachithuongtru] [nvarchar](150) NULL,
+        '[nghenghiep] [nvarchar](150) NULL,
+        '[dienthoai] [varchar] (15) NULL,
+        '[tencoquan] [nvarchar](150) NULL,
+        '[diachicoquan] [nvarchar](150) NULL,
+        '[thunhapmotnam] [float] NULL,
+        '[sotk] [varchar] (20)NULL)
+        'txtMaKH.Text = DataGridViewKhachHang.Rows(e.RowIndex).Cells(0).Value()
+        'txtHoVaTen.Text = DataGridViewKhachHang.Rows(e.RowIndex).Cells(1).Value()
+        ''  cbGioiTinh.SelectedIndex = 1
+        'txtTinhTrang.Text = DataGridViewKhachHang.Rows(e.RowIndex).Cells(3).Value()
+        ''txtTinhTrang.Text = DataGridViewKhachHang.Rows(e.RowIndex).Cells(4).Value()
+        'txtNoiSinh.Text = DataGridViewKhachHang.Rows(e.RowIndex).Cells(5).Value()
+        'txtQuocTich.Text = DataGridViewKhachHang.Rows(e.RowIndex).Cells(6).Value()
+        'txtCMND.Text = DataGridViewKhachHang.Rows(e.RowIndex).Cells(7).Value()
+        ''txtCMND.Text = DataGridViewKhachHang.Rows(e.RowIndex).Cells(8).Value()
+        'txtNoiCapCMND.Text = DataGridViewKhachHang.Rows(e.RowIndex).Cells(9).Value()
+        'txtDiaChiThuongTru.Text = DataGridViewKhachHang.Rows(e.RowIndex).Cells(10).Value()
+        'txtNgheNghiep.Text = DataGridViewKhachHang.Rows(e.RowIndex).Cells(11).Value()
+        'txtSDT.Text = DataGridViewKhachHang.Rows(e.RowIndex).Cells(12).Value()
+        'txtTenCoQuan.Text = DataGridViewKhachHang.Rows(e.RowIndex).Cells(13).Value()
+        'txtDiaChiCoQuan.Text = DataGridViewKhachHang.Rows(e.RowIndex).Cells(14).Value()
+        'txtThuNhapHangNam.Text = DataGridViewKhachHang.Rows(e.RowIndex).Cells(15).Value()
+        'txtSoTKNganHang.Text = DataGridViewKhachHang.Rows(e.RowIndex).Cells(16).Value()
     End Sub
 End Class

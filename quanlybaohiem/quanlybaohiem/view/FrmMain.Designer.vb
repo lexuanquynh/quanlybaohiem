@@ -25,15 +25,24 @@ Partial Class FrmMain
         Me.TabControlMain = New System.Windows.Forms.TabControl()
         Me.TabPageQuanLyKhachHang = New System.Windows.Forms.TabPage()
         Me.GroupBoxTruyVanKhachHang = New System.Windows.Forms.GroupBox()
+        Me.btnTimKiemKhachHang = New System.Windows.Forms.Button()
+        Me.btnXoaKhachHang = New System.Windows.Forms.Button()
+        Me.btnTaoHopDongBaoHiem = New System.Windows.Forms.Button()
+        Me.txtTimKiemKhachHang = New System.Windows.Forms.TextBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.btnCapNhatKhachHang = New System.Windows.Forms.Button()
+        Me.DataGridViewKhachHang = New System.Windows.Forms.DataGridView()
         Me.btnTruyVanThongTinKH = New System.Windows.Forms.Button()
         Me.btnThemKH = New System.Windows.Forms.Button()
         Me.GroupBoxThemKH = New System.Windows.Forms.GroupBox()
+        Me.ButtonHuyboThemKH = New System.Windows.Forms.Button()
+        Me.ButtonDongYThemKH = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtTenCoQuan = New System.Windows.Forms.TextBox()
-        Me.txtThuNhap = New System.Windows.Forms.TextBox()
+        Me.txtThuNhapHangNam = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
         Me.txtSDT = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.txtNoiCapCMND = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -63,29 +72,26 @@ Partial Class FrmMain
         Me.Label13 = New System.Windows.Forms.Label()
         Me.txtMaKH = New System.Windows.Forms.TextBox()
         Me.TabPageQuanLyBaoHiem = New System.Windows.Forms.TabPage()
-        Me.ButtonDongYThemKH = New System.Windows.Forms.Button()
-        Me.ButtonHuyboThemKH = New System.Windows.Forms.Button()
-        Me.DataGridViewKhachHang = New System.Windows.Forms.DataGridView()
-        Me.txtTimKiemKhachHang = New System.Windows.Forms.TextBox()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.btnCapNhatKhachHang = New System.Windows.Forms.Button()
-        Me.btnXoaKhachHang = New System.Windows.Forms.Button()
-        Me.btnTaoHopDongBaoHiem = New System.Windows.Forms.Button()
-        Me.GroupBoxThemThongTinBaoHiem = New System.Windows.Forms.GroupBox()
-        Me.btnThemHopDong = New System.Windows.Forms.Button()
+        Me.GroupBoxTruyVanThongTinBaoHiem = New System.Windows.Forms.GroupBox()
+        Me.btnXoaHoSoBaoHiem = New System.Windows.Forms.Button()
+        Me.btnCapNhatHoSoBaoHiem = New System.Windows.Forms.Button()
+        Me.DataGridViewThongTinBaoHiem = New System.Windows.Forms.DataGridView()
+        Me.txtTruyvanBaoHiem = New System.Windows.Forms.TextBox()
+        Me.Label37 = New System.Windows.Forms.Label()
         Me.btnTruyVanHopDong = New System.Windows.Forms.Button()
-        Me.TabPageTraCuuKyHanBaoHiem = New System.Windows.Forms.TabPage()
-        Me.TabPageBaocaoDoanhThu = New System.Windows.Forms.TabPage()
-        Me.txtDinhKyDongBaoHiem = New System.Windows.Forms.TextBox()
-        Me.txtKyHanBaoHiem = New System.Windows.Forms.TextBox()
-        Me.txtSoTienDaoHanBH = New System.Windows.Forms.TextBox()
-        Me.txtPhiBaoHiem = New System.Windows.Forms.TextBox()
-        Me.txtSoTienBaoHiem = New System.Windows.Forms.TextBox()
-        Me.txtSanPhamBaoHiem = New System.Windows.Forms.TextBox()
-        Me.Label30 = New System.Windows.Forms.Label()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnThemHopDong = New System.Windows.Forms.Button()
+        Me.GroupBoxThemThongTinBaoHiem = New System.Windows.Forms.GroupBox()
+        Me.btnHuyBoHopDongBH = New System.Windows.Forms.Button()
+        Me.btnThemMoiHopDongBH = New System.Windows.Forms.Button()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.txtMaKhachHangBH = New System.Windows.Forms.TextBox()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.Label27 = New System.Windows.Forms.Label()
         Me.txtBenhVienChiTra = New System.Windows.Forms.TextBox()
         Me.Label32 = New System.Windows.Forms.Label()
         Me.txtNguonGocPhiBaoHiem = New System.Windows.Forms.TextBox()
@@ -98,23 +104,21 @@ Partial Class FrmMain
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label28 = New System.Windows.Forms.Label()
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.Label31 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.Label33 = New System.Windows.Forms.Label()
-        Me.Label34 = New System.Windows.Forms.Label()
-        Me.txtMaKhachHangBH = New System.Windows.Forms.TextBox()
-        Me.Label35 = New System.Windows.Forms.Label()
-        Me.Label36 = New System.Windows.Forms.Label()
-        Me.btnHuyBoHopDongBH = New System.Windows.Forms.Button()
-        Me.btnThemMoiHopDongBH = New System.Windows.Forms.Button()
-        Me.GroupBoxTruyVanThongTinBaoHiem = New System.Windows.Forms.GroupBox()
-        Me.Label37 = New System.Windows.Forms.Label()
-        Me.txtTruyvanBaoHiem = New System.Windows.Forms.TextBox()
-        Me.btnXoaHoSoBaoHiem = New System.Windows.Forms.Button()
-        Me.btnCapNhatHoSoBaoHiem = New System.Windows.Forms.Button()
-        Me.DataGridViewThongTinBaoHiem = New System.Windows.Forms.DataGridView()
+        Me.txtDinhKyDongBaoHiem = New System.Windows.Forms.TextBox()
+        Me.txtKyHanBaoHiem = New System.Windows.Forms.TextBox()
+        Me.txtSoTienDaoHanBH = New System.Windows.Forms.TextBox()
+        Me.txtPhiBaoHiem = New System.Windows.Forms.TextBox()
+        Me.txtSoTienBaoHiem = New System.Windows.Forms.TextBox()
+        Me.txtSanPhamBaoHiem = New System.Windows.Forms.TextBox()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TabPageTraCuuKyHanBaoHiem = New System.Windows.Forms.TabPage()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.DataGridViewThongTinHoaDon = New System.Windows.Forms.DataGridView()
+        Me.txTimKiemHoaDon = New System.Windows.Forms.TextBox()
+        Me.Label38 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.dtNgayThuHoaDon = New System.Windows.Forms.DateTimePicker()
         Me.btnXoaHoaDon = New System.Windows.Forms.Button()
@@ -135,10 +139,7 @@ Partial Class FrmMain
         Me.btnTimDanhSachNopPhi = New System.Windows.Forms.Button()
         Me.dtThoiGianNopPhi = New System.Windows.Forms.DateTimePicker()
         Me.Label45 = New System.Windows.Forms.Label()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.DataGridViewThongTinHoaDon = New System.Windows.Forms.DataGridView()
-        Me.txTimKiemHoaDon = New System.Windows.Forms.TextBox()
-        Me.Label38 = New System.Windows.Forms.Label()
+        Me.TabPageBaocaoDoanhThu = New System.Windows.Forms.TabPage()
         Me.GroupBoxThongTinBaoCaoDoanhThu = New System.Windows.Forms.GroupBox()
         Me.DataGridViewDanhSachTrongNgay = New System.Windows.Forms.DataGridView()
         Me.txtDoanhThuTrongNgay = New System.Windows.Forms.TextBox()
@@ -148,23 +149,22 @@ Partial Class FrmMain
         Me.btnXuatBaoCaoTrongNgay = New System.Windows.Forms.Button()
         Me.txtThucThuTrongNgay = New System.Windows.Forms.TextBox()
         Me.Label48 = New System.Windows.Forms.Label()
-        Me.btnTimKiemKhachHang = New System.Windows.Forms.Button()
         Me.TabControlMain.SuspendLayout()
         Me.TabPageQuanLyKhachHang.SuspendLayout()
         Me.GroupBoxTruyVanKhachHang.SuspendLayout()
+        CType(Me.DataGridViewKhachHang, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBoxThemKH.SuspendLayout()
         Me.TabPageQuanLyBaoHiem.SuspendLayout()
-        CType(Me.DataGridViewKhachHang, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBoxThemThongTinBaoHiem.SuspendLayout()
-        Me.TabPageTraCuuKyHanBaoHiem.SuspendLayout()
-        Me.TabPageBaocaoDoanhThu.SuspendLayout()
         Me.GroupBoxTruyVanThongTinBaoHiem.SuspendLayout()
         CType(Me.DataGridViewThongTinBaoHiem, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBoxThemThongTinBaoHiem.SuspendLayout()
+        Me.TabPageTraCuuKyHanBaoHiem.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
+        CType(Me.DataGridViewThongTinHoaDon, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridViewDanhSachNopPhi, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox3.SuspendLayout()
-        CType(Me.DataGridViewThongTinHoaDon, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPageBaocaoDoanhThu.SuspendLayout()
         Me.GroupBoxThongTinBaoCaoDoanhThu.SuspendLayout()
         CType(Me.DataGridViewDanhSachTrongNgay, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -212,6 +212,75 @@ Partial Class FrmMain
         Me.GroupBoxTruyVanKhachHang.TabStop = False
         Me.GroupBoxTruyVanKhachHang.Text = "Truy vấn thông tin khách hàng"
         '
+        'btnTimKiemKhachHang
+        '
+        Me.btnTimKiemKhachHang.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTimKiemKhachHang.Location = New System.Drawing.Point(485, 17)
+        Me.btnTimKiemKhachHang.Name = "btnTimKiemKhachHang"
+        Me.btnTimKiemKhachHang.Size = New System.Drawing.Size(188, 36)
+        Me.btnTimKiemKhachHang.TabIndex = 76
+        Me.btnTimKiemKhachHang.Text = "&Tìm kiếm khách hàng"
+        Me.btnTimKiemKhachHang.UseVisualStyleBackColor = True
+        '
+        'btnXoaKhachHang
+        '
+        Me.btnXoaKhachHang.Enabled = False
+        Me.btnXoaKhachHang.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnXoaKhachHang.Location = New System.Drawing.Point(652, 275)
+        Me.btnXoaKhachHang.Name = "btnXoaKhachHang"
+        Me.btnXoaKhachHang.Size = New System.Drawing.Size(238, 36)
+        Me.btnXoaKhachHang.TabIndex = 74
+        Me.btnXoaKhachHang.Text = "&Xóa hồ sơ khách hàng"
+        Me.btnXoaKhachHang.UseVisualStyleBackColor = True
+        '
+        'btnTaoHopDongBaoHiem
+        '
+        Me.btnTaoHopDongBaoHiem.Enabled = False
+        Me.btnTaoHopDongBaoHiem.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTaoHopDongBaoHiem.Location = New System.Drawing.Point(44, 275)
+        Me.btnTaoHopDongBaoHiem.Name = "btnTaoHopDongBaoHiem"
+        Me.btnTaoHopDongBaoHiem.Size = New System.Drawing.Size(247, 36)
+        Me.btnTaoHopDongBaoHiem.TabIndex = 75
+        Me.btnTaoHopDongBaoHiem.Text = "&Tạo hợp đồng bảo hiểm"
+        Me.btnTaoHopDongBaoHiem.UseVisualStyleBackColor = True
+        '
+        'txtTimKiemKhachHang
+        '
+        Me.txtTimKiemKhachHang.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTimKiemKhachHang.Location = New System.Drawing.Point(204, 25)
+        Me.txtTimKiemKhachHang.Name = "txtTimKiemKhachHang"
+        Me.txtTimKiemKhachHang.Size = New System.Drawing.Size(253, 22)
+        Me.txtTimKiemKhachHang.TabIndex = 44
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(10, 25)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(160, 18)
+        Me.Label16.TabIndex = 43
+        Me.Label16.Text = "Nhập từ khóa tim kiếm:"
+        '
+        'btnCapNhatKhachHang
+        '
+        Me.btnCapNhatKhachHang.Enabled = False
+        Me.btnCapNhatKhachHang.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCapNhatKhachHang.Location = New System.Drawing.Point(355, 275)
+        Me.btnCapNhatKhachHang.Name = "btnCapNhatKhachHang"
+        Me.btnCapNhatKhachHang.Size = New System.Drawing.Size(246, 36)
+        Me.btnCapNhatKhachHang.TabIndex = 73
+        Me.btnCapNhatKhachHang.Text = "&Cập nhật hồ sơ khách hàng"
+        Me.btnCapNhatKhachHang.UseVisualStyleBackColor = True
+        '
+        'DataGridViewKhachHang
+        '
+        Me.DataGridViewKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridViewKhachHang.Location = New System.Drawing.Point(13, 70)
+        Me.DataGridViewKhachHang.Name = "DataGridViewKhachHang"
+        Me.DataGridViewKhachHang.Size = New System.Drawing.Size(917, 199)
+        Me.DataGridViewKhachHang.TabIndex = 0
+        '
         'btnTruyVanThongTinKH
         '
         Me.btnTruyVanThongTinKH.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -238,7 +307,7 @@ Partial Class FrmMain
         Me.GroupBoxThemKH.Controls.Add(Me.ButtonDongYThemKH)
         Me.GroupBoxThemKH.Controls.Add(Me.Label3)
         Me.GroupBoxThemKH.Controls.Add(Me.txtTenCoQuan)
-        Me.GroupBoxThemKH.Controls.Add(Me.txtThuNhap)
+        Me.GroupBoxThemKH.Controls.Add(Me.txtThuNhapHangNam)
         Me.GroupBoxThemKH.Controls.Add(Me.Label15)
         Me.GroupBoxThemKH.Controls.Add(Me.txtSDT)
         Me.GroupBoxThemKH.Controls.Add(Me.Label14)
@@ -278,6 +347,26 @@ Partial Class FrmMain
         Me.GroupBoxThemKH.TabStop = False
         Me.GroupBoxThemKH.Text = "Nhập hồ sơ khách hàng"
         '
+        'ButtonHuyboThemKH
+        '
+        Me.ButtonHuyboThemKH.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonHuyboThemKH.Location = New System.Drawing.Point(751, 286)
+        Me.ButtonHuyboThemKH.Name = "ButtonHuyboThemKH"
+        Me.ButtonHuyboThemKH.Size = New System.Drawing.Size(188, 36)
+        Me.ButtonHuyboThemKH.TabIndex = 73
+        Me.ButtonHuyboThemKH.Text = "&Hủy bỏ"
+        Me.ButtonHuyboThemKH.UseVisualStyleBackColor = True
+        '
+        'ButtonDongYThemKH
+        '
+        Me.ButtonDongYThemKH.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonDongYThemKH.Location = New System.Drawing.Point(547, 286)
+        Me.ButtonDongYThemKH.Name = "ButtonDongYThemKH"
+        Me.ButtonDongYThemKH.Size = New System.Drawing.Size(188, 36)
+        Me.ButtonDongYThemKH.TabIndex = 72
+        Me.ButtonDongYThemKH.Text = "&Thêm mới khách hàng"
+        Me.ButtonDongYThemKH.UseVisualStyleBackColor = True
+        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -296,13 +385,13 @@ Partial Class FrmMain
         Me.txtTenCoQuan.Size = New System.Drawing.Size(370, 24)
         Me.txtTenCoQuan.TabIndex = 64
         '
-        'txtThuNhap
+        'txtThuNhapHangNam
         '
-        Me.txtThuNhap.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtThuNhap.Location = New System.Drawing.Point(681, 200)
-        Me.txtThuNhap.Name = "txtThuNhap"
-        Me.txtThuNhap.Size = New System.Drawing.Size(258, 24)
-        Me.txtThuNhap.TabIndex = 66
+        Me.txtThuNhapHangNam.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtThuNhapHangNam.Location = New System.Drawing.Point(681, 200)
+        Me.txtThuNhapHangNam.Name = "txtThuNhapHangNam"
+        Me.txtThuNhapHangNam.Size = New System.Drawing.Size(258, 24)
+        Me.txtThuNhapHangNam.TabIndex = 66
         '
         'Label15
         '
@@ -314,6 +403,14 @@ Partial Class FrmMain
         Me.Label15.TabIndex = 70
         Me.Label15.Text = "13. Tên cơ quan"
         '
+        'txtSDT
+        '
+        Me.txtSDT.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSDT.Location = New System.Drawing.Point(168, 204)
+        Me.txtSDT.Name = "txtSDT"
+        Me.txtSDT.Size = New System.Drawing.Size(256, 24)
+        Me.txtSDT.TabIndex = 63
+        '
         'Label14
         '
         Me.Label14.AutoSize = True
@@ -323,14 +420,6 @@ Partial Class FrmMain
         Me.Label14.Size = New System.Drawing.Size(218, 18)
         Me.Label14.TabIndex = 69
         Me.Label14.Text = "15. Thu nhập ước tính hàng năm"
-        '
-        'txtSDT
-        '
-        Me.txtSDT.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSDT.Location = New System.Drawing.Point(168, 204)
-        Me.txtSDT.Name = "txtSDT"
-        Me.txtSDT.Size = New System.Drawing.Size(256, 24)
-        Me.txtSDT.TabIndex = 63
         '
         'Label12
         '
@@ -606,84 +695,86 @@ Partial Class FrmMain
         Me.TabPageQuanLyBaoHiem.Text = "Quản lý Bảo hiểm"
         Me.TabPageQuanLyBaoHiem.UseVisualStyleBackColor = True
         '
-        'ButtonDongYThemKH
+        'GroupBoxTruyVanThongTinBaoHiem
         '
-        Me.ButtonDongYThemKH.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonDongYThemKH.Location = New System.Drawing.Point(547, 286)
-        Me.ButtonDongYThemKH.Name = "ButtonDongYThemKH"
-        Me.ButtonDongYThemKH.Size = New System.Drawing.Size(188, 36)
-        Me.ButtonDongYThemKH.TabIndex = 72
-        Me.ButtonDongYThemKH.Text = "&Thêm mới khách hàng"
-        Me.ButtonDongYThemKH.UseVisualStyleBackColor = True
+        Me.GroupBoxTruyVanThongTinBaoHiem.Controls.Add(Me.btnXoaHoSoBaoHiem)
+        Me.GroupBoxTruyVanThongTinBaoHiem.Controls.Add(Me.btnCapNhatHoSoBaoHiem)
+        Me.GroupBoxTruyVanThongTinBaoHiem.Controls.Add(Me.DataGridViewThongTinBaoHiem)
+        Me.GroupBoxTruyVanThongTinBaoHiem.Controls.Add(Me.txtTruyvanBaoHiem)
+        Me.GroupBoxTruyVanThongTinBaoHiem.Controls.Add(Me.Label37)
+        Me.GroupBoxTruyVanThongTinBaoHiem.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBoxTruyVanThongTinBaoHiem.Location = New System.Drawing.Point(3, 403)
+        Me.GroupBoxTruyVanThongTinBaoHiem.Name = "GroupBoxTruyVanThongTinBaoHiem"
+        Me.GroupBoxTruyVanThongTinBaoHiem.Size = New System.Drawing.Size(962, 339)
+        Me.GroupBoxTruyVanThongTinBaoHiem.TabIndex = 9
+        Me.GroupBoxTruyVanThongTinBaoHiem.TabStop = False
+        Me.GroupBoxTruyVanThongTinBaoHiem.Text = "Truy vấn thông tin bảo hiểm"
         '
-        'ButtonHuyboThemKH
+        'btnXoaHoSoBaoHiem
         '
-        Me.ButtonHuyboThemKH.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonHuyboThemKH.Location = New System.Drawing.Point(751, 286)
-        Me.ButtonHuyboThemKH.Name = "ButtonHuyboThemKH"
-        Me.ButtonHuyboThemKH.Size = New System.Drawing.Size(188, 36)
-        Me.ButtonHuyboThemKH.TabIndex = 73
-        Me.ButtonHuyboThemKH.Text = "&Hủy bỏ"
-        Me.ButtonHuyboThemKH.UseVisualStyleBackColor = True
+        Me.btnXoaHoSoBaoHiem.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnXoaHoSoBaoHiem.Location = New System.Drawing.Point(486, 291)
+        Me.btnXoaHoSoBaoHiem.Name = "btnXoaHoSoBaoHiem"
+        Me.btnXoaHoSoBaoHiem.Size = New System.Drawing.Size(238, 36)
+        Me.btnXoaHoSoBaoHiem.TabIndex = 80
+        Me.btnXoaHoSoBaoHiem.Text = "&Xóa hồ sơ bảo hiểm"
+        Me.btnXoaHoSoBaoHiem.UseVisualStyleBackColor = True
         '
-        'DataGridViewKhachHang
+        'btnCapNhatHoSoBaoHiem
         '
-        Me.DataGridViewKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewKhachHang.Location = New System.Drawing.Point(13, 70)
-        Me.DataGridViewKhachHang.Name = "DataGridViewKhachHang"
-        Me.DataGridViewKhachHang.Size = New System.Drawing.Size(917, 199)
-        Me.DataGridViewKhachHang.TabIndex = 0
+        Me.btnCapNhatHoSoBaoHiem.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCapNhatHoSoBaoHiem.Location = New System.Drawing.Point(167, 291)
+        Me.btnCapNhatHoSoBaoHiem.Name = "btnCapNhatHoSoBaoHiem"
+        Me.btnCapNhatHoSoBaoHiem.Size = New System.Drawing.Size(246, 36)
+        Me.btnCapNhatHoSoBaoHiem.TabIndex = 79
+        Me.btnCapNhatHoSoBaoHiem.Text = "&Cập nhật hồ sơ bảo hiểm"
+        Me.btnCapNhatHoSoBaoHiem.UseVisualStyleBackColor = True
         '
-        'txtTimKiemKhachHang
+        'DataGridViewThongTinBaoHiem
         '
-        Me.txtTimKiemKhachHang.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTimKiemKhachHang.Location = New System.Drawing.Point(204, 25)
-        Me.txtTimKiemKhachHang.Name = "txtTimKiemKhachHang"
-        Me.txtTimKiemKhachHang.Size = New System.Drawing.Size(253, 22)
-        Me.txtTimKiemKhachHang.TabIndex = 44
+        Me.DataGridViewThongTinBaoHiem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridViewThongTinBaoHiem.Location = New System.Drawing.Point(9, 64)
+        Me.DataGridViewThongTinBaoHiem.Name = "DataGridViewThongTinBaoHiem"
+        Me.DataGridViewThongTinBaoHiem.Size = New System.Drawing.Size(917, 214)
+        Me.DataGridViewThongTinBaoHiem.TabIndex = 78
         '
-        'Label16
+        'txtTruyvanBaoHiem
         '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(10, 25)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(160, 18)
-        Me.Label16.TabIndex = 43
-        Me.Label16.Text = "Nhập từ khóa tim kiếm:"
+        Me.txtTruyvanBaoHiem.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTruyvanBaoHiem.Location = New System.Drawing.Point(222, 22)
+        Me.txtTruyvanBaoHiem.Name = "txtTruyvanBaoHiem"
+        Me.txtTruyvanBaoHiem.Size = New System.Drawing.Size(220, 24)
+        Me.txtTruyvanBaoHiem.TabIndex = 77
         '
-        'btnCapNhatKhachHang
+        'Label37
         '
-        Me.btnCapNhatKhachHang.Enabled = False
-        Me.btnCapNhatKhachHang.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCapNhatKhachHang.Location = New System.Drawing.Point(355, 275)
-        Me.btnCapNhatKhachHang.Name = "btnCapNhatKhachHang"
-        Me.btnCapNhatKhachHang.Size = New System.Drawing.Size(246, 36)
-        Me.btnCapNhatKhachHang.TabIndex = 73
-        Me.btnCapNhatKhachHang.Text = "&Cập nhật hồ sơ khách hàng"
-        Me.btnCapNhatKhachHang.UseVisualStyleBackColor = True
+        Me.Label37.AutoSize = True
+        Me.Label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label37.Location = New System.Drawing.Point(8, 22)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(160, 18)
+        Me.Label37.TabIndex = 76
+        Me.Label37.Text = "Nhập từ khóa tìm kiếm:"
         '
-        'btnXoaKhachHang
+        'btnTruyVanHopDong
         '
-        Me.btnXoaKhachHang.Enabled = False
-        Me.btnXoaKhachHang.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnXoaKhachHang.Location = New System.Drawing.Point(652, 275)
-        Me.btnXoaKhachHang.Name = "btnXoaKhachHang"
-        Me.btnXoaKhachHang.Size = New System.Drawing.Size(238, 36)
-        Me.btnXoaKhachHang.TabIndex = 74
-        Me.btnXoaKhachHang.Text = "&Xóa hồ sơ khách hàng"
-        Me.btnXoaKhachHang.UseVisualStyleBackColor = True
+        Me.btnTruyVanHopDong.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTruyVanHopDong.Location = New System.Drawing.Point(228, 9)
+        Me.btnTruyVanHopDong.Name = "btnTruyVanHopDong"
+        Me.btnTruyVanHopDong.Size = New System.Drawing.Size(188, 36)
+        Me.btnTruyVanHopDong.TabIndex = 8
+        Me.btnTruyVanHopDong.Text = "&Truy vấn hợp đồng"
+        Me.btnTruyVanHopDong.UseVisualStyleBackColor = True
         '
-        'btnTaoHopDongBaoHiem
+        'btnThemHopDong
         '
-        Me.btnTaoHopDongBaoHiem.Enabled = False
-        Me.btnTaoHopDongBaoHiem.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTaoHopDongBaoHiem.Location = New System.Drawing.Point(44, 275)
-        Me.btnTaoHopDongBaoHiem.Name = "btnTaoHopDongBaoHiem"
-        Me.btnTaoHopDongBaoHiem.Size = New System.Drawing.Size(247, 36)
-        Me.btnTaoHopDongBaoHiem.TabIndex = 75
-        Me.btnTaoHopDongBaoHiem.Text = "&Tạo hợp đồng bảo hiểm"
-        Me.btnTaoHopDongBaoHiem.UseVisualStyleBackColor = True
+        Me.btnThemHopDong.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnThemHopDong.Location = New System.Drawing.Point(22, 9)
+        Me.btnThemHopDong.Name = "btnThemHopDong"
+        Me.btnThemHopDong.Size = New System.Drawing.Size(188, 36)
+        Me.btnThemHopDong.TabIndex = 7
+        Me.btnThemHopDong.Text = "&Thêm mới hợp đồng"
+        Me.btnThemHopDong.UseVisualStyleBackColor = True
         '
         'GroupBoxThemThongTinBaoHiem
         '
@@ -728,137 +819,113 @@ Partial Class FrmMain
         Me.GroupBoxThemThongTinBaoHiem.TabStop = False
         Me.GroupBoxThemThongTinBaoHiem.Text = "Nhập hồ sơ hợp đồng bảo hiểm"
         '
-        'btnThemHopDong
+        'btnHuyBoHopDongBH
         '
-        Me.btnThemHopDong.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnThemHopDong.Location = New System.Drawing.Point(22, 9)
-        Me.btnThemHopDong.Name = "btnThemHopDong"
-        Me.btnThemHopDong.Size = New System.Drawing.Size(188, 36)
-        Me.btnThemHopDong.TabIndex = 7
-        Me.btnThemHopDong.Text = "&Thêm mới hợp đồng"
-        Me.btnThemHopDong.UseVisualStyleBackColor = True
+        Me.btnHuyBoHopDongBH.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnHuyBoHopDongBH.Location = New System.Drawing.Point(448, 292)
+        Me.btnHuyBoHopDongBH.Name = "btnHuyBoHopDongBH"
+        Me.btnHuyBoHopDongBH.Size = New System.Drawing.Size(188, 36)
+        Me.btnHuyBoHopDongBH.TabIndex = 88
+        Me.btnHuyBoHopDongBH.Text = "&Hủy bỏ"
+        Me.btnHuyBoHopDongBH.UseVisualStyleBackColor = True
         '
-        'btnTruyVanHopDong
+        'btnThemMoiHopDongBH
         '
-        Me.btnTruyVanHopDong.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTruyVanHopDong.Location = New System.Drawing.Point(228, 9)
-        Me.btnTruyVanHopDong.Name = "btnTruyVanHopDong"
-        Me.btnTruyVanHopDong.Size = New System.Drawing.Size(188, 36)
-        Me.btnTruyVanHopDong.TabIndex = 8
-        Me.btnTruyVanHopDong.Text = "&Truy vấn hợp đồng"
-        Me.btnTruyVanHopDong.UseVisualStyleBackColor = True
+        Me.btnThemMoiHopDongBH.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnThemMoiHopDongBH.Location = New System.Drawing.Point(244, 292)
+        Me.btnThemMoiHopDongBH.Name = "btnThemMoiHopDongBH"
+        Me.btnThemMoiHopDongBH.Size = New System.Drawing.Size(188, 36)
+        Me.btnThemMoiHopDongBH.TabIndex = 87
+        Me.btnThemMoiHopDongBH.Text = "&Đồng ý"
+        Me.btnThemMoiHopDongBH.UseVisualStyleBackColor = True
         '
-        'TabPageTraCuuKyHanBaoHiem
+        'Label36
         '
-        Me.TabPageTraCuuKyHanBaoHiem.Controls.Add(Me.GroupBox3)
-        Me.TabPageTraCuuKyHanBaoHiem.Controls.Add(Me.GroupBox2)
-        Me.TabPageTraCuuKyHanBaoHiem.Controls.Add(Me.GroupBox1)
-        Me.TabPageTraCuuKyHanBaoHiem.Location = New System.Drawing.Point(4, 22)
-        Me.TabPageTraCuuKyHanBaoHiem.Name = "TabPageTraCuuKyHanBaoHiem"
-        Me.TabPageTraCuuKyHanBaoHiem.Size = New System.Drawing.Size(976, 699)
-        Me.TabPageTraCuuKyHanBaoHiem.TabIndex = 2
-        Me.TabPageTraCuuKyHanBaoHiem.Text = "Tra cứu kỳ hạn bảo hiểm"
-        Me.TabPageTraCuuKyHanBaoHiem.UseVisualStyleBackColor = True
+        Me.Label36.AutoSize = True
+        Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label36.Location = New System.Drawing.Point(672, 252)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(253, 18)
+        Me.Label36.TabIndex = 86
+        Me.Label36.Text = "Chú thích: (*) Thông tin bắt buộc"
         '
-        'TabPageBaocaoDoanhThu
+        'txtMaKhachHangBH
         '
-        Me.TabPageBaocaoDoanhThu.Controls.Add(Me.GroupBoxThongTinBaoCaoDoanhThu)
-        Me.TabPageBaocaoDoanhThu.Location = New System.Drawing.Point(4, 22)
-        Me.TabPageBaocaoDoanhThu.Name = "TabPageBaocaoDoanhThu"
-        Me.TabPageBaocaoDoanhThu.Size = New System.Drawing.Size(976, 699)
-        Me.TabPageBaocaoDoanhThu.TabIndex = 3
-        Me.TabPageBaocaoDoanhThu.Text = "Báo cáo doanh thu"
-        Me.TabPageBaocaoDoanhThu.UseVisualStyleBackColor = True
+        Me.txtMaKhachHangBH.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtMaKhachHangBH.Location = New System.Drawing.Point(662, 13)
+        Me.txtMaKhachHangBH.Name = "txtMaKhachHangBH"
+        Me.txtMaKhachHangBH.Size = New System.Drawing.Size(247, 24)
+        Me.txtMaKhachHangBH.TabIndex = 84
         '
-        'txtDinhKyDongBaoHiem
+        'Label35
         '
-        Me.txtDinhKyDongBaoHiem.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDinhKyDongBaoHiem.Location = New System.Drawing.Point(658, 93)
-        Me.txtDinhKyDongBaoHiem.Multiline = True
-        Me.txtDinhKyDongBaoHiem.Name = "txtDinhKyDongBaoHiem"
-        Me.txtDinhKyDongBaoHiem.Size = New System.Drawing.Size(251, 24)
-        Me.txtDinhKyDongBaoHiem.TabIndex = 51
+        Me.Label35.AutoSize = True
+        Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label35.Location = New System.Drawing.Point(541, 13)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(131, 18)
+        Me.Label35.TabIndex = 85
+        Me.Label35.Text = "Mã Khách hàng(*):"
         '
-        'txtKyHanBaoHiem
+        'Label34
         '
-        Me.txtKyHanBaoHiem.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtKyHanBaoHiem.Location = New System.Drawing.Point(212, 96)
-        Me.txtKyHanBaoHiem.Name = "txtKyHanBaoHiem"
-        Me.txtKyHanBaoHiem.Size = New System.Drawing.Size(130, 24)
-        Me.txtKyHanBaoHiem.TabIndex = 50
+        Me.Label34.AutoSize = True
+        Me.Label34.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label34.Location = New System.Drawing.Point(919, 129)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(39, 18)
+        Me.Label34.TabIndex = 83
+        Me.Label34.Text = "VND"
         '
-        'txtSoTienDaoHanBH
+        'Label33
         '
-        Me.txtSoTienDaoHanBH.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSoTienDaoHanBH.Location = New System.Drawing.Point(658, 126)
-        Me.txtSoTienDaoHanBH.Name = "txtSoTienDaoHanBH"
-        Me.txtSoTienDaoHanBH.Size = New System.Drawing.Size(251, 24)
-        Me.txtSoTienDaoHanBH.TabIndex = 53
+        Me.Label33.AutoSize = True
+        Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label33.Location = New System.Drawing.Point(438, 129)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(39, 18)
+        Me.Label33.TabIndex = 82
+        Me.Label33.Text = "VND"
         '
-        'txtPhiBaoHiem
+        'Label29
         '
-        Me.txtPhiBaoHiem.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPhiBaoHiem.Location = New System.Drawing.Point(212, 126)
-        Me.txtPhiBaoHiem.Name = "txtPhiBaoHiem"
-        Me.txtPhiBaoHiem.Size = New System.Drawing.Size(220, 24)
-        Me.txtPhiBaoHiem.TabIndex = 52
+        Me.Label29.AutoSize = True
+        Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.Location = New System.Drawing.Point(365, 99)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(37, 18)
+        Me.Label29.TabIndex = 81
+        Me.Label29.Text = "năm"
         '
-        'txtSoTienBaoHiem
+        'Label25
         '
-        Me.txtSoTienBaoHiem.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSoTienBaoHiem.Location = New System.Drawing.Point(658, 55)
-        Me.txtSoTienBaoHiem.Name = "txtSoTienBaoHiem"
-        Me.txtSoTienBaoHiem.Size = New System.Drawing.Size(251, 24)
-        Me.txtSoTienBaoHiem.TabIndex = 49
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Location = New System.Drawing.Point(919, 55)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(39, 18)
+        Me.Label25.TabIndex = 80
+        Me.Label25.Text = "VND"
         '
-        'txtSanPhamBaoHiem
+        'Label31
         '
-        Me.txtSanPhamBaoHiem.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSanPhamBaoHiem.Location = New System.Drawing.Point(212, 55)
-        Me.txtSanPhamBaoHiem.Multiline = True
-        Me.txtSanPhamBaoHiem.Name = "txtSanPhamBaoHiem"
-        Me.txtSanPhamBaoHiem.Size = New System.Drawing.Size(287, 24)
-        Me.txtSanPhamBaoHiem.TabIndex = 48
+        Me.Label31.AutoSize = True
+        Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.Location = New System.Drawing.Point(72, 102)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(134, 18)
+        Me.Label31.TabIndex = 79
+        Me.Label31.Text = "3. Kỳ hạn bảo hiểm"
         '
-        'Label30
+        'Label27
         '
-        Me.Label30.AutoSize = True
-        Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.Location = New System.Drawing.Point(454, 96)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(198, 18)
-        Me.Label30.TabIndex = 57
-        Me.Label30.Text = "4. Định kỳ đóng phí bảo hiểm"
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(46, 129)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(160, 18)
-        Me.Label26.TabIndex = 56
-        Me.Label26.Text = "5. Phí bảo hiểm định kỳ"
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(517, 129)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(127, 18)
-        Me.Label21.TabIndex = 55
-        Me.Label21.Text = "6. Số tiền đáo hạn"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(11, 58)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(195, 18)
-        Me.Label1.TabIndex = 54
-        Me.Label1.Text = "1. Sản phẩm bảo hiểm chính"
+        Me.Label27.AutoSize = True
+        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.Location = New System.Drawing.Point(517, 58)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(135, 18)
+        Me.Label27.TabIndex = 78
+        Me.Label27.Text = "2. Số tiền bảo hiểm"
         '
         'txtBenhVienChiTra
         '
@@ -971,174 +1038,146 @@ Partial Class FrmMain
         Me.Label28.TabIndex = 73
         Me.Label28.Text = "7. Ngày có hiệu lực hợp đồng"
         '
-        'Label27
+        'txtDinhKyDongBaoHiem
         '
-        Me.Label27.AutoSize = True
-        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.Location = New System.Drawing.Point(517, 58)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(135, 18)
-        Me.Label27.TabIndex = 78
-        Me.Label27.Text = "2. Số tiền bảo hiểm"
+        Me.txtDinhKyDongBaoHiem.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDinhKyDongBaoHiem.Location = New System.Drawing.Point(658, 93)
+        Me.txtDinhKyDongBaoHiem.Multiline = True
+        Me.txtDinhKyDongBaoHiem.Name = "txtDinhKyDongBaoHiem"
+        Me.txtDinhKyDongBaoHiem.Size = New System.Drawing.Size(251, 24)
+        Me.txtDinhKyDongBaoHiem.TabIndex = 51
         '
-        'Label31
+        'txtKyHanBaoHiem
         '
-        Me.Label31.AutoSize = True
-        Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label31.Location = New System.Drawing.Point(72, 102)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(134, 18)
-        Me.Label31.TabIndex = 79
-        Me.Label31.Text = "3. Kỳ hạn bảo hiểm"
+        Me.txtKyHanBaoHiem.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtKyHanBaoHiem.Location = New System.Drawing.Point(212, 96)
+        Me.txtKyHanBaoHiem.Name = "txtKyHanBaoHiem"
+        Me.txtKyHanBaoHiem.Size = New System.Drawing.Size(130, 24)
+        Me.txtKyHanBaoHiem.TabIndex = 50
         '
-        'Label25
+        'txtSoTienDaoHanBH
         '
-        Me.Label25.AutoSize = True
-        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(919, 55)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(39, 18)
-        Me.Label25.TabIndex = 80
-        Me.Label25.Text = "VND"
+        Me.txtSoTienDaoHanBH.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSoTienDaoHanBH.Location = New System.Drawing.Point(658, 126)
+        Me.txtSoTienDaoHanBH.Name = "txtSoTienDaoHanBH"
+        Me.txtSoTienDaoHanBH.Size = New System.Drawing.Size(251, 24)
+        Me.txtSoTienDaoHanBH.TabIndex = 53
         '
-        'Label29
+        'txtPhiBaoHiem
         '
-        Me.Label29.AutoSize = True
-        Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(365, 99)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(37, 18)
-        Me.Label29.TabIndex = 81
-        Me.Label29.Text = "năm"
+        Me.txtPhiBaoHiem.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPhiBaoHiem.Location = New System.Drawing.Point(212, 126)
+        Me.txtPhiBaoHiem.Name = "txtPhiBaoHiem"
+        Me.txtPhiBaoHiem.Size = New System.Drawing.Size(220, 24)
+        Me.txtPhiBaoHiem.TabIndex = 52
         '
-        'Label33
+        'txtSoTienBaoHiem
         '
-        Me.Label33.AutoSize = True
-        Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label33.Location = New System.Drawing.Point(438, 129)
-        Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(39, 18)
-        Me.Label33.TabIndex = 82
-        Me.Label33.Text = "VND"
+        Me.txtSoTienBaoHiem.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSoTienBaoHiem.Location = New System.Drawing.Point(658, 55)
+        Me.txtSoTienBaoHiem.Name = "txtSoTienBaoHiem"
+        Me.txtSoTienBaoHiem.Size = New System.Drawing.Size(251, 24)
+        Me.txtSoTienBaoHiem.TabIndex = 49
         '
-        'Label34
+        'txtSanPhamBaoHiem
         '
-        Me.Label34.AutoSize = True
-        Me.Label34.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label34.Location = New System.Drawing.Point(919, 129)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(39, 18)
-        Me.Label34.TabIndex = 83
-        Me.Label34.Text = "VND"
+        Me.txtSanPhamBaoHiem.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSanPhamBaoHiem.Location = New System.Drawing.Point(212, 55)
+        Me.txtSanPhamBaoHiem.Multiline = True
+        Me.txtSanPhamBaoHiem.Name = "txtSanPhamBaoHiem"
+        Me.txtSanPhamBaoHiem.Size = New System.Drawing.Size(287, 24)
+        Me.txtSanPhamBaoHiem.TabIndex = 48
         '
-        'txtMaKhachHangBH
+        'Label30
         '
-        Me.txtMaKhachHangBH.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMaKhachHangBH.Location = New System.Drawing.Point(662, 13)
-        Me.txtMaKhachHangBH.Name = "txtMaKhachHangBH"
-        Me.txtMaKhachHangBH.Size = New System.Drawing.Size(247, 24)
-        Me.txtMaKhachHangBH.TabIndex = 84
+        Me.Label30.AutoSize = True
+        Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.Location = New System.Drawing.Point(454, 96)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(198, 18)
+        Me.Label30.TabIndex = 57
+        Me.Label30.Text = "4. Định kỳ đóng phí bảo hiểm"
         '
-        'Label35
+        'Label26
         '
-        Me.Label35.AutoSize = True
-        Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label35.Location = New System.Drawing.Point(541, 13)
-        Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(131, 18)
-        Me.Label35.TabIndex = 85
-        Me.Label35.Text = "Mã Khách hàng(*):"
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.Location = New System.Drawing.Point(46, 129)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(160, 18)
+        Me.Label26.TabIndex = 56
+        Me.Label26.Text = "5. Phí bảo hiểm định kỳ"
         '
-        'Label36
+        'Label21
         '
-        Me.Label36.AutoSize = True
-        Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label36.Location = New System.Drawing.Point(672, 252)
-        Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(253, 18)
-        Me.Label36.TabIndex = 86
-        Me.Label36.Text = "Chú thích: (*) Thông tin bắt buộc"
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(517, 129)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(127, 18)
+        Me.Label21.TabIndex = 55
+        Me.Label21.Text = "6. Số tiền đáo hạn"
         '
-        'btnHuyBoHopDongBH
+        'Label1
         '
-        Me.btnHuyBoHopDongBH.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnHuyBoHopDongBH.Location = New System.Drawing.Point(448, 292)
-        Me.btnHuyBoHopDongBH.Name = "btnHuyBoHopDongBH"
-        Me.btnHuyBoHopDongBH.Size = New System.Drawing.Size(188, 36)
-        Me.btnHuyBoHopDongBH.TabIndex = 88
-        Me.btnHuyBoHopDongBH.Text = "&Hủy bỏ"
-        Me.btnHuyBoHopDongBH.UseVisualStyleBackColor = True
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(11, 58)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(195, 18)
+        Me.Label1.TabIndex = 54
+        Me.Label1.Text = "1. Sản phẩm bảo hiểm chính"
         '
-        'btnThemMoiHopDongBH
+        'TabPageTraCuuKyHanBaoHiem
         '
-        Me.btnThemMoiHopDongBH.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnThemMoiHopDongBH.Location = New System.Drawing.Point(244, 292)
-        Me.btnThemMoiHopDongBH.Name = "btnThemMoiHopDongBH"
-        Me.btnThemMoiHopDongBH.Size = New System.Drawing.Size(188, 36)
-        Me.btnThemMoiHopDongBH.TabIndex = 87
-        Me.btnThemMoiHopDongBH.Text = "&Đồng ý"
-        Me.btnThemMoiHopDongBH.UseVisualStyleBackColor = True
+        Me.TabPageTraCuuKyHanBaoHiem.Controls.Add(Me.GroupBox3)
+        Me.TabPageTraCuuKyHanBaoHiem.Controls.Add(Me.GroupBox2)
+        Me.TabPageTraCuuKyHanBaoHiem.Controls.Add(Me.GroupBox1)
+        Me.TabPageTraCuuKyHanBaoHiem.Location = New System.Drawing.Point(4, 22)
+        Me.TabPageTraCuuKyHanBaoHiem.Name = "TabPageTraCuuKyHanBaoHiem"
+        Me.TabPageTraCuuKyHanBaoHiem.Size = New System.Drawing.Size(976, 699)
+        Me.TabPageTraCuuKyHanBaoHiem.TabIndex = 2
+        Me.TabPageTraCuuKyHanBaoHiem.Text = "Tra cứu kỳ hạn bảo hiểm"
+        Me.TabPageTraCuuKyHanBaoHiem.UseVisualStyleBackColor = True
         '
-        'GroupBoxTruyVanThongTinBaoHiem
+        'GroupBox3
         '
-        Me.GroupBoxTruyVanThongTinBaoHiem.Controls.Add(Me.btnXoaHoSoBaoHiem)
-        Me.GroupBoxTruyVanThongTinBaoHiem.Controls.Add(Me.btnCapNhatHoSoBaoHiem)
-        Me.GroupBoxTruyVanThongTinBaoHiem.Controls.Add(Me.DataGridViewThongTinBaoHiem)
-        Me.GroupBoxTruyVanThongTinBaoHiem.Controls.Add(Me.txtTruyvanBaoHiem)
-        Me.GroupBoxTruyVanThongTinBaoHiem.Controls.Add(Me.Label37)
-        Me.GroupBoxTruyVanThongTinBaoHiem.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBoxTruyVanThongTinBaoHiem.Location = New System.Drawing.Point(3, 403)
-        Me.GroupBoxTruyVanThongTinBaoHiem.Name = "GroupBoxTruyVanThongTinBaoHiem"
-        Me.GroupBoxTruyVanThongTinBaoHiem.Size = New System.Drawing.Size(962, 339)
-        Me.GroupBoxTruyVanThongTinBaoHiem.TabIndex = 9
-        Me.GroupBoxTruyVanThongTinBaoHiem.TabStop = False
-        Me.GroupBoxTruyVanThongTinBaoHiem.Text = "Truy vấn thông tin bảo hiểm"
+        Me.GroupBox3.Controls.Add(Me.DataGridViewThongTinHoaDon)
+        Me.GroupBox3.Controls.Add(Me.txTimKiemHoaDon)
+        Me.GroupBox3.Controls.Add(Me.Label38)
+        Me.GroupBox3.Location = New System.Drawing.Point(8, 461)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(954, 217)
+        Me.GroupBox3.TabIndex = 5
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Truy vấn hóa đơn"
         '
-        'Label37
+        'DataGridViewThongTinHoaDon
         '
-        Me.Label37.AutoSize = True
-        Me.Label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label37.Location = New System.Drawing.Point(8, 22)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(160, 18)
-        Me.Label37.TabIndex = 76
-        Me.Label37.Text = "Nhập từ khóa tìm kiếm:"
+        Me.DataGridViewThongTinHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridViewThongTinHoaDon.Location = New System.Drawing.Point(10, 49)
+        Me.DataGridViewThongTinHoaDon.Name = "DataGridViewThongTinHoaDon"
+        Me.DataGridViewThongTinHoaDon.ReadOnly = True
+        Me.DataGridViewThongTinHoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridViewThongTinHoaDon.Size = New System.Drawing.Size(938, 162)
+        Me.DataGridViewThongTinHoaDon.TabIndex = 16
         '
-        'txtTruyvanBaoHiem
+        'txTimKiemHoaDon
         '
-        Me.txtTruyvanBaoHiem.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTruyvanBaoHiem.Location = New System.Drawing.Point(222, 22)
-        Me.txtTruyvanBaoHiem.Name = "txtTruyvanBaoHiem"
-        Me.txtTruyvanBaoHiem.Size = New System.Drawing.Size(220, 24)
-        Me.txtTruyvanBaoHiem.TabIndex = 77
+        Me.txTimKiemHoaDon.Location = New System.Drawing.Point(94, 19)
+        Me.txTimKiemHoaDon.Name = "txTimKiemHoaDon"
+        Me.txTimKiemHoaDon.Size = New System.Drawing.Size(211, 20)
+        Me.txTimKiemHoaDon.TabIndex = 15
         '
-        'btnXoaHoSoBaoHiem
+        'Label38
         '
-        Me.btnXoaHoSoBaoHiem.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnXoaHoSoBaoHiem.Location = New System.Drawing.Point(486, 291)
-        Me.btnXoaHoSoBaoHiem.Name = "btnXoaHoSoBaoHiem"
-        Me.btnXoaHoSoBaoHiem.Size = New System.Drawing.Size(238, 36)
-        Me.btnXoaHoSoBaoHiem.TabIndex = 80
-        Me.btnXoaHoSoBaoHiem.Text = "&Xóa hồ sơ bảo hiểm"
-        Me.btnXoaHoSoBaoHiem.UseVisualStyleBackColor = True
-        '
-        'btnCapNhatHoSoBaoHiem
-        '
-        Me.btnCapNhatHoSoBaoHiem.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCapNhatHoSoBaoHiem.Location = New System.Drawing.Point(167, 291)
-        Me.btnCapNhatHoSoBaoHiem.Name = "btnCapNhatHoSoBaoHiem"
-        Me.btnCapNhatHoSoBaoHiem.Size = New System.Drawing.Size(246, 36)
-        Me.btnCapNhatHoSoBaoHiem.TabIndex = 79
-        Me.btnCapNhatHoSoBaoHiem.Text = "&Cập nhật hồ sơ bảo hiểm"
-        Me.btnCapNhatHoSoBaoHiem.UseVisualStyleBackColor = True
-        '
-        'DataGridViewThongTinBaoHiem
-        '
-        Me.DataGridViewThongTinBaoHiem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewThongTinBaoHiem.Location = New System.Drawing.Point(9, 64)
-        Me.DataGridViewThongTinBaoHiem.Name = "DataGridViewThongTinBaoHiem"
-        Me.DataGridViewThongTinBaoHiem.Size = New System.Drawing.Size(917, 214)
-        Me.DataGridViewThongTinBaoHiem.TabIndex = 78
+        Me.Label38.AutoSize = True
+        Me.Label38.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label38.Location = New System.Drawing.Point(13, 21)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(54, 15)
+        Me.Label38.TabIndex = 14
+        Me.Label38.Text = "Tìm kiếm"
         '
         'GroupBox2
         '
@@ -1341,44 +1380,15 @@ Partial Class FrmMain
         Me.Label45.TabIndex = 0
         Me.Label45.Text = "Thời gian"
         '
-        'GroupBox3
+        'TabPageBaocaoDoanhThu
         '
-        Me.GroupBox3.Controls.Add(Me.DataGridViewThongTinHoaDon)
-        Me.GroupBox3.Controls.Add(Me.txTimKiemHoaDon)
-        Me.GroupBox3.Controls.Add(Me.Label38)
-        Me.GroupBox3.Location = New System.Drawing.Point(8, 461)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(954, 217)
-        Me.GroupBox3.TabIndex = 5
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Truy vấn hóa đơn"
-        '
-        'DataGridViewThongTinHoaDon
-        '
-        Me.DataGridViewThongTinHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewThongTinHoaDon.Location = New System.Drawing.Point(10, 49)
-        Me.DataGridViewThongTinHoaDon.Name = "DataGridViewThongTinHoaDon"
-        Me.DataGridViewThongTinHoaDon.ReadOnly = True
-        Me.DataGridViewThongTinHoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridViewThongTinHoaDon.Size = New System.Drawing.Size(938, 162)
-        Me.DataGridViewThongTinHoaDon.TabIndex = 16
-        '
-        'txTimKiemHoaDon
-        '
-        Me.txTimKiemHoaDon.Location = New System.Drawing.Point(94, 19)
-        Me.txTimKiemHoaDon.Name = "txTimKiemHoaDon"
-        Me.txTimKiemHoaDon.Size = New System.Drawing.Size(211, 20)
-        Me.txTimKiemHoaDon.TabIndex = 15
-        '
-        'Label38
-        '
-        Me.Label38.AutoSize = True
-        Me.Label38.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label38.Location = New System.Drawing.Point(13, 21)
-        Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(54, 15)
-        Me.Label38.TabIndex = 14
-        Me.Label38.Text = "Tìm kiếm"
+        Me.TabPageBaocaoDoanhThu.Controls.Add(Me.GroupBoxThongTinBaoCaoDoanhThu)
+        Me.TabPageBaocaoDoanhThu.Location = New System.Drawing.Point(4, 22)
+        Me.TabPageBaocaoDoanhThu.Name = "TabPageBaocaoDoanhThu"
+        Me.TabPageBaocaoDoanhThu.Size = New System.Drawing.Size(976, 699)
+        Me.TabPageBaocaoDoanhThu.TabIndex = 3
+        Me.TabPageBaocaoDoanhThu.Text = "Báo cáo doanh thu"
+        Me.TabPageBaocaoDoanhThu.UseVisualStyleBackColor = True
         '
         'GroupBoxThongTinBaoCaoDoanhThu
         '
@@ -1465,16 +1475,6 @@ Partial Class FrmMain
         Me.Label48.TabIndex = 8
         Me.Label48.Text = "Doanh thu trong ngày"
         '
-        'btnTimKiemKhachHang
-        '
-        Me.btnTimKiemKhachHang.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTimKiemKhachHang.Location = New System.Drawing.Point(485, 17)
-        Me.btnTimKiemKhachHang.Name = "btnTimKiemKhachHang"
-        Me.btnTimKiemKhachHang.Size = New System.Drawing.Size(188, 36)
-        Me.btnTimKiemKhachHang.TabIndex = 76
-        Me.btnTimKiemKhachHang.Text = "&Tìm kiếm khách hàng"
-        Me.btnTimKiemKhachHang.UseVisualStyleBackColor = True
-        '
         'FrmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1489,25 +1489,25 @@ Partial Class FrmMain
         Me.TabPageQuanLyKhachHang.ResumeLayout(False)
         Me.GroupBoxTruyVanKhachHang.ResumeLayout(False)
         Me.GroupBoxTruyVanKhachHang.PerformLayout()
+        CType(Me.DataGridViewKhachHang, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBoxThemKH.ResumeLayout(False)
         Me.GroupBoxThemKH.PerformLayout()
         Me.TabPageQuanLyBaoHiem.ResumeLayout(False)
-        CType(Me.DataGridViewKhachHang, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBoxThemThongTinBaoHiem.ResumeLayout(False)
-        Me.GroupBoxThemThongTinBaoHiem.PerformLayout()
-        Me.TabPageTraCuuKyHanBaoHiem.ResumeLayout(False)
-        Me.TabPageBaocaoDoanhThu.ResumeLayout(False)
         Me.GroupBoxTruyVanThongTinBaoHiem.ResumeLayout(False)
         Me.GroupBoxTruyVanThongTinBaoHiem.PerformLayout()
         CType(Me.DataGridViewThongTinBaoHiem, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBoxThemThongTinBaoHiem.ResumeLayout(False)
+        Me.GroupBoxThemThongTinBaoHiem.PerformLayout()
+        Me.TabPageTraCuuKyHanBaoHiem.ResumeLayout(False)
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
+        CType(Me.DataGridViewThongTinHoaDon, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.DataGridViewDanhSachNopPhi, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
-        CType(Me.DataGridViewThongTinHoaDon, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPageBaocaoDoanhThu.ResumeLayout(False)
         Me.GroupBoxThongTinBaoCaoDoanhThu.ResumeLayout(False)
         Me.GroupBoxThongTinBaoCaoDoanhThu.PerformLayout()
         CType(Me.DataGridViewDanhSachTrongNgay, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1520,7 +1520,7 @@ Partial Class FrmMain
     Friend WithEvents GroupBoxThemKH As System.Windows.Forms.GroupBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents txtTenCoQuan As System.Windows.Forms.TextBox
-    Friend WithEvents txtThuNhap As System.Windows.Forms.TextBox
+    Friend WithEvents txtThuNhapHangNam As System.Windows.Forms.TextBox
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents txtSDT As System.Windows.Forms.TextBox
