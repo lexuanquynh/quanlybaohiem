@@ -1011,6 +1011,7 @@ Partial Class FrmMain
         Me.txtMaHDBaoHiem.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtMaHDBaoHiem.Location = New System.Drawing.Point(212, 22)
         Me.txtMaHDBaoHiem.Name = "txtMaHDBaoHiem"
+        Me.txtMaHDBaoHiem.ReadOnly = True
         Me.txtMaHDBaoHiem.Size = New System.Drawing.Size(130, 24)
         Me.txtMaHDBaoHiem.TabIndex = 68
         '

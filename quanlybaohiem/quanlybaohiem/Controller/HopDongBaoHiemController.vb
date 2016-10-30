@@ -64,7 +64,9 @@ Public Class HopDongBaoHiemController
         cmd.CommandType = CommandType.StoredProcedure
 
         Try
-            cmd.Parameters.AddWithValue(de_hop_mahd, maHopDong)
+            If isUpdate Then
+                cmd.Parameters.AddWithValue(de_hop_mahd, maHopDong)
+            End If
             cmd.Parameters.AddWithValue(de_hop_makhachhang, IdKhachHang)
             cmd.Parameters.AddWithValue(de_hop_sanphambaohiem, spbaohiem)
             cmd.Parameters.AddWithValue(de_hop_sotienbaohiem, sotienbaohiem)

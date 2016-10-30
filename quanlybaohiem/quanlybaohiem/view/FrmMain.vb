@@ -51,11 +51,17 @@
 
     'Xu ly them 1 khach hang
     Private Sub ButtonDongYThemKH_Click(sender As Object, e As EventArgs) Handles ButtonDongYThemKH.Click
-        CheckInput()
+
 
         'Insert vao database
         Dim mKhachHangController As KhachHangController
         mKhachHangController = New KhachHangController()
+
+        If txtHoVaTen.Text.Length() = 0 Then
+            MessageBox.Show("Họ tên đang để trống!")
+            txtHoVaTen.Focus()
+            Return
+        End If
 
         Dim makhachhang As Integer
         If Double.TryParse(txtMaKH.Text, makhachhang) Then
@@ -90,7 +96,7 @@
     Private Sub btnThemHopDong_Click(sender As Object, e As EventArgs) Handles btnThemHopDong.Click
         GroupBoxThemThongTinBaoHiem.Show()
         GroupBoxTruyVanThongTinBaoHiem.Hide()
-
+        btnThemMoiHopDongBH.Enabled = True
     End Sub
 
     Private Sub btnTruyVanHopDong_Click(sender As Object, e As EventArgs) Handles btnTruyVanHopDong.Click
@@ -133,9 +139,9 @@
         If Double.TryParse(txtMaHDBaoHiem.Text, maHopDong) Then
 
         Else
-            MessageBox.Show("Mã hợp đồng không đúng")
-            txtMaHDBaoHiem.Focus()
-            Return
+            'MessageBox.Show("Mã hợp đồng không đúng")
+            'txtMaHDBaoHiem.Focus()
+            'Return
         End If
 
         Dim maKhachHang As Integer
@@ -522,6 +528,9 @@
 
     'Clear toan bo text tren form
     Private Sub ClearTextBoxHoaDon()
+        btnCapNhatHoaDon.Enabled = False
+        btnXoaHoaDon.Enabled = False
+
         txtMaHoaDon.DataBindings.Clear()
         txtMaHoaDon.Text = ""
 
@@ -622,6 +631,7 @@
         End If
         If mTraCuuBaoHiemController.ChinhSuaThongTinHoaDon(False, sohoadon, mahopdong, dtNgayThuHoaDon.Text,
                                                            txtCachThucNopTienHoaDon.Text, sotien) Then
+            ClearTextBoxHoaDon()
             'Fill toan bo data len datagrid
             Dim ds As New DataSet
             ds = mTraCuuBaoHiemController.LoadAllHoaDon()
@@ -644,6 +654,7 @@
 
        
         If mTraCuuBaoHiemController.XoaThongTinHoaDon(sohoadon) Then
+            ClearTextBoxHoaDon()
             Dim ds As New DataSet
             ds = mTraCuuBaoHiemController.LoadAllHoaDon()
             DataGridViewThongTinHoaDon.DataSource = ds.Tables(0)
@@ -676,17 +687,66 @@
         btnXoaHoaDon.Enabled = True
     End Sub
 
+    'Ham tim kiem hoa don
     Private Sub btnTimKiemHoaDon_Click(sender As Object, e As EventArgs) Handles btnTimKiemHoaDon.Click
+        Dim mTraCuuBaoHiemController As TraCuuBaoHiemController
+        mTraCuuBaoHiemController = New TraCuuBaoHiemController()
 
+        'Hien thi ket qua tim kiem tren datagrid
+        Dim sTuKhoa As String
+        sTuKhoa = txTimKiemHoaDon.Text
+        Dim dt As DataTable = mTraCuuBaoHiemController.TimKiemHoaDon(sTuKhoa)
+        DataGridViewThongTinHoaDon.DataSource = dt
+
+        'Neu nhu khong co data thi disable cac nut phia duoi
+        If dt.Rows.Count > 0 Then
+            btnCapNhatHoaDon.Enabled = True
+            btnXoaHoaDon.Enabled = True
+        Else
+            btnCapNhatHoaDon.Enabled = False
+            btnXoaHoaDon.Enabled = False
+        End If
     End Sub
 
     Private Sub TabControlMain_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControlMain.SelectedIndexChanged
         Dim mTraCuuBaoHiemController As TraCuuBaoHiemController
         mTraCuuBaoHiemController = New TraCuuBaoHiemController()
+        ClearTextBoxHoaDon()
         'Fill toan bo data len datagrid
         Dim ds As New DataSet
         ds = mTraCuuBaoHiemController.LoadAllHoaDon()
         DataGridViewThongTinHoaDon.DataSource = ds.Tables(0)
         ds.Dispose()
+    End Sub
+
+    'Tinh thuc thu
+    Private Sub dtDoanhThuTrongNgay_ValueChanged(sender As Object, e As EventArgs) Handles dtDoanhThuTrongNgay.ValueChanged
+        Dim mTraCuuBaoHiemController As TraCuuBaoHiemController
+        mTraCuuBaoHiemController = New TraCuuBaoHiemController()
+
+        Dim tgian As DateTime = dtDoanhThuTrongNgay.Value
+        Dim ngay As Integer = tgian.Day
+        Dim thang As Integer = tgian.Month
+        Dim nam As Integer = tgian.Year
+
+        Dim ds As DataTable = mTraCuuBaoHiemController.LoadData(ngay, thang, nam)
+        Dim dt As DataTable = mTraCuuBaoHiemController.LoadData2(ngay, thang)
+
+        Dim sum1, sum2 As Double
+        If (ds.Rows.Count > 0) Then
+            sum1 = Convert.ToDouble(ds.Compute("SUM(sotien)", String.Empty))
+        Else : sum1 = 0
+        End If
+        If (dt.Rows.Count > 0) Then
+            sum2 = Convert.ToDouble(dt.Compute("SUM(phibaohiemdinhky)", String.Empty))
+        Else : sum2 = 0
+        End If
+        DataGridViewDanhSachTrongNgay.DataSource = ds
+        txtThucThuTrongNgay.Text = sum1.ToString()
+        txtDoanhThuTrongNgay.Text = sum2.ToString()
+    End Sub
+
+    Private Sub btnXuatBaoCaoTrongNgay_Click(sender As Object, e As EventArgs) Handles btnXuatBaoCaoTrongNgay.Click
+
     End Sub
 End Class

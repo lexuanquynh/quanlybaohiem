@@ -217,4 +217,45 @@ Public Class TraCuuBaoHiemController
             Return False
         End Try
     End Function
+
+    'Tim kiem hoa don
+    Public Function TimKiemHoaDon(sTuKhoa As String) As DataTable
+        Dim myDbConnecter As MyDBConnector
+        myDbConnecter = New MyDBConnector()
+        con = myDbConnecter.TaoKetNoi()
+
+        Dim sTruyVan As String = "select * from HoaDon where maHD like N'%" + sTuKhoa + "%' or ngaythu like N'%" + sTuKhoa + "%' or cachthuc like N'%" + sTuKhoa + "%' or sotien like N'%" + sTuKhoa + "%'"
+        Dim da As SqlDataAdapter = New SqlDataAdapter(sTruyVan, con)
+        Dim dt As DataTable = New DataTable
+        da.Fill(dt)
+
+        myDbConnecter.DongKetNoi()
+        da.Dispose()
+        Return dt
+    End Function
+
+    Public Function LoadData(ngay As Integer, thang As Integer, nam As Integer) As DataTable
+        Dim myDbConnecter As MyDBConnector
+        myDbConnecter = New MyDBConnector()
+        con = myDbConnecter.TaoKetNoi()
+
+        Dim sTruyVan As String = String.Format("select * from Hoadon where day(ngaythu) ={0} and month(ngaythu) = {1} and year(ngaythu) = {2}", ngay, thang, nam)
+        Dim da As SqlDataAdapter = New SqlDataAdapter(sTruyVan, con)
+        Dim dt As DataTable = New DataTable
+        da.Fill(dt)
+        myDbConnecter.DongKetNoi()
+        Return dt
+    End Function
+    Public Function LoadData2(ngay As Integer, thang As Integer) As DataTable
+        Dim myDbConnecter As MyDBConnector
+        myDbConnecter = New MyDBConnector()
+        con = myDbConnecter.TaoKetNoi()
+
+        Dim sTruyVan As String = String.Format("select * from Hopdong where day(ngaycohieuluc) = {0} and month(ngaycohieuluc) = {1}", ngay, thang)
+        Dim da As SqlDataAdapter = New SqlDataAdapter(sTruyVan, con)
+        Dim dt As DataTable = New DataTable
+        da.Fill(dt)
+        myDbConnecter.DongKetNoi()
+        Return dt
+    End Function
 End Class
