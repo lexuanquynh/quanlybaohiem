@@ -73,6 +73,7 @@ Partial Class FrmMain
         Me.txtMaKH = New System.Windows.Forms.TextBox()
         Me.TabPageQuanLyBaoHiem = New System.Windows.Forms.TabPage()
         Me.GroupBoxTruyVanThongTinBaoHiem = New System.Windows.Forms.GroupBox()
+        Me.btnTimKiemHopDong = New System.Windows.Forms.Button()
         Me.btnXoaHoSoBaoHiem = New System.Windows.Forms.Button()
         Me.btnCapNhatHoSoBaoHiem = New System.Windows.Forms.Button()
         Me.DataGridViewThongTinBaoHiem = New System.Windows.Forms.DataGridView()
@@ -697,6 +698,7 @@ Partial Class FrmMain
         '
         'GroupBoxTruyVanThongTinBaoHiem
         '
+        Me.GroupBoxTruyVanThongTinBaoHiem.Controls.Add(Me.btnTimKiemHopDong)
         Me.GroupBoxTruyVanThongTinBaoHiem.Controls.Add(Me.btnXoaHoSoBaoHiem)
         Me.GroupBoxTruyVanThongTinBaoHiem.Controls.Add(Me.btnCapNhatHoSoBaoHiem)
         Me.GroupBoxTruyVanThongTinBaoHiem.Controls.Add(Me.DataGridViewThongTinBaoHiem)
@@ -710,10 +712,20 @@ Partial Class FrmMain
         Me.GroupBoxTruyVanThongTinBaoHiem.TabStop = False
         Me.GroupBoxTruyVanThongTinBaoHiem.Text = "Truy vấn thông tin bảo hiểm"
         '
+        'btnTimKiemHopDong
+        '
+        Me.btnTimKiemHopDong.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTimKiemHopDong.Location = New System.Drawing.Point(464, 17)
+        Me.btnTimKiemHopDong.Name = "btnTimKiemHopDong"
+        Me.btnTimKiemHopDong.Size = New System.Drawing.Size(188, 36)
+        Me.btnTimKiemHopDong.TabIndex = 81
+        Me.btnTimKiemHopDong.Text = "&Tìm kiếm hợp đồng"
+        Me.btnTimKiemHopDong.UseVisualStyleBackColor = True
+        '
         'btnXoaHoSoBaoHiem
         '
         Me.btnXoaHoSoBaoHiem.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnXoaHoSoBaoHiem.Location = New System.Drawing.Point(486, 291)
+        Me.btnXoaHoSoBaoHiem.Location = New System.Drawing.Point(520, 205)
         Me.btnXoaHoSoBaoHiem.Name = "btnXoaHoSoBaoHiem"
         Me.btnXoaHoSoBaoHiem.Size = New System.Drawing.Size(238, 36)
         Me.btnXoaHoSoBaoHiem.TabIndex = 80
@@ -723,7 +735,7 @@ Partial Class FrmMain
         'btnCapNhatHoSoBaoHiem
         '
         Me.btnCapNhatHoSoBaoHiem.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCapNhatHoSoBaoHiem.Location = New System.Drawing.Point(167, 291)
+        Me.btnCapNhatHoSoBaoHiem.Location = New System.Drawing.Point(167, 205)
         Me.btnCapNhatHoSoBaoHiem.Name = "btnCapNhatHoSoBaoHiem"
         Me.btnCapNhatHoSoBaoHiem.Size = New System.Drawing.Size(246, 36)
         Me.btnCapNhatHoSoBaoHiem.TabIndex = 79
@@ -735,7 +747,7 @@ Partial Class FrmMain
         Me.DataGridViewThongTinBaoHiem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewThongTinBaoHiem.Location = New System.Drawing.Point(9, 64)
         Me.DataGridViewThongTinBaoHiem.Name = "DataGridViewThongTinBaoHiem"
-        Me.DataGridViewThongTinBaoHiem.Size = New System.Drawing.Size(917, 214)
+        Me.DataGridViewThongTinBaoHiem.Size = New System.Drawing.Size(917, 135)
         Me.DataGridViewThongTinBaoHiem.TabIndex = 78
         '
         'txtTruyvanBaoHiem
@@ -1641,5 +1653,6 @@ Partial Class FrmMain
     Friend WithEvents txtThucThuTrongNgay As System.Windows.Forms.TextBox
     Friend WithEvents Label48 As System.Windows.Forms.Label
     Friend WithEvents btnTimKiemKhachHang As System.Windows.Forms.Button
+    Friend WithEvents btnTimKiemHopDong As System.Windows.Forms.Button
 
 End Class
