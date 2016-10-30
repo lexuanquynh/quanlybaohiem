@@ -119,25 +119,17 @@ Public Class TraCuuBaoHiemController
         con = myDbConnecter.TaoKetNoi()
 
         Dim ds As New DataSet
-        Dim da As New SqlDataAdapter("select " + de_hop_mahd + " as [" + DE_MAHD_AS + "], " +
-                                     de_hop_makhachhang + " as [" + DE_IDKH_AS + "]," +
-                                     de_hop_sanphambaohiem + " as [" + DE_SPBAOHIEM_AS + "], " +
-                                     de_hop_sotienbaohiem + " as [" + DE_SOTIENBAOHIEM_AS + "]," +
-                                     de_hop_kyhanbaohiem + " as [" + DE_KYHANBAOHIEM_AS + "], " +
-                                     de_hop_dinhkydongbaohiem + " as [" + DE_DINHKYBAOHIEM_AS + "], " +
-                                     de_hop_phi + " as [" + DE_PHI_AS + "], " +
-                                     de_hop_sotiendaohan + " as [" + DE_SOTIENDAOHAN_AS + "], " +
-                                     de_hop_ngayhd + " as [" + DE_NGAYHD_AS + "], " +
-                                     de_hop_bosung + " as [" + DE_BOSUNG_AS + "], " +
-                                     de_hop_phuongthuc + " as [" + DE_PHUONGTHUC_AS + "], " +
-                                     de_hop_nguongoc + " as [" + DE_NGUONGOCBAOHIEM_AS + "], " +
-                                     de_hop_benhvien + " as [" + DE_BENHVIENCHITRA_AS + "] from " +
-                                     TABLE_HOPDONG, con)
+        Dim sqlcmd As String
+
+        sqlcmd = "select * from " + TABLE_HOPDONG
+        Dim da As New SqlDataAdapter(sqlcmd, con)
         da.Fill(ds)
         myDbConnecter.DongKetNoi()
         da.Dispose()
 
         Return ds
     End Function
+
+
 
 End Class
