@@ -107,7 +107,7 @@ Partial Class FrmMain
         Me.txtDinhKyDongBaoHiem = New System.Windows.Forms.TextBox()
         Me.txtKyHanBaoHiem = New System.Windows.Forms.TextBox()
         Me.txtSoTienDaoHanBH = New System.Windows.Forms.TextBox()
-        Me.txtPhiBaoHiem = New System.Windows.Forms.TextBox()
+        Me.txtPhiBaoHiemDinhKy = New System.Windows.Forms.TextBox()
         Me.txtSoTienBaoHiem = New System.Windows.Forms.TextBox()
         Me.txtSanPhamBaoHiem = New System.Windows.Forms.TextBox()
         Me.Label30 = New System.Windows.Forms.Label()
@@ -804,7 +804,7 @@ Partial Class FrmMain
         Me.GroupBoxThemThongTinBaoHiem.Controls.Add(Me.txtDinhKyDongBaoHiem)
         Me.GroupBoxThemThongTinBaoHiem.Controls.Add(Me.txtKyHanBaoHiem)
         Me.GroupBoxThemThongTinBaoHiem.Controls.Add(Me.txtSoTienDaoHanBH)
-        Me.GroupBoxThemThongTinBaoHiem.Controls.Add(Me.txtPhiBaoHiem)
+        Me.GroupBoxThemThongTinBaoHiem.Controls.Add(Me.txtPhiBaoHiemDinhKy)
         Me.GroupBoxThemThongTinBaoHiem.Controls.Add(Me.txtSoTienBaoHiem)
         Me.GroupBoxThemThongTinBaoHiem.Controls.Add(Me.txtSanPhamBaoHiem)
         Me.GroupBoxThemThongTinBaoHiem.Controls.Add(Me.Label30)
@@ -836,7 +836,7 @@ Partial Class FrmMain
         Me.btnThemMoiHopDongBH.Name = "btnThemMoiHopDongBH"
         Me.btnThemMoiHopDongBH.Size = New System.Drawing.Size(188, 36)
         Me.btnThemMoiHopDongBH.TabIndex = 87
-        Me.btnThemMoiHopDongBH.Text = "&Đồng ý"
+        Me.btnThemMoiHopDongBH.Text = "&Thêm mới bảo hiểm"
         Me.btnThemMoiHopDongBH.UseVisualStyleBackColor = True
         '
         'Label36
@@ -1063,13 +1063,13 @@ Partial Class FrmMain
         Me.txtSoTienDaoHanBH.Size = New System.Drawing.Size(251, 24)
         Me.txtSoTienDaoHanBH.TabIndex = 53
         '
-        'txtPhiBaoHiem
+        'txtPhiBaoHiemDinhKy
         '
-        Me.txtPhiBaoHiem.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPhiBaoHiem.Location = New System.Drawing.Point(212, 126)
-        Me.txtPhiBaoHiem.Name = "txtPhiBaoHiem"
-        Me.txtPhiBaoHiem.Size = New System.Drawing.Size(220, 24)
-        Me.txtPhiBaoHiem.TabIndex = 52
+        Me.txtPhiBaoHiemDinhKy.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPhiBaoHiemDinhKy.Location = New System.Drawing.Point(212, 126)
+        Me.txtPhiBaoHiemDinhKy.Name = "txtPhiBaoHiemDinhKy"
+        Me.txtPhiBaoHiemDinhKy.Size = New System.Drawing.Size(220, 24)
+        Me.txtPhiBaoHiemDinhKy.TabIndex = 52
         '
         'txtSoTienBaoHiem
         '
@@ -1594,7 +1594,7 @@ Partial Class FrmMain
     Friend WithEvents txtDinhKyDongBaoHiem As System.Windows.Forms.TextBox
     Friend WithEvents txtKyHanBaoHiem As System.Windows.Forms.TextBox
     Friend WithEvents txtSoTienDaoHanBH As System.Windows.Forms.TextBox
-    Friend WithEvents txtPhiBaoHiem As System.Windows.Forms.TextBox
+    Friend WithEvents txtPhiBaoHiemDinhKy As System.Windows.Forms.TextBox
     Friend WithEvents txtSoTienBaoHiem As System.Windows.Forms.TextBox
     Friend WithEvents txtSanPhamBaoHiem As System.Windows.Forms.TextBox
     Friend WithEvents Label30 As System.Windows.Forms.Label

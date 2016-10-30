@@ -70,7 +70,17 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\HopDongBaoHiemController.vb" />
     <Compile Include="Controller\KhachHangController.vb" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Controller\TraCuuBaoHiemController.vb" />
+    <Compile Include="QLHDBHDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLHDBHDataSet.xsd</DependentUpon>
+    </Compile>
+>>>>>>> 029e89a085968615c78bb45bf529545e2070290e
     <Compile Include="view\FrmMain.vb">
       <SubType>Form</SubType>
     </Compile>
