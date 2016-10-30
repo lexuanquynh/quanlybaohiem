@@ -94,6 +94,8 @@ Public Class KhachHangController
             cmd.Parameters.AddWithValue(DE_CUS_SOTK, sotk)
             cmd.ExecuteNonQuery()
             myDbConnecter.DongKetNoi()
+            cmd.Dispose()
+
             If isUpdate Then
                 MessageBox.Show("Cập nhật thông tin khách hàng thành công")
             Else
@@ -102,6 +104,7 @@ Public Class KhachHangController
             Return True
         Catch ex As Exception
             myDbConnecter.DongKetNoi()
+            cmd.Dispose()
             If isUpdate Then
                 MessageBox.Show("Cập nhật thông tin khách hàng thất bại")
             Else
@@ -123,6 +126,7 @@ Public Class KhachHangController
         da.Fill(dt)
 
         myDbConnecter.DongKetNoi()
+        da.Dispose()
         Return dt
     End Function
 
@@ -133,26 +137,32 @@ Public Class KhachHangController
         con = myDbConnecter.TaoKetNoi()
 
         Dim ds As New DataSet
-        Dim da As New SqlDataAdapter("select " + DE_CUS_IDKHACHHANG + " as [" + DE_MAKH_AS + "], " +
-                                     DE_CUS_HOVATEN + " as [" + DE_HOVATEN_AS + "]," +
-                                     DE_CUS_GIOITINH + " as [" + DE_GIOITINH_AS + "], " +
-                                     DE_CUS_TINHTRANG + " as [" + DE_TINHTRANG_AS + "]," +
-                                     DE_CUS_NGAYSINH + " as [" + DE_NGAYSINH_AS + "], " +
-                                     DE_CUS_NOISINH + " as [" + DE_NOISINH_AS + "], " +
-                                     DE_CUS_QUOCTICH + " as [" + DE_QUOCTICH_AS + "], " +
-                                     DE_CUS_SOCMND + " as [" + DE_SOCMND_AS + "], " +
-                                     DE_CUS_NGAYCAP + " as [" + DE_NGAYCAP_AS + "], " +
-                                     DE_CUS_NOICAP + " as [" + DE_NOICAP_AS + "], " +
-                                     DE_CUS_DIACHITHUONGTRU + " as [" + DE_DIACHITHUONGTRU_AS + "], " +
-                                     DE_CUS_NGHENGHIEP + " as [" + DE_NGHENGHIEP_AS + "], " +
-                                     DE_CUS_DIENTHOAI + " as [" + DE_DIENTHOAI_AS + "], " +
-                                     DE_CUS_TENCOQUAN + " as [" + DE_TENCOQUAN_AS + "], " +
-                                     DE_CUS_DIACHICOQUAN + " as [" + DE_DIACHICOQUAN_AS + "], " +
-                                     DE_CUS_THUNHAPMOTNAM + " as [" + DE_THUNHAPMOTNAM_AS + "], " +
-                                     DE_CUS_SOTK + " as [" + DE_SOTK_AS + "]  from " +
-                                     TABLE_KHACHHANG, con)
+        Dim sqlcmd As String
+
+        'sqlcmd = "select " + DE_CUS_IDKHACHHANG + " as [" + DE_MAKH_AS + "], " +
+        '                             DE_CUS_HOVATEN + " as [" + DE_HOVATEN_AS + "]," +
+        '                             DE_CUS_GIOITINH + " as [" + DE_GIOITINH_AS + "], " +
+        '                             DE_CUS_TINHTRANG + " as [" + DE_TINHTRANG_AS + "]," +
+        '                             DE_CUS_NGAYSINH + " as [" + DE_NGAYSINH_AS + "], " +
+        '                             DE_CUS_NOISINH + " as [" + DE_NOISINH_AS + "], " +
+        '                             DE_CUS_QUOCTICH + " as [" + DE_QUOCTICH_AS + "], " +
+        '                             DE_CUS_SOCMND + " as [" + DE_SOCMND_AS + "], " +
+        '                             DE_CUS_NGAYCAP + " as [" + DE_NGAYCAP_AS + "], " +
+        '                             DE_CUS_NOICAP + " as [" + DE_NOICAP_AS + "], " +
+        '                             DE_CUS_DIACHITHUONGTRU + " as [" + DE_DIACHITHUONGTRU_AS + "], " +
+        '                             DE_CUS_NGHENGHIEP + " as [" + DE_NGHENGHIEP_AS + "], " +
+        '                             DE_CUS_DIENTHOAI + " as [" + DE_DIENTHOAI_AS + "], " +
+        '                             DE_CUS_TENCOQUAN + " as [" + DE_TENCOQUAN_AS + "], " +
+        '                             DE_CUS_DIACHICOQUAN + " as [" + DE_DIACHICOQUAN_AS + "], " +
+        '                             DE_CUS_THUNHAPMOTNAM + " as [" + DE_THUNHAPMOTNAM_AS + "], " +
+        '                             DE_CUS_SOTK + " as [" + DE_SOTK_AS + "]  from " +
+        '                             TABLE_KHACHHANG
+
+        sqlcmd = "select * from " + TABLE_KHACHHANG
+        Dim da As New SqlDataAdapter(sqlcmd, con)
         da.Fill(ds)
         myDbConnecter.DongKetNoi()
+        da.Dispose()
 
         Return ds
     End Function

@@ -73,6 +73,7 @@ Partial Class FrmMain
         Me.txtMaKH = New System.Windows.Forms.TextBox()
         Me.TabPageQuanLyBaoHiem = New System.Windows.Forms.TabPage()
         Me.GroupBoxTruyVanThongTinBaoHiem = New System.Windows.Forms.GroupBox()
+        Me.btnTimKiemHopDong = New System.Windows.Forms.Button()
         Me.btnXoaHoSoBaoHiem = New System.Windows.Forms.Button()
         Me.btnCapNhatHoSoBaoHiem = New System.Windows.Forms.Button()
         Me.DataGridViewThongTinBaoHiem = New System.Windows.Forms.DataGridView()
@@ -149,9 +150,6 @@ Partial Class FrmMain
         Me.btnXuatBaoCaoTrongNgay = New System.Windows.Forms.Button()
         Me.txtThucThuTrongNgay = New System.Windows.Forms.TextBox()
         Me.Label48 = New System.Windows.Forms.Label()
-        Me.btnTimKiemHopDong = New System.Windows.Forms.Button()
-        Me.btnXoaHoSoKhachHang = New System.Windows.Forms.Button()
-        Me.btnCapNhatHoSoKhachHang = New System.Windows.Forms.Button()
         Me.TabControlMain.SuspendLayout()
         Me.TabPageQuanLyKhachHang.SuspendLayout()
         Me.GroupBoxTruyVanKhachHang.SuspendLayout()
@@ -700,8 +698,6 @@ Partial Class FrmMain
         '
         'GroupBoxTruyVanThongTinBaoHiem
         '
-        Me.GroupBoxTruyVanThongTinBaoHiem.Controls.Add(Me.btnXoaHoSoKhachHang)
-        Me.GroupBoxTruyVanThongTinBaoHiem.Controls.Add(Me.btnCapNhatHoSoKhachHang)
         Me.GroupBoxTruyVanThongTinBaoHiem.Controls.Add(Me.btnTimKiemHopDong)
         Me.GroupBoxTruyVanThongTinBaoHiem.Controls.Add(Me.btnXoaHoSoBaoHiem)
         Me.GroupBoxTruyVanThongTinBaoHiem.Controls.Add(Me.btnCapNhatHoSoBaoHiem)
@@ -716,10 +712,20 @@ Partial Class FrmMain
         Me.GroupBoxTruyVanThongTinBaoHiem.TabStop = False
         Me.GroupBoxTruyVanThongTinBaoHiem.Text = "Truy vấn thông tin bảo hiểm"
         '
+        'btnTimKiemHopDong
+        '
+        Me.btnTimKiemHopDong.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTimKiemHopDong.Location = New System.Drawing.Point(464, 17)
+        Me.btnTimKiemHopDong.Name = "btnTimKiemHopDong"
+        Me.btnTimKiemHopDong.Size = New System.Drawing.Size(188, 36)
+        Me.btnTimKiemHopDong.TabIndex = 81
+        Me.btnTimKiemHopDong.Text = "&Tìm kiếm hợp đồng"
+        Me.btnTimKiemHopDong.UseVisualStyleBackColor = True
+        '
         'btnXoaHoSoBaoHiem
         '
         Me.btnXoaHoSoBaoHiem.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnXoaHoSoBaoHiem.Location = New System.Drawing.Point(486, 291)
+        Me.btnXoaHoSoBaoHiem.Location = New System.Drawing.Point(520, 205)
         Me.btnXoaHoSoBaoHiem.Name = "btnXoaHoSoBaoHiem"
         Me.btnXoaHoSoBaoHiem.Size = New System.Drawing.Size(238, 36)
         Me.btnXoaHoSoBaoHiem.TabIndex = 80
@@ -729,7 +735,7 @@ Partial Class FrmMain
         'btnCapNhatHoSoBaoHiem
         '
         Me.btnCapNhatHoSoBaoHiem.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCapNhatHoSoBaoHiem.Location = New System.Drawing.Point(167, 291)
+        Me.btnCapNhatHoSoBaoHiem.Location = New System.Drawing.Point(167, 205)
         Me.btnCapNhatHoSoBaoHiem.Name = "btnCapNhatHoSoBaoHiem"
         Me.btnCapNhatHoSoBaoHiem.Size = New System.Drawing.Size(246, 36)
         Me.btnCapNhatHoSoBaoHiem.TabIndex = 79
@@ -1481,38 +1487,6 @@ Partial Class FrmMain
         Me.Label48.TabIndex = 8
         Me.Label48.Text = "Doanh thu trong ngày"
         '
-        'btnTimKiemHopDong
-        '
-        Me.btnTimKiemHopDong.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTimKiemHopDong.Location = New System.Drawing.Point(464, 17)
-        Me.btnTimKiemHopDong.Name = "btnTimKiemHopDong"
-        Me.btnTimKiemHopDong.Size = New System.Drawing.Size(188, 36)
-        Me.btnTimKiemHopDong.TabIndex = 81
-        Me.btnTimKiemHopDong.Text = "&Tìm kiếm hợp đồng"
-        Me.btnTimKiemHopDong.UseVisualStyleBackColor = True
-        '
-        'btnXoaHoSoKhachHang
-        '
-        Me.btnXoaHoSoKhachHang.Enabled = False
-        Me.btnXoaHoSoKhachHang.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnXoaHoSoKhachHang.Location = New System.Drawing.Point(655, 228)
-        Me.btnXoaHoSoKhachHang.Name = "btnXoaHoSoKhachHang"
-        Me.btnXoaHoSoKhachHang.Size = New System.Drawing.Size(238, 36)
-        Me.btnXoaHoSoKhachHang.TabIndex = 83
-        Me.btnXoaHoSoKhachHang.Text = "&Xóa hồ sơ khách hàng"
-        Me.btnXoaHoSoKhachHang.UseVisualStyleBackColor = True
-        '
-        'btnCapNhatHoSoKhachHang
-        '
-        Me.btnCapNhatHoSoKhachHang.Enabled = False
-        Me.btnCapNhatHoSoKhachHang.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCapNhatHoSoKhachHang.Location = New System.Drawing.Point(358, 228)
-        Me.btnCapNhatHoSoKhachHang.Name = "btnCapNhatHoSoKhachHang"
-        Me.btnCapNhatHoSoKhachHang.Size = New System.Drawing.Size(246, 36)
-        Me.btnCapNhatHoSoKhachHang.TabIndex = 82
-        Me.btnCapNhatHoSoKhachHang.Text = "&Cập nhật hồ sơ khách hàng"
-        Me.btnCapNhatHoSoKhachHang.UseVisualStyleBackColor = True
-        '
         'FrmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1679,8 +1653,6 @@ Partial Class FrmMain
     Friend WithEvents txtThucThuTrongNgay As System.Windows.Forms.TextBox
     Friend WithEvents Label48 As System.Windows.Forms.Label
     Friend WithEvents btnTimKiemKhachHang As System.Windows.Forms.Button
-    Friend WithEvents btnXoaHoSoKhachHang As System.Windows.Forms.Button
-    Friend WithEvents btnCapNhatHoSoKhachHang As System.Windows.Forms.Button
     Friend WithEvents btnTimKiemHopDong As System.Windows.Forms.Button
 
 End Class
