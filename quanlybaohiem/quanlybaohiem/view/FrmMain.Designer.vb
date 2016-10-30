@@ -199,16 +199,14 @@ Partial Class FrmMain
         'GroupBoxTruyVanKhachHang
         '
         Me.GroupBoxTruyVanKhachHang.Controls.Add(Me.btnTimKiemKhachHang)
-        Me.GroupBoxTruyVanKhachHang.Controls.Add(Me.btnXoaKhachHang)
         Me.GroupBoxTruyVanKhachHang.Controls.Add(Me.btnTaoHopDongBaoHiem)
         Me.GroupBoxTruyVanKhachHang.Controls.Add(Me.txtTimKiemKhachHang)
         Me.GroupBoxTruyVanKhachHang.Controls.Add(Me.Label16)
-        Me.GroupBoxTruyVanKhachHang.Controls.Add(Me.btnCapNhatKhachHang)
         Me.GroupBoxTruyVanKhachHang.Controls.Add(Me.DataGridViewKhachHang)
         Me.GroupBoxTruyVanKhachHang.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBoxTruyVanKhachHang.Location = New System.Drawing.Point(11, 382)
+        Me.GroupBoxTruyVanKhachHang.Location = New System.Drawing.Point(11, 412)
         Me.GroupBoxTruyVanKhachHang.Name = "GroupBoxTruyVanKhachHang"
-        Me.GroupBoxTruyVanKhachHang.Size = New System.Drawing.Size(957, 317)
+        Me.GroupBoxTruyVanKhachHang.Size = New System.Drawing.Size(957, 281)
         Me.GroupBoxTruyVanKhachHang.TabIndex = 8
         Me.GroupBoxTruyVanKhachHang.TabStop = False
         Me.GroupBoxTruyVanKhachHang.Text = "Truy vấn thông tin khách hàng"
@@ -227,7 +225,7 @@ Partial Class FrmMain
         '
         Me.btnXoaKhachHang.Enabled = False
         Me.btnXoaKhachHang.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnXoaKhachHang.Location = New System.Drawing.Point(652, 275)
+        Me.btnXoaKhachHang.Location = New System.Drawing.Point(485, 307)
         Me.btnXoaKhachHang.Name = "btnXoaKhachHang"
         Me.btnXoaKhachHang.Size = New System.Drawing.Size(238, 36)
         Me.btnXoaKhachHang.TabIndex = 74
@@ -238,7 +236,7 @@ Partial Class FrmMain
         '
         Me.btnTaoHopDongBaoHiem.Enabled = False
         Me.btnTaoHopDongBaoHiem.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTaoHopDongBaoHiem.Location = New System.Drawing.Point(44, 275)
+        Me.btnTaoHopDongBaoHiem.Location = New System.Drawing.Point(356, 227)
         Me.btnTaoHopDongBaoHiem.Name = "btnTaoHopDongBaoHiem"
         Me.btnTaoHopDongBaoHiem.Size = New System.Drawing.Size(247, 36)
         Me.btnTaoHopDongBaoHiem.TabIndex = 75
@@ -267,7 +265,7 @@ Partial Class FrmMain
         '
         Me.btnCapNhatKhachHang.Enabled = False
         Me.btnCapNhatKhachHang.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCapNhatKhachHang.Location = New System.Drawing.Point(355, 275)
+        Me.btnCapNhatKhachHang.Location = New System.Drawing.Point(220, 307)
         Me.btnCapNhatKhachHang.Name = "btnCapNhatKhachHang"
         Me.btnCapNhatKhachHang.Size = New System.Drawing.Size(246, 36)
         Me.btnCapNhatKhachHang.TabIndex = 73
@@ -277,9 +275,9 @@ Partial Class FrmMain
         'DataGridViewKhachHang
         '
         Me.DataGridViewKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewKhachHang.Location = New System.Drawing.Point(13, 70)
+        Me.DataGridViewKhachHang.Location = New System.Drawing.Point(22, 53)
         Me.DataGridViewKhachHang.Name = "DataGridViewKhachHang"
-        Me.DataGridViewKhachHang.Size = New System.Drawing.Size(917, 199)
+        Me.DataGridViewKhachHang.Size = New System.Drawing.Size(917, 168)
         Me.DataGridViewKhachHang.TabIndex = 0
         '
         'btnTruyVanThongTinKH
@@ -305,10 +303,12 @@ Partial Class FrmMain
         'GroupBoxThemKH
         '
         Me.GroupBoxThemKH.Controls.Add(Me.ButtonHuyboThemKH)
+        Me.GroupBoxThemKH.Controls.Add(Me.btnXoaKhachHang)
         Me.GroupBoxThemKH.Controls.Add(Me.ButtonDongYThemKH)
         Me.GroupBoxThemKH.Controls.Add(Me.Label3)
         Me.GroupBoxThemKH.Controls.Add(Me.txtTenCoQuan)
         Me.GroupBoxThemKH.Controls.Add(Me.txtThuNhapHangNam)
+        Me.GroupBoxThemKH.Controls.Add(Me.btnCapNhatKhachHang)
         Me.GroupBoxThemKH.Controls.Add(Me.Label15)
         Me.GroupBoxThemKH.Controls.Add(Me.txtSDT)
         Me.GroupBoxThemKH.Controls.Add(Me.Label14)
@@ -343,7 +343,7 @@ Partial Class FrmMain
         Me.GroupBoxThemKH.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBoxThemKH.Location = New System.Drawing.Point(11, 48)
         Me.GroupBoxThemKH.Name = "GroupBoxThemKH"
-        Me.GroupBoxThemKH.Size = New System.Drawing.Size(962, 328)
+        Me.GroupBoxThemKH.Size = New System.Drawing.Size(962, 358)
         Me.GroupBoxThemKH.TabIndex = 0
         Me.GroupBoxThemKH.TabStop = False
         Me.GroupBoxThemKH.Text = "Nhập hồ sơ khách hàng"
@@ -351,7 +351,7 @@ Partial Class FrmMain
         'ButtonHuyboThemKH
         '
         Me.ButtonHuyboThemKH.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonHuyboThemKH.Location = New System.Drawing.Point(751, 286)
+        Me.ButtonHuyboThemKH.Location = New System.Drawing.Point(767, 307)
         Me.ButtonHuyboThemKH.Name = "ButtonHuyboThemKH"
         Me.ButtonHuyboThemKH.Size = New System.Drawing.Size(188, 36)
         Me.ButtonHuyboThemKH.TabIndex = 73
@@ -361,7 +361,7 @@ Partial Class FrmMain
         'ButtonDongYThemKH
         '
         Me.ButtonDongYThemKH.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonDongYThemKH.Location = New System.Drawing.Point(547, 286)
+        Me.ButtonDongYThemKH.Location = New System.Drawing.Point(26, 307)
         Me.ButtonDongYThemKH.Name = "ButtonDongYThemKH"
         Me.ButtonDongYThemKH.Size = New System.Drawing.Size(188, 36)
         Me.ButtonDongYThemKH.TabIndex = 72
@@ -372,7 +372,7 @@ Partial Class FrmMain
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(699, 34)
+        Me.Label3.Location = New System.Drawing.Point(699, 25)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(78, 18)
         Me.Label3.TabIndex = 71
@@ -381,7 +381,7 @@ Partial Class FrmMain
         'txtTenCoQuan
         '
         Me.txtTenCoQuan.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTenCoQuan.Location = New System.Drawing.Point(569, 168)
+        Me.txtTenCoQuan.Location = New System.Drawing.Point(569, 159)
         Me.txtTenCoQuan.Name = "txtTenCoQuan"
         Me.txtTenCoQuan.Size = New System.Drawing.Size(370, 24)
         Me.txtTenCoQuan.TabIndex = 64
@@ -389,7 +389,7 @@ Partial Class FrmMain
         'txtThuNhapHangNam
         '
         Me.txtThuNhapHangNam.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtThuNhapHangNam.Location = New System.Drawing.Point(681, 200)
+        Me.txtThuNhapHangNam.Location = New System.Drawing.Point(681, 191)
         Me.txtThuNhapHangNam.Name = "txtThuNhapHangNam"
         Me.txtThuNhapHangNam.Size = New System.Drawing.Size(258, 24)
         Me.txtThuNhapHangNam.TabIndex = 66
@@ -398,7 +398,7 @@ Partial Class FrmMain
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(455, 172)
+        Me.Label15.Location = New System.Drawing.Point(455, 163)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(114, 18)
         Me.Label15.TabIndex = 70
@@ -407,7 +407,7 @@ Partial Class FrmMain
         'txtSDT
         '
         Me.txtSDT.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSDT.Location = New System.Drawing.Point(168, 204)
+        Me.txtSDT.Location = New System.Drawing.Point(168, 195)
         Me.txtSDT.Name = "txtSDT"
         Me.txtSDT.Size = New System.Drawing.Size(256, 24)
         Me.txtSDT.TabIndex = 63
@@ -416,7 +416,7 @@ Partial Class FrmMain
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(455, 207)
+        Me.Label14.Location = New System.Drawing.Point(455, 198)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(218, 18)
         Me.Label14.TabIndex = 69
@@ -426,7 +426,7 @@ Partial Class FrmMain
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(7, 205)
+        Me.Label12.Location = New System.Drawing.Point(7, 196)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(108, 18)
         Me.Label12.TabIndex = 68
@@ -435,7 +435,7 @@ Partial Class FrmMain
         'txtNoiCapCMND
         '
         Me.txtNoiCapCMND.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNoiCapCMND.Location = New System.Drawing.Point(767, 131)
+        Me.txtNoiCapCMND.Location = New System.Drawing.Point(767, 122)
         Me.txtNoiCapCMND.Name = "txtNoiCapCMND"
         Me.txtNoiCapCMND.Size = New System.Drawing.Size(172, 24)
         Me.txtNoiCapCMND.TabIndex = 62
@@ -444,7 +444,7 @@ Partial Class FrmMain
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(676, 134)
+        Me.Label10.Location = New System.Drawing.Point(676, 125)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(75, 18)
         Me.Label10.TabIndex = 67
@@ -454,7 +454,7 @@ Partial Class FrmMain
         '
         Me.dtNgayCMND.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtNgayCMND.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtNgayCMND.Location = New System.Drawing.Point(538, 132)
+        Me.dtNgayCMND.Location = New System.Drawing.Point(538, 123)
         Me.dtNgayCMND.Name = "dtNgayCMND"
         Me.dtNgayCMND.Size = New System.Drawing.Size(132, 24)
         Me.dtNgayCMND.TabIndex = 61
@@ -463,7 +463,7 @@ Partial Class FrmMain
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(446, 137)
+        Me.Label9.Location = New System.Drawing.Point(446, 128)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(86, 18)
         Me.Label9.TabIndex = 65
@@ -472,7 +472,7 @@ Partial Class FrmMain
         'txtSoTKNganHang
         '
         Me.txtSoTKNganHang.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSoTKNganHang.Location = New System.Drawing.Point(618, 237)
+        Me.txtSoTKNganHang.Location = New System.Drawing.Point(618, 228)
         Me.txtSoTKNganHang.Name = "txtSoTKNganHang"
         Me.txtSoTKNganHang.Size = New System.Drawing.Size(321, 24)
         Me.txtSoTKNganHang.TabIndex = 56
@@ -481,7 +481,7 @@ Partial Class FrmMain
         '
         Me.Label24.AutoSize = True
         Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(455, 237)
+        Me.Label24.Location = New System.Drawing.Point(455, 228)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(146, 18)
         Me.Label24.TabIndex = 60
@@ -490,7 +490,7 @@ Partial Class FrmMain
         'txtDiaChiCoQuan
         '
         Me.txtDiaChiCoQuan.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDiaChiCoQuan.Location = New System.Drawing.Point(169, 275)
+        Me.txtDiaChiCoQuan.Location = New System.Drawing.Point(169, 266)
         Me.txtDiaChiCoQuan.Multiline = True
         Me.txtDiaChiCoQuan.Name = "txtDiaChiCoQuan"
         Me.txtDiaChiCoQuan.Size = New System.Drawing.Size(256, 29)
@@ -499,7 +499,7 @@ Partial Class FrmMain
         'txtNgheNghiep
         '
         Me.txtNgheNghiep.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNgheNghiep.Location = New System.Drawing.Point(168, 240)
+        Me.txtNgheNghiep.Location = New System.Drawing.Point(168, 231)
         Me.txtNgheNghiep.Name = "txtNgheNghiep"
         Me.txtNgheNghiep.Size = New System.Drawing.Size(256, 24)
         Me.txtNgheNghiep.TabIndex = 53
@@ -508,7 +508,7 @@ Partial Class FrmMain
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(6, 240)
+        Me.Label18.Location = New System.Drawing.Point(6, 231)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(114, 18)
         Me.Label18.TabIndex = 59
@@ -518,7 +518,7 @@ Partial Class FrmMain
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(7, 278)
+        Me.Label17.Location = New System.Drawing.Point(7, 269)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(134, 18)
         Me.Label17.TabIndex = 58
@@ -527,7 +527,7 @@ Partial Class FrmMain
         'txtDiaChiThuongTru
         '
         Me.txtDiaChiThuongTru.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDiaChiThuongTru.Location = New System.Drawing.Point(170, 167)
+        Me.txtDiaChiThuongTru.Location = New System.Drawing.Point(170, 158)
         Me.txtDiaChiThuongTru.Multiline = True
         Me.txtDiaChiThuongTru.Name = "txtDiaChiThuongTru"
         Me.txtDiaChiThuongTru.Size = New System.Drawing.Size(255, 29)
@@ -537,7 +537,7 @@ Partial Class FrmMain
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(6, 167)
+        Me.Label11.Location = New System.Drawing.Point(6, 158)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(147, 18)
         Me.Label11.TabIndex = 57
@@ -546,7 +546,7 @@ Partial Class FrmMain
         'txtCMND
         '
         Me.txtCMND.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCMND.Location = New System.Drawing.Point(169, 131)
+        Me.txtCMND.Location = New System.Drawing.Point(169, 122)
         Me.txtCMND.Name = "txtCMND"
         Me.txtCMND.Size = New System.Drawing.Size(256, 24)
         Me.txtCMND.TabIndex = 51
@@ -555,7 +555,7 @@ Partial Class FrmMain
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(7, 137)
+        Me.Label8.Location = New System.Drawing.Point(7, 128)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(156, 18)
         Me.Label8.TabIndex = 54
@@ -564,7 +564,7 @@ Partial Class FrmMain
         'txtQuocTich
         '
         Me.txtQuocTich.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtQuocTich.Location = New System.Drawing.Point(767, 96)
+        Me.txtQuocTich.Location = New System.Drawing.Point(767, 87)
         Me.txtQuocTich.Name = "txtQuocTich"
         Me.txtQuocTich.Size = New System.Drawing.Size(172, 24)
         Me.txtQuocTich.TabIndex = 47
@@ -573,7 +573,7 @@ Partial Class FrmMain
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(649, 99)
+        Me.Label7.Location = New System.Drawing.Point(649, 90)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(88, 18)
         Me.Label7.TabIndex = 50
@@ -582,7 +582,7 @@ Partial Class FrmMain
         'txtNoiSinh
         '
         Me.txtNoiSinh.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNoiSinh.Location = New System.Drawing.Point(118, 99)
+        Me.txtNoiSinh.Location = New System.Drawing.Point(118, 90)
         Me.txtNoiSinh.Name = "txtNoiSinh"
         Me.txtNoiSinh.Size = New System.Drawing.Size(425, 24)
         Me.txtNoiSinh.TabIndex = 46
@@ -591,7 +591,7 @@ Partial Class FrmMain
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(10, 102)
+        Me.Label6.Location = New System.Drawing.Point(10, 93)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(78, 18)
         Me.Label6.TabIndex = 49
@@ -601,7 +601,7 @@ Partial Class FrmMain
         '
         Me.dtNgaySinh.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtNgaySinh.Location = New System.Drawing.Point(356, 66)
+        Me.dtNgaySinh.Location = New System.Drawing.Point(356, 57)
         Me.dtNgaySinh.Name = "dtNgaySinh"
         Me.dtNgaySinh.Size = New System.Drawing.Size(187, 24)
         Me.dtNgaySinh.TabIndex = 45
@@ -610,7 +610,7 @@ Partial Class FrmMain
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(250, 72)
+        Me.Label5.Location = New System.Drawing.Point(250, 63)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(89, 18)
         Me.Label5.TabIndex = 48
@@ -619,7 +619,7 @@ Partial Class FrmMain
         'txtTinhTrang
         '
         Me.txtTinhTrang.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTinhTrang.Location = New System.Drawing.Point(125, 68)
+        Me.txtTinhTrang.Location = New System.Drawing.Point(125, 59)
         Me.txtTinhTrang.Name = "txtTinhTrang"
         Me.txtTinhTrang.Size = New System.Drawing.Size(114, 24)
         Me.txtTinhTrang.TabIndex = 43
@@ -630,7 +630,7 @@ Partial Class FrmMain
         Me.cbGioiTinh.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbGioiTinh.FormattingEnabled = True
         Me.cbGioiTinh.Items.AddRange(New Object() {"Nữ ", "Nam"})
-        Me.cbGioiTinh.Location = New System.Drawing.Point(810, 33)
+        Me.cbGioiTinh.Location = New System.Drawing.Point(810, 24)
         Me.cbGioiTinh.Name = "cbGioiTinh"
         Me.cbGioiTinh.Size = New System.Drawing.Size(129, 24)
         Me.cbGioiTinh.TabIndex = 42
@@ -639,7 +639,7 @@ Partial Class FrmMain
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(26, 71)
+        Me.Label4.Location = New System.Drawing.Point(26, 62)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(89, 18)
         Me.Label4.TabIndex = 44
@@ -648,7 +648,7 @@ Partial Class FrmMain
         'txtHoVaTen
         '
         Me.txtHoVaTen.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtHoVaTen.Location = New System.Drawing.Point(343, 34)
+        Me.txtHoVaTen.Location = New System.Drawing.Point(343, 25)
         Me.txtHoVaTen.Name = "txtHoVaTen"
         Me.txtHoVaTen.Size = New System.Drawing.Size(348, 24)
         Me.txtHoVaTen.TabIndex = 41
@@ -657,7 +657,7 @@ Partial Class FrmMain
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(250, 37)
+        Me.Label2.Location = New System.Drawing.Point(250, 28)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(87, 18)
         Me.Label2.TabIndex = 40
@@ -667,7 +667,7 @@ Partial Class FrmMain
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(8, 37)
+        Me.Label13.Location = New System.Drawing.Point(8, 28)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(111, 18)
         Me.Label13.TabIndex = 39
@@ -677,7 +677,7 @@ Partial Class FrmMain
         '
         Me.txtMaKH.Enabled = False
         Me.txtMaKH.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMaKH.Location = New System.Drawing.Point(125, 34)
+        Me.txtMaKH.Location = New System.Drawing.Point(125, 25)
         Me.txtMaKH.Name = "txtMaKH"
         Me.txtMaKH.Size = New System.Drawing.Size(114, 24)
         Me.txtMaKH.TabIndex = 38
