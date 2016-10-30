@@ -36,6 +36,7 @@
             btnCapNhatKhachHang.Enabled = False
             btnXoaKhachHang.Enabled = False
         End If
+        ds.Dispose()
     End Sub
 
     'Ham kiem tra du lieu nhap vao da dung chua
@@ -209,15 +210,40 @@
         End If
     End Sub
 
-    Private Sub DataGridViewKhachHang_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewKhachHang.CellContentClick
-        txtMaKH.Text = e.RowIndex.ToString
+    'Add data len form
+    Private Sub LoadTextBox()
+        txtHoVaTen.DataBindings.Clear()
+        txtHoVaTen.DataBindings.Add("Text", DataGridViewKhachHang.DataSource, "hovaten")
 
-        If e.RowIndex >= 0 Then
-            Dim row As DataGridViewRow
-            row = Me.DataGridViewKhachHang.Rows(e.RowIndex)
-            'txtMaKH.Text = row.Cells(0).Value.ToString
-            txtHoVaTen.Text = row.Cells(1).Value.ToString
-        End If
+
+        'gioitinh bit,
+        '@tinhtrang nvarchar(10),
+        '@ngaysinh SMALLDATETIME ,
+        '@noisinh nvarchar(50),
+        '@quoctich nvarchar(50),
+        '@socmnd varchar(15),
+        '@ngaycap SMALLDATETIME ,
+        '@noicap nvarchar(150),
+        '@diachithuongtru nvarchar(150),
+        '@nghenghiep nvarchar(150),
+        '@dienthoai varchar(15),
+        '@tencoquan nvarchar(150),
+        '@diachicoquan nvarchar(150),
+        '@thunhapmotnam float,
+        '@sotk varchar
+    End Sub
+    Private Sub DataGridViewKhachHang_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewKhachHang.CellContentClick
+        LoadTextBox()
+        'txtMaKH.Text = e.RowIndex.ToString
+        'txtHoVaTen.Text = e.RowIndex.ToString
+        'txtTinhTrang.Text = e.ColumnIndex.ToString
+        'If e.RowIndex >= 0 Then
+        '    Dim row As DataGridViewRow
+        '    row = Me.DataGridViewKhachHang.Rows(e.RowIndex)
+        '    'txtMaKH.Text = row.Cells(0).Value.ToString
+        '    'txtHoVaTen.Text = row.Cells(1).Value.ToString
+
+        'End If
         'Day toan bo data tu grid len form
         '       [hovaten] [nvarchar](50) NULL,
         '[gioitinh] [bit] NULL,

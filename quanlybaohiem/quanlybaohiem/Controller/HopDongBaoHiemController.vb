@@ -93,6 +93,7 @@ Public Class HopDongBaoHiemController
 
             cmd.ExecuteNonQuery()
             myDbConnecter.DongKetNoi()
+            cmd.Dispose()
             If isUpdate Then
                 MessageBox.Show("Cập nhật thông tin hợp đồng thành công")
             Else
@@ -101,6 +102,7 @@ Public Class HopDongBaoHiemController
             Return True
         Catch ex As Exception
             myDbConnecter.DongKetNoi()
+            cmd.Dispose()
             If isUpdate Then
                 MessageBox.Show("Cập nhật thông tin hợp đồng thất bại")
             Else
