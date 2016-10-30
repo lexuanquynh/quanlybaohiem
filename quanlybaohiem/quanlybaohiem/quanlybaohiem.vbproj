@@ -70,6 +70,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\BaoCaoDoanhThu.vb" />
     <Compile Include="Controller\HopDongBaoHiemController.vb" />
     <Compile Include="Controller\KhachHangController.vb" />
     <Compile Include="Controller\TraCuuBaoHiemController.vb" />
