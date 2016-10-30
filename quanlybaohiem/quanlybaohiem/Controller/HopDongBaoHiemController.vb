@@ -139,4 +139,19 @@ Public Class HopDongBaoHiemController
             Return False
         End Try
     End Function
+
+    'Ham tim kiem hop dong bao hiem
+    Public Function TimKiemBaoHiem(sTuKhoa As String) As DataTable
+        Dim myDbConnecter As MyDBConnector
+        myDbConnecter = New MyDBConnector()
+        con = myDbConnecter.TaoKetNoi()
+
+        Dim sTruyVan As String = "select * from Hopdong where IDKhachHang like N'%" + sTuKhoa + "%' or maHD like N'%" + sTuKhoa + "%' or spbaohiem like N'%" + sTuKhoa + "%' or sotienbaohiem like N'%" + sTuKhoa + "%' or kyhanbaohiem like N'%" + sTuKhoa + "%'"
+        Dim da As SqlDataAdapter = New SqlDataAdapter(sTruyVan, con)
+        Dim dt As DataTable = New DataTable
+        da.Fill(dt)
+
+        myDbConnecter.DongKetNoi()
+        Return dt
+    End Function
 End Class

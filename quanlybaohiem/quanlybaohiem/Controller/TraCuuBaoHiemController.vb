@@ -39,6 +39,18 @@ Public Class TraCuuBaoHiemController
 
     Protected Friend Const DE_PRODUCE_INSERT_HOPDONG As String = "insertdataintotableHD"
     Protected Friend Const DE_PRODUCE_UPDATE_HOPDONG As String = "updatedatainsidetableHD"
+
+
+    Protected Friend Const DE_HOADON_SOHOADON As String = "soHoadon"
+    Protected Friend Const DE_HOADON_MAHD As String = "maHD"
+    Protected Friend Const DE_HOADON_NGAYTHU As String = "ngaythu"
+    Protected Friend Const DE_HOADON_CACHTHUC As String = "cachthuc"
+    Protected Friend Const DE_HOADON_SOTIEN As String = "sotien"
+
+
+    Protected Friend Const DE_PRODUCE_INSERT_HOADON As String = "InsertDataIntoTableHoadon"
+    Protected Friend Const DE_PRODUCE_UPDATE_HOADON As String = "UpdateDataInsideTableHoadon"
+    Protected Friend Const DE_PRODUCE_DELETE_HOADON As String = "DeleteDataFromTableHoadon"
  
     Public Function ChinhSuaThongTinBaoHiem(ByVal isUpdate As Boolean, ByVal IDKhachHang As Integer, ByVal spbaohiem As String, sotienbaohiem As Double,
                                    ByVal kyhanbaohiem As String, ByVal dinhkybaohiem As String, ByVal phibaohiemdinhky As Double,
@@ -97,17 +109,112 @@ Public Class TraCuuBaoHiemController
     End Function
 
     'Ham tim kiem thong tin bảo hiểm
-    Public Function TimKiemBaoHiem(sTuKhoa As String) As DataTable
+    Public Function TraCuuHopDongBaoHiemTheoNgay(ByVal ngay As String, ByVal thang As String, ByVal nam As String) As DataTable
         Dim myDbConnecter As MyDBConnector
         myDbConnecter = New MyDBConnector()
         con = myDbConnecter.TaoKetNoi()
 
-        Dim sTruyVan As String = "select * from Hopdong where IDKhachHang like N'%" + sTuKhoa + "%' or maHD like N'%" + sTuKhoa + "%' or spbaohiem like N'%" + sTuKhoa + "%' or sotienbaohiem like N'%" + sTuKhoa + "%' or kyhanbaohiem like N'%" + sTuKhoa + "%'"
+        Dim sTruyVan As String = String.Format("select * from Hopdong where day(ngaycohieuluc) = {0} and month(ngaycohieuluc) = {1}", ngay, thang)
         Dim da As SqlDataAdapter = New SqlDataAdapter(sTruyVan, con)
         Dim dt As DataTable = New DataTable
         da.Fill(dt)
 
         myDbConnecter.DongKetNoi()
         Return dt
+    End Function
+
+    '    @soHoadon int,
+    '@maHD int,
+    '@ngaythu smalldatetime,
+    '@cachthuc nvarchar (50),
+    '@sotien float
+    'Chinh sua thong tin hoa don
+    Public Function ChinhSuaThongTinHoaDon(ByVal isUpdate As Boolean, ByVal soHoadon As Integer, ByVal maHD As Integer, ByVal ngaythu As String,
+                                           cachthuc As String, ByVal sotien As Double) As Boolean
+        Dim myDbConnecter As MyDBConnector
+        myDbConnecter = New MyDBConnector()
+        con = myDbConnecter.TaoKetNoi()
+
+        Dim cmd As New SqlCommand
+
+        cmd.Connection = con
+        If isUpdate Then
+            cmd.CommandText = DE_PRODUCE_UPDATE_HOADON
+        Else
+            cmd.CommandText = DE_PRODUCE_INSERT_HOADON
+        End If
+
+        cmd.CommandType = CommandType.StoredProcedure
+
+        Try
+            If isUpdate Then
+                cmd.Parameters.AddWithValue(DE_HOADON_SOHOADON, soHoadon)
+            End If
+            cmd.Parameters.AddWithValue(DE_HOADON_MAHD, maHD)
+            cmd.Parameters.AddWithValue(DE_HOADON_NGAYTHU, DateTime.Parse(ngaythu))
+            cmd.Parameters.AddWithValue(DE_HOADON_CACHTHUC, cachthuc)
+            cmd.Parameters.AddWithValue(DE_HOADON_SOTIEN, sotien)
+            cmd.ExecuteNonQuery()
+            myDbConnecter.DongKetNoi()
+            cmd.Dispose()
+
+            If isUpdate Then
+                MessageBox.Show("Cập nhật thông tin hóa đơn thành công")
+            Else
+                MessageBox.Show("Thêm mới thông tin hóa đơn thành công")
+            End If
+            Return True
+        Catch ex As Exception
+            myDbConnecter.DongKetNoi()
+            cmd.Dispose()
+            If isUpdate Then
+                MessageBox.Show("Cập nhật thông tin hóa đơn thất bại")
+            Else
+                MessageBox.Show("Thêm mới thông tin hóa đơn thất bại")
+            End If
+            Return False
+        End Try
+    End Function
+
+    'Load toan bo danh sach khach hang
+    Public Function LoadAllHoaDon() As DataSet
+        Dim myDbConnecter As MyDBConnector
+        myDbConnecter = New MyDBConnector()
+        con = myDbConnecter.TaoKetNoi()
+
+        Dim ds As New DataSet
+        Dim sqlcmd As String
+        sqlcmd = "select * from " + TABLE_HOADON
+        Dim da As New SqlDataAdapter(sqlcmd, con)
+        da.Fill(ds)
+        myDbConnecter.DongKetNoi()
+        da.Dispose()
+
+        Return ds
+    End Function
+
+    'Ham xoa hoa don
+    Public Function XoaThongTinHoaDon(soHoadon As Integer) As Boolean
+        Dim myDbConnecter As MyDBConnector
+        myDbConnecter = New MyDBConnector()
+        con = myDbConnecter.TaoKetNoi()
+
+        Dim cmd As New SqlCommand
+        cmd.Connection = con
+        cmd.CommandText = DE_PRODUCE_DELETE_HOADON
+        cmd.CommandType = CommandType.StoredProcedure
+        Try
+            cmd.Parameters.AddWithValue(DE_HOADON_SOHOADON, soHoadon)
+            cmd.ExecuteNonQuery()
+            myDbConnecter.DongKetNoi()
+            cmd.Dispose()
+            MessageBox.Show("Xóa hóa đơn thành công")
+            Return True
+        Catch ex As Exception
+            myDbConnecter.DongKetNoi()
+            cmd.Dispose()
+            MessageBox.Show("Xóa hóa đơn thất bại")
+            Return False
+        End Try
     End Function
 End Class

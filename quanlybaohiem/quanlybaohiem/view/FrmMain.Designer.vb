@@ -124,7 +124,7 @@ Partial Class FrmMain
         Me.dtNgayThuHoaDon = New System.Windows.Forms.DateTimePicker()
         Me.btnXoaHoaDon = New System.Windows.Forms.Button()
         Me.btnCapNhatHoaDon = New System.Windows.Forms.Button()
-        Me.btnLuuHoaDon = New System.Windows.Forms.Button()
+        Me.btnTaoHoaDon = New System.Windows.Forms.Button()
         Me.txtMaHoaDon = New System.Windows.Forms.TextBox()
         Me.Label39 = New System.Windows.Forms.Label()
         Me.txtSoTienHoaDon = New System.Windows.Forms.TextBox()
@@ -132,7 +132,7 @@ Partial Class FrmMain
         Me.Label40 = New System.Windows.Forms.Label()
         Me.Label41 = New System.Windows.Forms.Label()
         Me.Label42 = New System.Windows.Forms.Label()
-        Me.txtMaHopDong = New System.Windows.Forms.TextBox()
+        Me.txtMaHopDongHoaDon = New System.Windows.Forms.TextBox()
         Me.Label43 = New System.Windows.Forms.Label()
         Me.Label44 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -150,6 +150,7 @@ Partial Class FrmMain
         Me.btnXuatBaoCaoTrongNgay = New System.Windows.Forms.Button()
         Me.txtThucThuTrongNgay = New System.Windows.Forms.TextBox()
         Me.Label48 = New System.Windows.Forms.Label()
+        Me.btnTimKiemHoaDon = New System.Windows.Forms.Button()
         Me.TabControlMain.SuspendLayout()
         Me.TabPageQuanLyKhachHang.SuspendLayout()
         Me.GroupBoxTruyVanKhachHang.SuspendLayout()
@@ -1156,6 +1157,7 @@ Partial Class FrmMain
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.btnTimKiemHoaDon)
         Me.GroupBox3.Controls.Add(Me.DataGridViewThongTinHoaDon)
         Me.GroupBox3.Controls.Add(Me.txTimKiemHoaDon)
         Me.GroupBox3.Controls.Add(Me.Label38)
@@ -1169,7 +1171,7 @@ Partial Class FrmMain
         'DataGridViewThongTinHoaDon
         '
         Me.DataGridViewThongTinHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewThongTinHoaDon.Location = New System.Drawing.Point(10, 49)
+        Me.DataGridViewThongTinHoaDon.Location = New System.Drawing.Point(6, 55)
         Me.DataGridViewThongTinHoaDon.Name = "DataGridViewThongTinHoaDon"
         Me.DataGridViewThongTinHoaDon.ReadOnly = True
         Me.DataGridViewThongTinHoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -1198,7 +1200,7 @@ Partial Class FrmMain
         Me.GroupBox2.Controls.Add(Me.dtNgayThuHoaDon)
         Me.GroupBox2.Controls.Add(Me.btnXoaHoaDon)
         Me.GroupBox2.Controls.Add(Me.btnCapNhatHoaDon)
-        Me.GroupBox2.Controls.Add(Me.btnLuuHoaDon)
+        Me.GroupBox2.Controls.Add(Me.btnTaoHoaDon)
         Me.GroupBox2.Controls.Add(Me.txtMaHoaDon)
         Me.GroupBox2.Controls.Add(Me.Label39)
         Me.GroupBox2.Controls.Add(Me.txtSoTienHoaDon)
@@ -1206,7 +1208,7 @@ Partial Class FrmMain
         Me.GroupBox2.Controls.Add(Me.Label40)
         Me.GroupBox2.Controls.Add(Me.Label41)
         Me.GroupBox2.Controls.Add(Me.Label42)
-        Me.GroupBox2.Controls.Add(Me.txtMaHopDong)
+        Me.GroupBox2.Controls.Add(Me.txtMaHopDongHoaDon)
         Me.GroupBox2.Controls.Add(Me.Label43)
         Me.GroupBox2.Controls.Add(Me.Label44)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1227,6 +1229,7 @@ Partial Class FrmMain
         '
         'btnXoaHoaDon
         '
+        Me.btnXoaHoaDon.Enabled = False
         Me.btnXoaHoaDon.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnXoaHoaDon.Location = New System.Drawing.Point(601, 189)
         Me.btnXoaHoaDon.Name = "btnXoaHoaDon"
@@ -1237,6 +1240,7 @@ Partial Class FrmMain
         '
         'btnCapNhatHoaDon
         '
+        Me.btnCapNhatHoaDon.Enabled = False
         Me.btnCapNhatHoaDon.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCapNhatHoaDon.Location = New System.Drawing.Point(378, 189)
         Me.btnCapNhatHoaDon.Name = "btnCapNhatHoaDon"
@@ -1245,15 +1249,15 @@ Partial Class FrmMain
         Me.btnCapNhatHoaDon.Text = "&Cập nhật hóa đơn"
         Me.btnCapNhatHoaDon.UseVisualStyleBackColor = True
         '
-        'btnLuuHoaDon
+        'btnTaoHoaDon
         '
-        Me.btnLuuHoaDon.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLuuHoaDon.Location = New System.Drawing.Point(158, 189)
-        Me.btnLuuHoaDon.Name = "btnLuuHoaDon"
-        Me.btnLuuHoaDon.Size = New System.Drawing.Size(197, 37)
-        Me.btnLuuHoaDon.TabIndex = 6
-        Me.btnLuuHoaDon.Text = "&Lưu hóa đơn"
-        Me.btnLuuHoaDon.UseVisualStyleBackColor = True
+        Me.btnTaoHoaDon.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTaoHoaDon.Location = New System.Drawing.Point(158, 189)
+        Me.btnTaoHoaDon.Name = "btnTaoHoaDon"
+        Me.btnTaoHoaDon.Size = New System.Drawing.Size(197, 37)
+        Me.btnTaoHoaDon.TabIndex = 6
+        Me.btnTaoHoaDon.Text = "&Tạo mới hóa đơn"
+        Me.btnTaoHoaDon.UseVisualStyleBackColor = True
         '
         'txtMaHoaDon
         '
@@ -1317,12 +1321,12 @@ Partial Class FrmMain
         Me.Label42.TabIndex = 3
         Me.Label42.Text = "Ngày thu"
         '
-        'txtMaHopDong
+        'txtMaHopDongHoaDon
         '
-        Me.txtMaHopDong.Location = New System.Drawing.Point(328, 49)
-        Me.txtMaHopDong.Name = "txtMaHopDong"
-        Me.txtMaHopDong.Size = New System.Drawing.Size(175, 22)
-        Me.txtMaHopDong.TabIndex = 2
+        Me.txtMaHopDongHoaDon.Location = New System.Drawing.Point(328, 49)
+        Me.txtMaHopDongHoaDon.Name = "txtMaHopDongHoaDon"
+        Me.txtMaHopDongHoaDon.Size = New System.Drawing.Size(175, 22)
+        Me.txtMaHopDongHoaDon.TabIndex = 2
         '
         'Label43
         '
@@ -1489,6 +1493,16 @@ Partial Class FrmMain
         Me.Label48.TabIndex = 8
         Me.Label48.Text = "Doanh thu trong ngày"
         '
+        'btnTimKiemHoaDon
+        '
+        Me.btnTimKiemHoaDon.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTimKiemHoaDon.Location = New System.Drawing.Point(328, 13)
+        Me.btnTimKiemHoaDon.Name = "btnTimKiemHoaDon"
+        Me.btnTimKiemHoaDon.Size = New System.Drawing.Size(183, 35)
+        Me.btnTimKiemHoaDon.TabIndex = 17
+        Me.btnTimKiemHoaDon.Text = "&Tìm kiếm hóa đơn"
+        Me.btnTimKiemHoaDon.UseVisualStyleBackColor = True
+        '
         'FrmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1629,7 +1643,7 @@ Partial Class FrmMain
     Friend WithEvents dtNgayThuHoaDon As System.Windows.Forms.DateTimePicker
     Friend WithEvents btnXoaHoaDon As System.Windows.Forms.Button
     Friend WithEvents btnCapNhatHoaDon As System.Windows.Forms.Button
-    Friend WithEvents btnLuuHoaDon As System.Windows.Forms.Button
+    Friend WithEvents btnTaoHoaDon As System.Windows.Forms.Button
     Friend WithEvents txtMaHoaDon As System.Windows.Forms.TextBox
     Friend WithEvents Label39 As System.Windows.Forms.Label
     Friend WithEvents txtSoTienHoaDon As System.Windows.Forms.TextBox
@@ -1637,7 +1651,7 @@ Partial Class FrmMain
     Friend WithEvents Label40 As System.Windows.Forms.Label
     Friend WithEvents Label41 As System.Windows.Forms.Label
     Friend WithEvents Label42 As System.Windows.Forms.Label
-    Friend WithEvents txtMaHopDong As System.Windows.Forms.TextBox
+    Friend WithEvents txtMaHopDongHoaDon As System.Windows.Forms.TextBox
     Friend WithEvents Label43 As System.Windows.Forms.Label
     Friend WithEvents Label44 As System.Windows.Forms.Label
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
@@ -1656,5 +1670,6 @@ Partial Class FrmMain
     Friend WithEvents Label48 As System.Windows.Forms.Label
     Friend WithEvents btnTimKiemKhachHang As System.Windows.Forms.Button
     Friend WithEvents btnTimKiemHopDong As System.Windows.Forms.Button
+    Friend WithEvents btnTimKiemHoaDon As System.Windows.Forms.Button
 
 End Class
