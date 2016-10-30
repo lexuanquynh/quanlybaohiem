@@ -57,6 +57,10 @@
         Dim mKhachHangController As KhachHangController
         mKhachHangController = New KhachHangController()
 
+        Dim makhachhang As Integer
+        If Double.TryParse(txtMaKH.Text, makhachhang) Then
+
+        End If
         Dim gioitinh As Integer
         gioitinh = cbGioiTinh.SelectedIndex
 
@@ -69,7 +73,7 @@
             Return
         End If
 
-        If mKhachHangController.ChinhSuaThongTinKhachHang(False, txtMaKH.Text, txtHoVaTen.Text, gioitinh, txtTinhTrang.Text,
+        If mKhachHangController.ChinhSuaThongTinKhachHang(False, makhachhang, txtHoVaTen.Text, gioitinh, txtTinhTrang.Text,
                                                  dtNgaySinh.Text, txtNoiSinh.Text, txtQuocTich.Text,
                                                  txtCMND.Text, dtNgayCMND.Text, txtNoiCapCMND.Text,
                                                  txtDiaChiThuongTru.Text, txtNgheNghiep.Text, txtSDT.Text, txtTenCoQuan.Text,
