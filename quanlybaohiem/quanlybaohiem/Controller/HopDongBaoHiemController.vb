@@ -38,23 +38,9 @@ Public Class HopDongBaoHiemController
 
     Protected Friend Const DE_PRODUCE_INSERT_HOPDONG As String = "insertdataintotableHD"
     Protected Friend Const DE_PRODUCE_UPDATE_HOPDONG As String = "UpdateDataInsideTableHD"
-    ' @IdKhachHang int,
-    '@spbaohiem nvarchar(150),
-    '@sotienbaohiem float,
-    '@kyhanbaohiem nvarchar(50),
-    '@dinhkybaohiem nvarchar(50) ,
-    '@phibaohiemdinhky float,
-    '@sotiendaohan float,
-    '@ngaycohieuluc SMALLDATETIME,
-    '@sanphambaohiembosung nvarchar(150) ,
-    '@phuongthuctra nvarchar(50),
-    '@nguongocphibaohiem nvarchar(50),
-    '@benhvienduocchitra nvarchar(50)
+    Protected Friend Const DE_PRODUCE_DELETE_HOPDONG As String = "DeleteDataFromTableHD"
 
-    'Ham insert hoac update thong tin bao hiem
-    'Neu isUpdate = true: update
-    '= False = tao moi
-    Public Function ChinhSuaThongTinBaoHiem(ByVal isUpdate As Boolean,
+    Public Function ChinhSuaThongTinBaoHiem(ByVal isUpdate As Boolean, ByVal maHopDong As Integer,
                                             ByVal IdKhachHang As Integer, ByVal spbaohiem As String,
                                             ByVal sotienbaohiem As Double, ByVal kyhanbaohiem As String,
                                             ByVal dinhkybaohiem As String, ByVal phibaohiemdinhky As Double,
@@ -78,6 +64,7 @@ Public Class HopDongBaoHiemController
         cmd.CommandType = CommandType.StoredProcedure
 
         Try
+            cmd.Parameters.AddWithValue(de_hop_mahd, maHopDong)
             cmd.Parameters.AddWithValue(de_hop_makhachhang, IdKhachHang)
             cmd.Parameters.AddWithValue(de_hop_sanphambaohiem, spbaohiem)
             cmd.Parameters.AddWithValue(de_hop_sotienbaohiem, sotienbaohiem)
@@ -112,4 +99,44 @@ Public Class HopDongBaoHiemController
         End Try
     End Function
 
+    'Load toan bo danh sach baohiem
+    Public Function LoadAllBaoHiem() As DataSet
+        Dim myDbConnecter As MyDBConnector
+        myDbConnecter = New MyDBConnector()
+        con = myDbConnecter.TaoKetNoi()
+
+        Dim ds As New DataSet
+        Dim sqlcmd As String
+
+        sqlcmd = "select * from " + TABLE_HOPDONG
+        Dim da As New SqlDataAdapter(sqlcmd, con)
+        da.Fill(ds)
+        myDbConnecter.DongKetNoi()
+        da.Dispose()
+
+        Return ds
+    End Function
+
+    'Ham xoa HD bao hiem
+    Public Function XoaThongTinBaoHiem(IDHDBaoHiem As Integer) As Boolean
+        Dim myDbConnecter As MyDBConnector
+        myDbConnecter = New MyDBConnector()
+        con = myDbConnecter.TaoKetNoi()
+
+        Dim cmd As New SqlCommand
+        cmd.Connection = con
+        cmd.CommandText = DE_PRODUCE_DELETE_HOPDONG
+        cmd.CommandType = CommandType.StoredProcedure
+        Try
+            cmd.Parameters.AddWithValue(de_hop_mahd, IDHDBaoHiem)
+            cmd.ExecuteNonQuery()
+            myDbConnecter.DongKetNoi()
+            cmd.Dispose()
+            Return True
+        Catch ex As Exception
+            myDbConnecter.DongKetNoi()
+            cmd.Dispose()
+            Return False
+        End Try
+    End Function
 End Class

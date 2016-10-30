@@ -699,8 +699,6 @@ Partial Class FrmMain
         'GroupBoxTruyVanThongTinBaoHiem
         '
         Me.GroupBoxTruyVanThongTinBaoHiem.Controls.Add(Me.btnTimKiemHopDong)
-        Me.GroupBoxTruyVanThongTinBaoHiem.Controls.Add(Me.btnXoaHoSoBaoHiem)
-        Me.GroupBoxTruyVanThongTinBaoHiem.Controls.Add(Me.btnCapNhatHoSoBaoHiem)
         Me.GroupBoxTruyVanThongTinBaoHiem.Controls.Add(Me.DataGridViewThongTinBaoHiem)
         Me.GroupBoxTruyVanThongTinBaoHiem.Controls.Add(Me.txtTruyvanBaoHiem)
         Me.GroupBoxTruyVanThongTinBaoHiem.Controls.Add(Me.Label37)
@@ -724,20 +722,22 @@ Partial Class FrmMain
         '
         'btnXoaHoSoBaoHiem
         '
+        Me.btnXoaHoSoBaoHiem.Enabled = False
         Me.btnXoaHoSoBaoHiem.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnXoaHoSoBaoHiem.Location = New System.Drawing.Point(520, 205)
+        Me.btnXoaHoSoBaoHiem.Location = New System.Drawing.Point(502, 298)
         Me.btnXoaHoSoBaoHiem.Name = "btnXoaHoSoBaoHiem"
-        Me.btnXoaHoSoBaoHiem.Size = New System.Drawing.Size(238, 36)
+        Me.btnXoaHoSoBaoHiem.Size = New System.Drawing.Size(189, 36)
         Me.btnXoaHoSoBaoHiem.TabIndex = 80
         Me.btnXoaHoSoBaoHiem.Text = "&Xóa hồ sơ bảo hiểm"
         Me.btnXoaHoSoBaoHiem.UseVisualStyleBackColor = True
         '
         'btnCapNhatHoSoBaoHiem
         '
+        Me.btnCapNhatHoSoBaoHiem.Enabled = False
         Me.btnCapNhatHoSoBaoHiem.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCapNhatHoSoBaoHiem.Location = New System.Drawing.Point(167, 205)
+        Me.btnCapNhatHoSoBaoHiem.Location = New System.Drawing.Point(250, 298)
         Me.btnCapNhatHoSoBaoHiem.Name = "btnCapNhatHoSoBaoHiem"
-        Me.btnCapNhatHoSoBaoHiem.Size = New System.Drawing.Size(246, 36)
+        Me.btnCapNhatHoSoBaoHiem.Size = New System.Drawing.Size(217, 36)
         Me.btnCapNhatHoSoBaoHiem.TabIndex = 79
         Me.btnCapNhatHoSoBaoHiem.Text = "&Cập nhật hồ sơ bảo hiểm"
         Me.btnCapNhatHoSoBaoHiem.UseVisualStyleBackColor = True
@@ -791,7 +791,9 @@ Partial Class FrmMain
         'GroupBoxThemThongTinBaoHiem
         '
         Me.GroupBoxThemThongTinBaoHiem.Controls.Add(Me.btnHuyBoHopDongBH)
+        Me.GroupBoxThemThongTinBaoHiem.Controls.Add(Me.btnXoaHoSoBaoHiem)
         Me.GroupBoxThemThongTinBaoHiem.Controls.Add(Me.btnThemMoiHopDongBH)
+        Me.GroupBoxThemThongTinBaoHiem.Controls.Add(Me.btnCapNhatHoSoBaoHiem)
         Me.GroupBoxThemThongTinBaoHiem.Controls.Add(Me.Label36)
         Me.GroupBoxThemThongTinBaoHiem.Controls.Add(Me.txtMaKhachHangBH)
         Me.GroupBoxThemThongTinBaoHiem.Controls.Add(Me.Label35)
@@ -834,7 +836,7 @@ Partial Class FrmMain
         'btnHuyBoHopDongBH
         '
         Me.btnHuyBoHopDongBH.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnHuyBoHopDongBH.Location = New System.Drawing.Point(448, 292)
+        Me.btnHuyBoHopDongBH.Location = New System.Drawing.Point(721, 298)
         Me.btnHuyBoHopDongBH.Name = "btnHuyBoHopDongBH"
         Me.btnHuyBoHopDongBH.Size = New System.Drawing.Size(188, 36)
         Me.btnHuyBoHopDongBH.TabIndex = 88
@@ -844,7 +846,7 @@ Partial Class FrmMain
         'btnThemMoiHopDongBH
         '
         Me.btnThemMoiHopDongBH.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnThemMoiHopDongBH.Location = New System.Drawing.Point(244, 292)
+        Me.btnThemMoiHopDongBH.Location = New System.Drawing.Point(37, 298)
         Me.btnThemMoiHopDongBH.Name = "btnThemMoiHopDongBH"
         Me.btnThemMoiHopDongBH.Size = New System.Drawing.Size(188, 36)
         Me.btnThemMoiHopDongBH.TabIndex = 87

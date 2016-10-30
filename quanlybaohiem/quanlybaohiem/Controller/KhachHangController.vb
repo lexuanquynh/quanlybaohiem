@@ -44,6 +44,7 @@ Public Class KhachHangController
 
     Protected Friend Const DE_PRODUCE_INSERT_CUSTOM As String = "insertdataintotableKH"
     Protected Friend Const DE_PRODUCE_UPDATE_CUSTOM As String = "updatedatainsidetableKH"
+    Protected Friend Const DE_PRODUCE_DELETE_CUSTOM As String = "deletedatafromtableKH"
 
     'define table
     Protected Friend Const TABLE_TINHTRANGQUANHE As String = "tinhtrangquanhe"
@@ -65,7 +66,6 @@ Public Class KhachHangController
         con = myDbConnecter.TaoKetNoi()
 
         Dim cmd As New SqlCommand
-
         cmd.Connection = con
         If isUpdate Then
             cmd.CommandText = DE_PRODUCE_UPDATE_CUSTOM
@@ -133,6 +133,28 @@ Public Class KhachHangController
         Return dt
     End Function
 
+    'Ham xoa khach hang
+    Public Function XoaThongTinKhachHang(IDKhachHang As Integer) As Boolean
+        Dim myDbConnecter As MyDBConnector
+        myDbConnecter = New MyDBConnector()
+        con = myDbConnecter.TaoKetNoi()
+
+       Dim cmd As New SqlCommand
+        cmd.Connection = con
+        cmd.CommandText = DE_PRODUCE_DELETE_CUSTOM
+        cmd.CommandType = CommandType.StoredProcedure
+        Try
+            cmd.Parameters.AddWithValue(DE_CUS_IDKHACHHANG, IDKhachHang)
+            cmd.ExecuteNonQuery()
+            myDbConnecter.DongKetNoi()
+            cmd.Dispose()
+            Return True
+        Catch ex As Exception
+            myDbConnecter.DongKetNoi()
+            cmd.Dispose()
+            Return False
+        End Try
+    End Function
     'Load toan bo danh sach khach hang
     Public Function LoadAllKhachHang() As DataSet
         Dim myDbConnecter As MyDBConnector

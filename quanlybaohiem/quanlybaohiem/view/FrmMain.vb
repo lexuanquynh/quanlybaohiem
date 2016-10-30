@@ -94,8 +94,16 @@
     End Sub
 
     Private Sub btnTruyVanHopDong_Click(sender As Object, e As EventArgs) Handles btnTruyVanHopDong.Click
-        ' GroupBoxThemThongTinBaoHiem.Hide()
+        GroupBoxThemThongTinBaoHiem.Show()
         GroupBoxTruyVanThongTinBaoHiem.Show()
+        Dim mTraCuuBaoHiemController As HopDongBaoHiemController
+        mTraCuuBaoHiemController = New HopDongBaoHiemController()
+
+        'Fill toan bo data len datagrid
+        Dim ds As New DataSet
+        ds = mTraCuuBaoHiemController.LoadAllBaoHiem()
+        DataGridViewThongTinBaoHiem.DataSource = ds.Tables(0)
+        ds.Dispose()
     End Sub
 
     'Check thong tin nhap dung chua tren form nhap ho so bao hiem
@@ -121,6 +129,24 @@
             Return
         End If
 
+        Dim maHopDong As Integer
+        If Double.TryParse(txtMaHDBaoHiem.Text, maHopDong) Then
+
+        Else
+            MessageBox.Show("Mã hợp đồng không đúng")
+            txtMaHDBaoHiem.Focus()
+            Return
+        End If
+
+        Dim maKhachHang As Integer
+        If Double.TryParse(txtMaKhachHangBH.Text, maKhachHang) Then
+
+        Else
+            MessageBox.Show("Mã khách hàng không đúng")
+            txtMaKhachHangBH.Focus()
+            Return
+        End If
+
         Dim phiBaoHiemDinhKy As Double
         If Double.TryParse(txtPhiBaoHiemDinhKy.Text, phiBaoHiemDinhKy) Then
 
@@ -139,7 +165,7 @@
             Return
         End If
 
-        If mHopDongBaoHiemController.ChinhSuaThongTinBaoHiem(False, txtMaKhachHangBH.Text, txtSanPhamBHBoSung.Text, sotienBaohiem,
+        If mHopDongBaoHiemController.ChinhSuaThongTinBaoHiem(False, maHopDong, maKhachHang, txtSanPhamBHBoSung.Text, sotienBaohiem,
                                                              txtKyHanBaoHiem.Text, txtDinhKyDongBaoHiem.Text, phiBaoHiemDinhKy, soTienDaoHan,
                                                              dtNgayHieuLucHD.Text, txtSanPhamBHBoSung.Text, txtPhuongThucDongBH.Text,
                                                              txtNguonGocPhiBaoHiem.Text, txtBenhVienChiTra.Text) Then
@@ -193,6 +219,15 @@
         Dim mKhachHangController As KhachHangController
         mKhachHangController = New KhachHangController()
 
+        Dim makhachHang As Integer
+        If Double.TryParse(txtMaKH.Text, makhachHang) Then
+
+        Else
+            MessageBox.Show("Mã khách hàng nhập không đúng")
+            txtMaKH.Focus()
+            Return
+
+        End If
         Dim gioitinh As Integer
         gioitinh = cbGioiTinh.SelectedIndex
 
@@ -205,7 +240,7 @@
             Return
         End If
 
-        If mKhachHangController.ChinhSuaThongTinKhachHang(True, txtMaKH.Text, txtHoVaTen.Text, gioitinh, txtTinhTrang.Text,
+        If mKhachHangController.ChinhSuaThongTinKhachHang(True, makhachHang, txtHoVaTen.Text, gioitinh, txtTinhTrang.Text,
                                                  dtNgaySinh.Text, txtNoiSinh.Text, txtQuocTich.Text,
                                                  txtCMND.Text, dtNgayCMND.Text, txtNoiCapCMND.Text,
                                                  txtDiaChiThuongTru.Text, txtNgheNghiep.Text, txtSDT.Text, txtTenCoQuan.Text,
@@ -278,6 +313,7 @@
         txtSoTKNganHang.DataBindings.Clear()
         txtSoTKNganHang.DataBindings.Add("Text", DataGridViewKhachHang.DataSource, "sotk")
     End Sub
+
     Private Sub DataGridViewKhachHang_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewKhachHang.CellContentClick
         LoadTextBoxKH()
 
@@ -289,7 +325,22 @@
     End Sub
 
     Private Sub btnXoaKhachHang_Click(sender As Object, e As EventArgs) Handles btnXoaKhachHang.Click
+        Dim mKhachHangController As KhachHangController
+        mKhachHangController = New KhachHangController()
 
+        Dim makhachhang As Integer
+        If Double.TryParse(txtMaKH.Text, makhachhang) Then
+        End If
+
+        If mKhachHangController.XoaThongTinKhachHang(makhachhang) Then
+            MessageBox.Show("Xóa khách hàng thành công!")
+            Dim ds As New DataSet
+            ds = mKhachHangController.LoadAllKhachHang()
+            DataGridViewKhachHang.DataSource = ds.Tables(0)
+            ds.Dispose()
+        Else
+            MessageBox.Show("Xóa khách hàng thất bại. Có ràng buộc data với các bảng khác!")
+        End If
     End Sub
 
     Private Sub btnTimKiemHopDong_Click(sender As Object, e As EventArgs) Handles btnTimKiemHopDong.Click
@@ -314,8 +365,138 @@
         End If
     End Sub
 
-    
+    Private Sub btnCapNhatHoSoBaoHiem_Click(sender As Object, e As EventArgs) Handles btnCapNhatHoSoBaoHiem.Click
+        Dim mHopDongBaoHiemController As HopDongBaoHiemController
+        mHopDongBaoHiemController = New HopDongBaoHiemController()
 
+        Dim maHopDong As Integer
+        If Double.TryParse(txtMaHDBaoHiem.Text, maHopDong) Then
 
-   
+        Else
+            MessageBox.Show("Mã hợp đồng không đúng")
+            txtMaHDBaoHiem.Focus()
+            Return
+        End If
+
+        Dim makhachHang As Integer
+        If Double.TryParse(txtMaKhachHangBH.Text, makhachHang) Then
+
+        Else
+            MessageBox.Show("Mã khách hàng nhập không đúng")
+            txtMaKhachHangBH.Focus()
+            Return
+        End If
+
+        Dim sotienbaohiem As Double
+        If Double.TryParse(txtSoTienBaoHiem.Text, sotienbaohiem) Then
+
+        Else
+            MessageBox.Show("Số tiền bảo hiểm nhập không đúng")
+            txtSoTienBaoHiem.Focus()
+            Return
+        End If
+
+        Dim phibaohiemdinhky As Double
+        If Double.TryParse(txtPhiBaoHiemDinhKy.Text, phibaohiemdinhky) Then
+
+        Else
+            MessageBox.Show("Phí bảo hiểm định kỳ nhập không đúng")
+            txtPhiBaoHiemDinhKy.Focus()
+            Return
+        End If
+
+        Dim sotiendaohan As Double
+        If Double.TryParse(txtSoTienDaoHanBH.Text, sotiendaohan) Then
+
+        Else
+            MessageBox.Show("Số tiền đáo hạn nhập không đúng")
+            txtSoTienDaoHanBH.Focus()
+            Return
+        End If
+
+        If mHopDongBaoHiemController.ChinhSuaThongTinBaoHiem(True, maHopDong, makhachHang, txtSanPhamBaoHiem.Text,
+                                                             sotienbaohiem, txtKyHanBaoHiem.Text, txtDinhKyDongBaoHiem.Text,
+                                                             phibaohiemdinhky, sotiendaohan, dtNgayHieuLucHD.Text,
+                                                             txtSanPhamBHBoSung.Text, txtPhuongThucDongBH.Text,
+                                                             txtNguonGocPhiBaoHiem.Text, txtBenhVienChiTra.Text) Then
+            'GroupBoxThemKH.Hide()
+            'Fill toan bo data len datagrid
+            Dim ds As New DataSet
+            ds = mHopDongBaoHiemController.LoadAllBaoHiem()
+            DataGridViewKhachHang.DataSource = ds.Tables(0)
+            ds.Dispose()
+        End If
+    End Sub
+
+    'Ham load thong tin bao hiem
+    Private Sub LoadTextBoxBaoHiem()
+        txtMaHDBaoHiem.DataBindings.Clear()
+        txtMaHDBaoHiem.DataBindings.Add("Text", DataGridViewThongTinBaoHiem.DataSource, "maHD")
+
+        txtMaKhachHangBH.DataBindings.Clear()
+        txtMaKhachHangBH.DataBindings.Add("Text", DataGridViewThongTinBaoHiem.DataSource, "IdKhachHang")
+
+        txtSanPhamBaoHiem.DataBindings.Clear()
+        txtSanPhamBaoHiem.DataBindings.Add("Text", DataGridViewThongTinBaoHiem.DataSource, "spbaohiem")
+
+        txtSoTienBaoHiem.DataBindings.Clear()
+        txtSoTienBaoHiem.DataBindings.Add("Text", DataGridViewThongTinBaoHiem.DataSource, "sotienbaohiem")
+
+        txtKyHanBaoHiem.DataBindings.Clear()
+        txtKyHanBaoHiem.DataBindings.Add("Text", DataGridViewThongTinBaoHiem.DataSource, "kyhanbaohiem")
+
+        txtDinhKyDongBaoHiem.DataBindings.Clear()
+        txtDinhKyDongBaoHiem.DataBindings.Add("Text", DataGridViewThongTinBaoHiem.DataSource, "dinhkybaohiem")
+
+        txtPhiBaoHiemDinhKy.DataBindings.Clear()
+        txtPhiBaoHiemDinhKy.DataBindings.Add("Text", DataGridViewThongTinBaoHiem.DataSource, "phibaohiemdinhky")
+
+        txtSoTienDaoHanBH.DataBindings.Clear()
+        txtSoTienDaoHanBH.DataBindings.Add("Text", DataGridViewThongTinBaoHiem.DataSource, "sotiendaohan")
+
+        dtNgayHieuLucHD.DataBindings.Clear()
+        dtNgayHieuLucHD.DataBindings.Add("Text", DataGridViewThongTinBaoHiem.DataSource, "ngaycohieuluc")
+
+        txtSanPhamBHBoSung.DataBindings.Clear()
+        txtSanPhamBHBoSung.DataBindings.Add("Text", DataGridViewThongTinBaoHiem.DataSource, "sanphambaohiembosung")
+
+        txtPhuongThucDongBH.DataBindings.Clear()
+        txtPhuongThucDongBH.DataBindings.Add("Text", DataGridViewThongTinBaoHiem.DataSource, "phuongthuctra")
+
+        txtNguonGocPhiBaoHiem.DataBindings.Clear()
+        txtNguonGocPhiBaoHiem.DataBindings.Add("Text", DataGridViewThongTinBaoHiem.DataSource, "nguongocphibaohiem")
+
+        txtBenhVienChiTra.DataBindings.Clear()
+        txtBenhVienChiTra.DataBindings.Add("Text", DataGridViewThongTinBaoHiem.DataSource, "benhvienduocchitra")
+    End Sub
+
+    Private Sub DataGridViewThongTinBaoHiem_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewThongTinBaoHiem.CellContentClick
+        LoadTextBoxBaoHiem()
+
+        btnThemMoiHopDongBH.Enabled = False
+        btnCapNhatHoSoBaoHiem.Enabled = True
+        btnXoaHoSoBaoHiem.Enabled = True
+        'btnXoaKhachHang.Enabled = True
+    End Sub
+
+    Private Sub btnXoaHoSoBaoHiem_Click(sender As Object, e As EventArgs) Handles btnXoaHoSoBaoHiem.Click
+        Dim mHopDongBaoHiemController As HopDongBaoHiemController
+        mHopDongBaoHiemController = New HopDongBaoHiemController()
+
+        Dim maHopDong As Integer
+        If Double.TryParse(txtMaHDBaoHiem.Text, maHopDong) Then
+        End If
+
+        If mHopDongBaoHiemController.XoaThongTinBaoHiem(maHopDong) Then
+            MessageBox.Show("Xóa hợp đồng bảo hiểm thành công!")
+
+            'Fill toan bo data len datagrid
+            Dim ds As New DataSet
+            ds = mHopDongBaoHiemController.LoadAllBaoHiem()
+            DataGridViewThongTinBaoHiem.DataSource = ds.Tables(0)
+            ds.Dispose()
+        Else
+            MessageBox.Show("Xóa hợp đồng bảo hiểm thất bại. Có ràng buộc data với các bảng khác!")
+        End If
+    End Sub
 End Class

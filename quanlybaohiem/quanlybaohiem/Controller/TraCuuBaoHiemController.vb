@@ -13,7 +13,6 @@ Public Class TraCuuBaoHiemController
     Protected Friend Const DE_PHI_AS As String = "Phí bảo hiểm định kỳ"
     Protected Friend Const DE_SOTIENDAOHAN_AS As String = "Số tiền đáo hạn"
     Protected Friend Const DE_NGAYHD_AS As String = "Ngày có hiệu lực"
-    Protected Friend Const DE_BOSUNG_AS As String = "Sản phẩm bảo hiểm bổ sung"
     Protected Friend Const DE_PHUONGTHUC_AS As String = "Phương thức trả"
     Protected Friend Const DE_NGUONGOCBAOHIEM_AS As String = "Nguồn gôc phí bảo hiểm"
     Protected Friend Const DE_BENHVIENCHITRA_AS As String = "Bệnh viện được chi trả"
@@ -41,7 +40,7 @@ Public Class TraCuuBaoHiemController
     Protected Friend Const DE_PRODUCE_INSERT_HOPDONG As String = "insertdataintotableHD"
     Protected Friend Const DE_PRODUCE_UPDATE_HOPDONG As String = "updatedatainsidetableHD"
  
-    Public Function ChinhSuaThongTinKhachHang(ByVal isUpdate As Boolean, ByVal IDKhachHang As Integer, ByVal spbaohiem As String, sotienbaohiem As Double,
+    Public Function ChinhSuaThongTinBaoHiem(ByVal isUpdate As Boolean, ByVal IDKhachHang As Integer, ByVal spbaohiem As String, sotienbaohiem As Double,
                                    ByVal kyhanbaohiem As String, ByVal dinhkybaohiem As String, ByVal phibaohiemdinhky As Double,
                                    ByVal sotiendaohan As Double, ByVal ngaycohieuluc As String, ByVal sanphambaohiembosung As String,
                                    ByVal phuongthuctra As String, ByVal nguongocphibaohiem As String,
@@ -111,25 +110,4 @@ Public Class TraCuuBaoHiemController
         myDbConnecter.DongKetNoi()
         Return dt
     End Function
-
-    'Load toan bo danh sach baohiem
-    Public Function LoadAllBaoHiem() As DataSet
-        Dim myDbConnecter As MyDBConnector
-        myDbConnecter = New MyDBConnector()
-        con = myDbConnecter.TaoKetNoi()
-
-        Dim ds As New DataSet
-        Dim sqlcmd As String
-
-        sqlcmd = "select * from " + TABLE_HOPDONG
-        Dim da As New SqlDataAdapter(sqlcmd, con)
-        da.Fill(ds)
-        myDbConnecter.DongKetNoi()
-        da.Dispose()
-
-        Return ds
-    End Function
-
-
-
 End Class
