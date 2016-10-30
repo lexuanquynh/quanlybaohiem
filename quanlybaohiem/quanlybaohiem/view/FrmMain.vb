@@ -1,7 +1,7 @@
 ﻿Public Class FrmMain
     Protected Friend Const TAB_QUANLY_KH As Integer = 0
     Protected Friend Const TAB_QUANLY_BAOHIEM As Integer = 1
-
+    Dim maKHToanCuc As Integer
 
     Private Sub FrmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         GroupBoxThemKH.Hide()
@@ -190,7 +190,7 @@
 
     Private Sub btnTaoHopDongBaoHiem_Click(sender As Object, e As EventArgs) Handles btnTaoHopDongBaoHiem.Click
         TabControlMain.SelectedIndex = TAB_QUANLY_BAOHIEM
-        txtMaKhachHangBH.Text = "1"
+        txtMaKhachHangBH.Text = maKHToanCuc
         GroupBoxThemThongTinBaoHiem.Show()
         GroupBoxTruyVanKhachHang.Hide()
     End Sub
@@ -271,6 +271,7 @@
         txtMaKH.DataBindings.Clear()
         txtMaKH.DataBindings.Add("Text", DataGridViewKhachHang.DataSource, "IDKhachHang")
 
+        maKHToanCuc = Integer.Parse(txtMaKH.Text)
         txtHoVaTen.DataBindings.Clear()
         txtHoVaTen.DataBindings.Add("Text", DataGridViewKhachHang.DataSource, "hovaten")
 
