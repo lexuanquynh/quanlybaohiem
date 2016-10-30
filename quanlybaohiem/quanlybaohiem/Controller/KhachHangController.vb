@@ -53,7 +53,7 @@ Public Class KhachHangController
 
     'Ham them moi khach hang hoac sua khach hang
     'bien xac dinh them moi hoac sua: isUpadte = true thi update, neu khong la them moi
-    Public Function ChinhSuaThongTinKhachHang(ByVal isUpdate As Boolean, ByVal hovaten As String, ByVal gioitinh As Integer, tinhtrang As String,
+    Public Function ChinhSuaThongTinKhachHang(ByVal isUpdate As Boolean, ByVal IDKhachHang As Integer, ByVal hovaten As String, ByVal gioitinh As Integer, tinhtrang As String,
                                      ByVal ngaysinh As String, ByVal noisinh As String, ByVal quoctich As String,
                                      ByVal socmnd As String, ByVal ngaycap As String, ByVal noicap As String,
                                      ByVal diachithuongtru As String, ByVal nghenghiep As String,
@@ -76,14 +76,17 @@ Public Class KhachHangController
         cmd.CommandType = CommandType.StoredProcedure
 
         Try
+            If isUpdate Then
+                cmd.Parameters.AddWithValue(DE_CUS_IDKHACHHANG, IDKhachHang)
+            End If
             cmd.Parameters.AddWithValue(DE_CUS_HOVATEN, hovaten)
             cmd.Parameters.AddWithValue(DE_CUS_GIOITINH, gioitinh)
             cmd.Parameters.AddWithValue(DE_CUS_TINHTRANG, tinhtrang)
-            cmd.Parameters.AddWithValue(DE_CUS_NGAYSINH, ngaysinh)
+            cmd.Parameters.AddWithValue(DE_CUS_NGAYSINH, DateTime.Parse(ngaysinh))
             cmd.Parameters.AddWithValue(DE_CUS_NOISINH, noisinh)
             cmd.Parameters.AddWithValue(DE_CUS_QUOCTICH, quoctich)
             cmd.Parameters.AddWithValue(DE_CUS_SOCMND, socmnd)
-            cmd.Parameters.AddWithValue(DE_CUS_NGAYCAP, ngaycap)
+            cmd.Parameters.AddWithValue(DE_CUS_NGAYCAP, DateTime.Parse(ngaycap))
             cmd.Parameters.AddWithValue(DE_CUS_NOICAP, noicap)
             cmd.Parameters.AddWithValue(DE_CUS_DIACHITHUONGTRU, diachithuongtru)
             cmd.Parameters.AddWithValue(DE_CUS_NGHENGHIEP, nghenghiep)

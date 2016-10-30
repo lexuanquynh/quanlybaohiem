@@ -69,7 +69,7 @@
             Return
         End If
 
-        If mKhachHangController.ChinhSuaThongTinKhachHang(False, txtHoVaTen.Text, gioitinh, txtTinhTrang.Text,
+        If mKhachHangController.ChinhSuaThongTinKhachHang(False, txtMaKH.Text, txtHoVaTen.Text, gioitinh, txtTinhTrang.Text,
                                                  dtNgaySinh.Text, txtNoiSinh.Text, txtQuocTich.Text,
                                                  txtCMND.Text, dtNgayCMND.Text, txtNoiCapCMND.Text,
                                                  txtDiaChiThuongTru.Text, txtNgheNghiep.Text, txtSDT.Text, txtTenCoQuan.Text,
@@ -90,7 +90,7 @@
     End Sub
 
     Private Sub btnTruyVanHopDong_Click(sender As Object, e As EventArgs) Handles btnTruyVanHopDong.Click
-        GroupBoxThemThongTinBaoHiem.Hide()
+        ' GroupBoxThemThongTinBaoHiem.Hide()
         GroupBoxTruyVanThongTinBaoHiem.Show()
     End Sub
 
@@ -200,12 +200,17 @@
             Return
         End If
 
-        If mKhachHangController.ChinhSuaThongTinKhachHang(True, txtHoVaTen.Text, gioitinh, txtTinhTrang.Text,
+        If mKhachHangController.ChinhSuaThongTinKhachHang(True, txtMaKH.Text, txtHoVaTen.Text, gioitinh, txtTinhTrang.Text,
                                                  dtNgaySinh.Text, txtNoiSinh.Text, txtQuocTich.Text,
                                                  txtCMND.Text, dtNgayCMND.Text, txtNoiCapCMND.Text,
                                                  txtDiaChiThuongTru.Text, txtNgheNghiep.Text, txtSDT.Text, txtTenCoQuan.Text,
                                                  txtDiaChiCoQuan.Text, 100000, txtSoTKNganHang.Text) Then
-            GroupBoxThemKH.Hide()
+            'GroupBoxThemKH.Hide()
+            'Fill toan bo data len datagrid
+            Dim ds As New DataSet
+            ds = mKhachHangController.LoadAllKhachHang()
+            DataGridViewKhachHang.DataSource = ds.Tables(0)
+            ds.Dispose()
         End If
     End Sub
 
@@ -275,6 +280,10 @@
         btnTaoHopDongBaoHiem.Enabled = True
         btnCapNhatKhachHang.Enabled = True
         btnXoaKhachHang.Enabled = True
+
+    End Sub
+
+    Private Sub btnXoaKhachHang_Click(sender As Object, e As EventArgs) Handles btnXoaKhachHang.Click
 
     End Sub
 End Class

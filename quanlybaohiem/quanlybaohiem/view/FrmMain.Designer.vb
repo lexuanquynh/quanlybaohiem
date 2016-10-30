@@ -26,20 +26,20 @@ Partial Class FrmMain
         Me.TabPageQuanLyKhachHang = New System.Windows.Forms.TabPage()
         Me.GroupBoxTruyVanKhachHang = New System.Windows.Forms.GroupBox()
         Me.btnTimKiemKhachHang = New System.Windows.Forms.Button()
-        Me.btnXoaKhachHang = New System.Windows.Forms.Button()
         Me.btnTaoHopDongBaoHiem = New System.Windows.Forms.Button()
         Me.txtTimKiemKhachHang = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.btnCapNhatKhachHang = New System.Windows.Forms.Button()
         Me.DataGridViewKhachHang = New System.Windows.Forms.DataGridView()
         Me.btnTruyVanThongTinKH = New System.Windows.Forms.Button()
         Me.btnThemKH = New System.Windows.Forms.Button()
         Me.GroupBoxThemKH = New System.Windows.Forms.GroupBox()
         Me.ButtonHuyboThemKH = New System.Windows.Forms.Button()
+        Me.btnXoaKhachHang = New System.Windows.Forms.Button()
         Me.ButtonDongYThemKH = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtTenCoQuan = New System.Windows.Forms.TextBox()
         Me.txtThuNhapHangNam = New System.Windows.Forms.TextBox()
+        Me.btnCapNhatKhachHang = New System.Windows.Forms.Button()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.txtSDT = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -221,17 +221,6 @@ Partial Class FrmMain
         Me.btnTimKiemKhachHang.Text = "&Tìm kiếm khách hàng"
         Me.btnTimKiemKhachHang.UseVisualStyleBackColor = True
         '
-        'btnXoaKhachHang
-        '
-        Me.btnXoaKhachHang.Enabled = False
-        Me.btnXoaKhachHang.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnXoaKhachHang.Location = New System.Drawing.Point(485, 307)
-        Me.btnXoaKhachHang.Name = "btnXoaKhachHang"
-        Me.btnXoaKhachHang.Size = New System.Drawing.Size(238, 36)
-        Me.btnXoaKhachHang.TabIndex = 74
-        Me.btnXoaKhachHang.Text = "&Xóa hồ sơ khách hàng"
-        Me.btnXoaKhachHang.UseVisualStyleBackColor = True
-        '
         'btnTaoHopDongBaoHiem
         '
         Me.btnTaoHopDongBaoHiem.Enabled = False
@@ -260,17 +249,6 @@ Partial Class FrmMain
         Me.Label16.Size = New System.Drawing.Size(160, 18)
         Me.Label16.TabIndex = 43
         Me.Label16.Text = "Nhập từ khóa tim kiếm:"
-        '
-        'btnCapNhatKhachHang
-        '
-        Me.btnCapNhatKhachHang.Enabled = False
-        Me.btnCapNhatKhachHang.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCapNhatKhachHang.Location = New System.Drawing.Point(220, 307)
-        Me.btnCapNhatKhachHang.Name = "btnCapNhatKhachHang"
-        Me.btnCapNhatKhachHang.Size = New System.Drawing.Size(246, 36)
-        Me.btnCapNhatKhachHang.TabIndex = 73
-        Me.btnCapNhatKhachHang.Text = "&Cập nhật hồ sơ khách hàng"
-        Me.btnCapNhatKhachHang.UseVisualStyleBackColor = True
         '
         'DataGridViewKhachHang
         '
@@ -358,6 +336,17 @@ Partial Class FrmMain
         Me.ButtonHuyboThemKH.Text = "&Hủy bỏ"
         Me.ButtonHuyboThemKH.UseVisualStyleBackColor = True
         '
+        'btnXoaKhachHang
+        '
+        Me.btnXoaKhachHang.Enabled = False
+        Me.btnXoaKhachHang.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnXoaKhachHang.Location = New System.Drawing.Point(485, 307)
+        Me.btnXoaKhachHang.Name = "btnXoaKhachHang"
+        Me.btnXoaKhachHang.Size = New System.Drawing.Size(238, 36)
+        Me.btnXoaKhachHang.TabIndex = 74
+        Me.btnXoaKhachHang.Text = "&Xóa hồ sơ khách hàng"
+        Me.btnXoaKhachHang.UseVisualStyleBackColor = True
+        '
         'ButtonDongYThemKH
         '
         Me.ButtonDongYThemKH.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -393,6 +382,17 @@ Partial Class FrmMain
         Me.txtThuNhapHangNam.Name = "txtThuNhapHangNam"
         Me.txtThuNhapHangNam.Size = New System.Drawing.Size(258, 24)
         Me.txtThuNhapHangNam.TabIndex = 66
+        '
+        'btnCapNhatKhachHang
+        '
+        Me.btnCapNhatKhachHang.Enabled = False
+        Me.btnCapNhatKhachHang.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCapNhatKhachHang.Location = New System.Drawing.Point(220, 307)
+        Me.btnCapNhatKhachHang.Name = "btnCapNhatKhachHang"
+        Me.btnCapNhatKhachHang.Size = New System.Drawing.Size(246, 36)
+        Me.btnCapNhatKhachHang.TabIndex = 73
+        Me.btnCapNhatKhachHang.Text = "&Cập nhật hồ sơ khách hàng"
+        Me.btnCapNhatKhachHang.UseVisualStyleBackColor = True
         '
         'Label15
         '
