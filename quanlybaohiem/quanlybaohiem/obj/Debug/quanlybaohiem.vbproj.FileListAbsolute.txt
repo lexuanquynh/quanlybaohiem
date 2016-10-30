@@ -18,3 +18,4 @@ E:\TINHOCNGANHANG\githubproject\quanlybaohiem\quanlybaohiem\quanlybaohiem\bin\De
 E:\TINHOCNGANHANG\githubproject\quanlybaohiem\quanlybaohiem\quanlybaohiem\obj\Debug\quanlybaohiem.FrmMain.resources
 E:\TINHOCNGANHANG\githubproject\quanlybaohiem\quanlybaohiem\quanlybaohiem\obj\Debug\quanlybaohiem.Resources.resources
 E:\TINHOCNGANHANG\githubproject\quanlybaohiem\quanlybaohiem\quanlybaohiem\obj\Debug\quanlybaohiem.vbproj.GenerateResource.Cache
+E:\TINHOCNGANHANG\githubproject\new\quanlybaohiem\quanlybaohiem\quanlybaohiem\bin\Debug\quanlybaohiem.exe.config
