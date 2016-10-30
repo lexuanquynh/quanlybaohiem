@@ -18,7 +18,6 @@ E:\TINHOCNGANHANG\githubproject\quanlybaohiem\quanlybaohiem\quanlybaohiem\bin\De
 E:\TINHOCNGANHANG\githubproject\quanlybaohiem\quanlybaohiem\quanlybaohiem\obj\Debug\quanlybaohiem.FrmMain.resources
 E:\TINHOCNGANHANG\githubproject\quanlybaohiem\quanlybaohiem\quanlybaohiem\obj\Debug\quanlybaohiem.Resources.resources
 E:\TINHOCNGANHANG\githubproject\quanlybaohiem\quanlybaohiem\quanlybaohiem\obj\Debug\quanlybaohiem.vbproj.GenerateResource.Cache
-E:\TINHOCNGANHANG\githubproject\new\quanlybaohiem\quanlybaohiem\quanlybaohiem\bin\Debug\quanlybaohiem.exe.config
 F:\visual_basic_project\quanlybaohiem\quanlybaohiem\quanlybaohiem\bin\Debug\quanlybaohiem.exe.config
 F:\visual_basic_project\quanlybaohiem\quanlybaohiem\quanlybaohiem\bin\Debug\quanlybaohiem.exe
 F:\visual_basic_project\quanlybaohiem\quanlybaohiem\quanlybaohiem\bin\Debug\quanlybaohiem.pdb
@@ -29,12 +28,3 @@ F:\visual_basic_project\quanlybaohiem\quanlybaohiem\quanlybaohiem\obj\Debug\quan
 F:\visual_basic_project\quanlybaohiem\quanlybaohiem\quanlybaohiem\obj\Debug\quanlybaohiem.exe
 F:\visual_basic_project\quanlybaohiem\quanlybaohiem\quanlybaohiem\obj\Debug\quanlybaohiem.xml
 F:\visual_basic_project\quanlybaohiem\quanlybaohiem\quanlybaohiem\obj\Debug\quanlybaohiem.pdb
-E:\TINHOCNGANHANG\githubproject\new\quanlybaohiem\quanlybaohiem\quanlybaohiem\obj\Debug\quanlybaohiem.FrmMain.resources
-E:\TINHOCNGANHANG\githubproject\new\quanlybaohiem\quanlybaohiem\quanlybaohiem\obj\Debug\quanlybaohiem.Resources.resources
-E:\TINHOCNGANHANG\githubproject\new\quanlybaohiem\quanlybaohiem\quanlybaohiem\obj\Debug\quanlybaohiem.vbproj.GenerateResource.Cache
-E:\TINHOCNGANHANG\githubproject\new\quanlybaohiem\quanlybaohiem\quanlybaohiem\bin\Debug\quanlybaohiem.exe
-E:\TINHOCNGANHANG\githubproject\new\quanlybaohiem\quanlybaohiem\quanlybaohiem\bin\Debug\quanlybaohiem.pdb
-E:\TINHOCNGANHANG\githubproject\new\quanlybaohiem\quanlybaohiem\quanlybaohiem\bin\Debug\quanlybaohiem.xml
-E:\TINHOCNGANHANG\githubproject\new\quanlybaohiem\quanlybaohiem\quanlybaohiem\obj\Debug\quanlybaohiem.exe
-E:\TINHOCNGANHANG\githubproject\new\quanlybaohiem\quanlybaohiem\quanlybaohiem\obj\Debug\quanlybaohiem.xml
-E:\TINHOCNGANHANG\githubproject\new\quanlybaohiem\quanlybaohiem\quanlybaohiem\obj\Debug\quanlybaohiem.pdb
