@@ -71,11 +71,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\KhachHangController.vb" />
-    <Compile Include="QLHDBHDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLHDBHDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="view\FrmMain.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -122,17 +117,6 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-    <None Include="QLHDBHDataSet.xsc">
-      <DependentUpon>QLHDBHDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QLHDBHDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLHDBHDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QLHDBHDataSet.xss">
-      <DependentUpon>QLHDBHDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />
