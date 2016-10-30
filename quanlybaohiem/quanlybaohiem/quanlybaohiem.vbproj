@@ -70,7 +70,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\HopDongBaoHiemController.vb" />
     <Compile Include="Controller\KhachHangController.vb" />
+    <Compile Include="Controller\TraCuuBaoHiemController.vb" />
     <Compile Include="QLHDBHDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -16,7 +16,7 @@
     End Sub
 
     Private Sub btnTruyVanThongTinKH_Click(sender As Object, e As EventArgs) Handles btnTruyVanThongTinKH.Click
-        GroupBoxThemKH.Hide()
+        GroupBoxThemKH.Show()
         GroupBoxTruyVanKhachHang.Show()
         Dim mKhachHangController As KhachHangController
         mKhachHangController = New KhachHangController()
@@ -73,7 +73,7 @@
                                                  dtNgaySinh.Text, txtNoiSinh.Text, txtQuocTich.Text,
                                                  txtCMND.Text, dtNgayCMND.Text, txtNoiCapCMND.Text,
                                                  txtDiaChiThuongTru.Text, txtNgheNghiep.Text, txtSDT.Text, txtTenCoQuan.Text,
-                                                 txtDiaChiCoQuan.Text, 100000, txtSoTKNganHang.Text) Then
+                                                 txtDiaChiCoQuan.Text, thunhap, txtSoTKNganHang.Text) Then
             GroupBoxThemKH.Hide()
         End If
     End Sub
@@ -94,8 +94,52 @@
         GroupBoxTruyVanThongTinBaoHiem.Show()
     End Sub
 
-    Private Sub btnThemMoiHopDongBH_Click(sender As Object, e As EventArgs) Handles btnThemMoiHopDongBH.Click
+    'Check thong tin nhap dung chua tren form nhap ho so bao hiem
+    Private Sub CheckInputBaoHiem()
 
+    End Sub
+
+    'Ham them moi bao hiem
+    Private Sub btnThemMoiHopDongBH_Click(sender As Object, e As EventArgs) Handles btnThemMoiHopDongBH.Click
+        CheckInputBaoHiem()
+
+        'Insert vao database
+        Dim mHopDongBaoHiemController As HopDongBaoHiemController
+        mHopDongBaoHiemController = New HopDongBaoHiemController()
+
+        Dim sotienBaohiem As Double
+        If Double.TryParse(txtSoTienBaoHiem.Text, sotienBaohiem) Then
+
+        Else
+            MessageBox.Show("Số tiền bảo hiểm không đúng")
+            txtSoTienBaoHiem.Focus()
+            Return
+        End If
+
+        Dim phiBaoHiemDinhKy As Double
+        If Double.TryParse(txtPhiBaoHiemDinhKy.Text, phiBaoHiemDinhKy) Then
+
+        Else
+            MessageBox.Show("Số tiền bảo hiểm định kỳ không đúng")
+            txtPhiBaoHiemDinhKy.Focus()
+            Return
+        End If
+
+        Dim soTienDaoHan As Double
+        If Double.TryParse(txtSoTienDaoHanBH.Text, soTienDaoHan) Then
+
+        Else
+            MessageBox.Show("Số tiền đáo hạn không đúng")
+            txtSoTienDaoHanBH.Focus()
+            Return
+        End If
+
+        If mHopDongBaoHiemController.ChinhSuaThongTinBaoHiem(False, txtMaKhachHangBH.Text, txtSanPhamBHBoSung.Text, sotienBaohiem,
+                                                             txtKyHanBaoHiem.Text, txtDinhKyDongBaoHiem.Text, phiBaoHiemDinhKy, soTienDaoHan,
+                                                             dtNgayHieuLucHD.Text, txtSanPhamBHBoSung.Text, txtPhuongThucDongBH.Text,
+                                                             txtNguonGocPhiBaoHiem.Text, txtBenhVienChiTra.Text) Then
+
+        End If
     End Sub
 
     Private Sub btnHuyBoHopDongBH_Click(sender As Object, e As EventArgs) Handles btnHuyBoHopDongBH.Click
