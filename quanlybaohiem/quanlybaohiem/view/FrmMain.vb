@@ -10,11 +10,21 @@
         GroupBoxTruyVanThongTinBaoHiem.Hide()
     End Sub
 
+
+    'Them moikhach hang
     Private Sub btnThemKH_Click(sender As Object, e As EventArgs) Handles btnThemKH.Click
         GroupBoxThemKH.Show()
         GroupBoxTruyVanKhachHang.Hide()
+
+        ClearTextBoxKH()
+
+        ButtonDongYThemKH.Enabled = True
+        btnTaoHopDongBaoHiem.Enabled = False
+        btnCapNhatKhachHang.Enabled = False
+        btnXoaKhachHang.Enabled = False
     End Sub
 
+    'Truy van thong tin khach hang
     Private Sub btnTruyVanThongTinKH_Click(sender As Object, e As EventArgs) Handles btnTruyVanThongTinKH.Click
         GroupBoxThemKH.Show()
         GroupBoxTruyVanKhachHang.Show()
@@ -25,17 +35,6 @@
         Dim ds As New DataSet
         ds = mKhachHangController.LoadAllKhachHang()
         DataGridViewKhachHang.DataSource = ds.Tables(0)
-
-        'Neu nhu khong co data thi disable cac nut phia duoi
-        If ds.Tables(0).Rows.Count > 0 Then
-            btnTaoHopDongBaoHiem.Enabled = True
-            btnCapNhatKhachHang.Enabled = True
-            btnXoaKhachHang.Enabled = True
-        Else
-            btnTaoHopDongBaoHiem.Enabled = False
-            btnCapNhatKhachHang.Enabled = False
-            btnXoaKhachHang.Enabled = False
-        End If
         ds.Dispose()
     End Sub
 
@@ -210,73 +209,72 @@
         End If
     End Sub
 
+    'Clear KH form
+    Private Sub ClearTextBoxKH()
+        txtMaKH.DataBindings.Clear()
+        txtMaKH.Text = ""
+    End Sub
+
     'Add data len form
-    Private Sub LoadTextBox()
+    Private Sub LoadTextBoxKH()
+        txtMaKH.DataBindings.Clear()
+        txtMaKH.DataBindings.Add("Text", DataGridViewKhachHang.DataSource, "IDKhachHang")
+
         txtHoVaTen.DataBindings.Clear()
         txtHoVaTen.DataBindings.Add("Text", DataGridViewKhachHang.DataSource, "hovaten")
 
+        cbGioiTinh.DataBindings.Clear()
+        cbGioiTinh.DataBindings.Add("Text", DataGridViewKhachHang.DataSource, "gioitinh")
 
-        'gioitinh bit,
-        '@tinhtrang nvarchar(10),
-        '@ngaysinh SMALLDATETIME ,
-        '@noisinh nvarchar(50),
-        '@quoctich nvarchar(50),
-        '@socmnd varchar(15),
-        '@ngaycap SMALLDATETIME ,
-        '@noicap nvarchar(150),
-        '@diachithuongtru nvarchar(150),
-        '@nghenghiep nvarchar(150),
-        '@dienthoai varchar(15),
-        '@tencoquan nvarchar(150),
-        '@diachicoquan nvarchar(150),
-        '@thunhapmotnam float,
-        '@sotk varchar
+        txtTinhTrang.DataBindings.Clear()
+        txtTinhTrang.DataBindings.Add("Text", DataGridViewKhachHang.DataSource, "tinhtrang")
+
+        dtNgaySinh.DataBindings.Clear()
+        dtNgaySinh.DataBindings.Add("Text", DataGridViewKhachHang.DataSource, "ngaysinh")
+
+        txtNoiSinh.DataBindings.Clear()
+        txtNoiSinh.DataBindings.Add("Text", DataGridViewKhachHang.DataSource, "noisinh")
+
+        txtQuocTich.DataBindings.Clear()
+        txtQuocTich.DataBindings.Add("Text", DataGridViewKhachHang.DataSource, "quoctich")
+
+        txtCMND.DataBindings.Clear()
+        txtCMND.DataBindings.Add("Text", DataGridViewKhachHang.DataSource, "socmnd")
+
+        dtNgayCMND.DataBindings.Clear()
+        dtNgayCMND.DataBindings.Add("Text", DataGridViewKhachHang.DataSource, "ngaycap")
+
+        txtNoiCapCMND.DataBindings.Clear()
+        txtNoiCapCMND.DataBindings.Add("Text", DataGridViewKhachHang.DataSource, "noicap")
+
+        txtDiaChiThuongTru.DataBindings.Clear()
+        txtDiaChiThuongTru.DataBindings.Add("Text", DataGridViewKhachHang.DataSource, "diachithuongtru")
+
+        txtNgheNghiep.DataBindings.Clear()
+        txtNgheNghiep.DataBindings.Add("Text", DataGridViewKhachHang.DataSource, "nghenghiep")
+
+        txtSDT.DataBindings.Clear()
+        txtSDT.DataBindings.Add("Text", DataGridViewKhachHang.DataSource, "dienthoai")
+
+        txtTenCoQuan.DataBindings.Clear()
+        txtTenCoQuan.DataBindings.Add("Text", DataGridViewKhachHang.DataSource, "tencoquan")
+
+        txtDiaChiCoQuan.DataBindings.Clear()
+        txtDiaChiCoQuan.DataBindings.Add("Text", DataGridViewKhachHang.DataSource, "diachicoquan")
+
+        txtThuNhapHangNam.DataBindings.Clear()
+        txtThuNhapHangNam.DataBindings.Add("Text", DataGridViewKhachHang.DataSource, "thunhapmotnam")
+
+        txtSoTKNganHang.DataBindings.Clear()
+        txtSoTKNganHang.DataBindings.Add("Text", DataGridViewKhachHang.DataSource, "sotk")
     End Sub
     Private Sub DataGridViewKhachHang_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewKhachHang.CellContentClick
-        LoadTextBox()
-        'txtMaKH.Text = e.RowIndex.ToString
-        'txtHoVaTen.Text = e.RowIndex.ToString
-        'txtTinhTrang.Text = e.ColumnIndex.ToString
-        'If e.RowIndex >= 0 Then
-        '    Dim row As DataGridViewRow
-        '    row = Me.DataGridViewKhachHang.Rows(e.RowIndex)
-        '    'txtMaKH.Text = row.Cells(0).Value.ToString
-        '    'txtHoVaTen.Text = row.Cells(1).Value.ToString
+        LoadTextBoxKH()
 
-        'End If
-        'Day toan bo data tu grid len form
-        '       [hovaten] [nvarchar](50) NULL,
-        '[gioitinh] [bit] NULL,
-        '[tinhtrang] nvarchar(10)NULL,
-        '[ngaysinh] SMALLDATETIME  NULL,
-        '[noisinh] [nvarchar](50) NULL,
-        '[quoctich] [nvarchar](50) NULL,
-        '[socmnd] [varchar] (15) NULL,
-        '[ngaycap] SMALLDATETIME NULL,
-        '[noicap] [nvarchar](150) NULL,
-        '[diachithuongtru] [nvarchar](150) NULL,
-        '[nghenghiep] [nvarchar](150) NULL,
-        '[dienthoai] [varchar] (15) NULL,
-        '[tencoquan] [nvarchar](150) NULL,
-        '[diachicoquan] [nvarchar](150) NULL,
-        '[thunhapmotnam] [float] NULL,
-        '[sotk] [varchar] (20)NULL)
-        'txtMaKH.Text = DataGridViewKhachHang.Rows(e.RowIndex).Cells(0).Value()
-        'txtHoVaTen.Text = DataGridViewKhachHang.Rows(e.RowIndex).Cells(1).Value()
-        ''  cbGioiTinh.SelectedIndex = 1
-        'txtTinhTrang.Text = DataGridViewKhachHang.Rows(e.RowIndex).Cells(3).Value()
-        ''txtTinhTrang.Text = DataGridViewKhachHang.Rows(e.RowIndex).Cells(4).Value()
-        'txtNoiSinh.Text = DataGridViewKhachHang.Rows(e.RowIndex).Cells(5).Value()
-        'txtQuocTich.Text = DataGridViewKhachHang.Rows(e.RowIndex).Cells(6).Value()
-        'txtCMND.Text = DataGridViewKhachHang.Rows(e.RowIndex).Cells(7).Value()
-        ''txtCMND.Text = DataGridViewKhachHang.Rows(e.RowIndex).Cells(8).Value()
-        'txtNoiCapCMND.Text = DataGridViewKhachHang.Rows(e.RowIndex).Cells(9).Value()
-        'txtDiaChiThuongTru.Text = DataGridViewKhachHang.Rows(e.RowIndex).Cells(10).Value()
-        'txtNgheNghiep.Text = DataGridViewKhachHang.Rows(e.RowIndex).Cells(11).Value()
-        'txtSDT.Text = DataGridViewKhachHang.Rows(e.RowIndex).Cells(12).Value()
-        'txtTenCoQuan.Text = DataGridViewKhachHang.Rows(e.RowIndex).Cells(13).Value()
-        'txtDiaChiCoQuan.Text = DataGridViewKhachHang.Rows(e.RowIndex).Cells(14).Value()
-        'txtThuNhapHangNam.Text = DataGridViewKhachHang.Rows(e.RowIndex).Cells(15).Value()
-        'txtSoTKNganHang.Text = DataGridViewKhachHang.Rows(e.RowIndex).Cells(16).Value()
+        ButtonDongYThemKH.Enabled = False
+        btnTaoHopDongBaoHiem.Enabled = True
+        btnCapNhatKhachHang.Enabled = True
+        btnXoaKhachHang.Enabled = True
+
     End Sub
 End Class
