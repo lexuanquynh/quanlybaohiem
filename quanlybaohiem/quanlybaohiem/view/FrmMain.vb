@@ -106,6 +106,7 @@
     'Ham them moi bao hiem
     Private Sub btnThemMoiHopDongBH_Click(sender As Object, e As EventArgs) Handles btnThemMoiHopDongBH.Click
         CheckInputBaoHiem()
+      
 
         'Insert vao database
         Dim mHopDongBaoHiemController As HopDongBaoHiemController
@@ -290,4 +291,31 @@
     Private Sub btnXoaKhachHang_Click(sender As Object, e As EventArgs) Handles btnXoaKhachHang.Click
 
     End Sub
+
+    Private Sub btnTimKiemHopDong_Click(sender As Object, e As EventArgs) Handles btnTimKiemHopDong.Click
+        Dim mBaoHiemController As TraCuuBaoHiemController
+        mBaoHiemController = New TraCuuBaoHiemController()
+
+        'Hien thi ket qua tim kiem tren datagrid
+        Dim sTuKhoa As String
+        sTuKhoa = txtTruyvanBaoHiem.Text
+        Dim dt As DataTable = mBaoHiemController.TimKiemBaoHiem(sTuKhoa)
+        DataGridViewThongTinBaoHiem.DataSource = dt
+
+        'Neu nhu khong co data thi disable cac nut phia duoi
+        If dt.Rows.Count > 0 Then
+            btnThemMoiHopDongBH.Enabled = True
+            btnCapNhatHoSoBaoHiem.Enabled = True
+            btnXoaHoSoBaoHiem.Enabled = True
+        Else
+            btnThemMoiHopDongBH.Enabled = False
+            btnCapNhatHoSoBaoHiem.Enabled = False
+            btnXoaHoSoBaoHiem.Enabled = False
+        End If
+    End Sub
+
+    
+
+
+   
 End Class

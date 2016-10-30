@@ -1494,7 +1494,7 @@ Partial Class FrmMain
         Me.ClientSize = New System.Drawing.Size(984, 727)
         Me.Controls.Add(Me.TabControlMain)
         Me.MaximumSize = New System.Drawing.Size(1000, 766)
-        Me.MinimumSize = New System.Drawing.Size(1000, 766)
+        Me.MinimumSize = New System.Drawing.Size(1000, 736)
         Me.Name = "FrmMain"
         Me.Text = "Quản lý bảo hiểm nhân thọ"
         Me.TabControlMain.ResumeLayout(False)
